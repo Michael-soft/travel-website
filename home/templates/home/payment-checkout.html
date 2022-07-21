@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Lingking -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/payment-checkout.css">
+
+    <!-- Custom Icons -->
+    <script src="https://kit.fontawesome.com/c491194143.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <title>Payment Checkout</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg navbar-light bg-light py-2 fixed-top">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand fw-bold blue fs-3" href="landing-page-after-sign-in.html">Travel<span class="orange">Guide</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark px-4" aria-current="page" href="landing-page-after-sign-in.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="service.html">Services</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <!-- <button class="bg-orange p-2 ms-3 rounded-3 border-0"><img src="./img/landing-bell.png"></button> -->
+                <div style="display: inline-grid;" class="pe-2">
+                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="my-account.html">My
+                        Account</a>
+                </div>
+                <div style="display: inline-grid;" class="actions">
+                    <div class="bell">
+                        <a class=" bg-orange rounded-3 p-2" href="#">
+                            <img src="img/landing-bell.png" alt="" class="">
+                        </a>
+                    </div>
+                    <div class="noti">
+                        <h4 class="pt-3 ps-2">Notification</h4>
+                        <div class="all d-flex ps-2">
+                            <div><a href="#">All</a></div>
+                            <div class="ps-5"><a href="#">Unread</a></div>
+                        </div>
+                        <div class="new d-flex justify-content-between pt-2">
+                            <div class="ps-2">
+                                <p>New</p>
+                            </div>
+                            <div class="pe-2 see"> <a href="notification.html">See all</a></div>
+                        </div>
+                        <div class="book">
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked Kenzi as your tour guide in Paris <br> 1h ago
+                                        <span class="fw-bold">.</span> Travel Guide
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked Kenzi as your tour guide in Paris <br> 1h ago
+                                        <span class="fw-bold">.</span> Travel Guide
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked Kenzi as your tour guide in Paris <br> 1h ago
+                                        <span class="fw-bold">.</span> Travel Guide
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <img src="./img/payment-hero.png" class="img-fluid" alt="">
+    </section>
+
+    <main class="container">
+        <div class="row py-4">
+            <div class="col-md-7 col-12 pb-3">
+                <h3>Payment Options</h3>
+                <form action="">
+                    <div class="form-row d-flex gap-5">
+                        <div class="form-box d-flex align-items-center">
+                            <input type="checkbox" name="check">
+                            <label for="" class="d-flex ps-2 align-items-center">
+                                <p class="my-1 fs-5 pe-2">Card</p>
+                                <div style="transform: rotate(315deg); "><i class="bi bi-credit-card fs-5 p-0 text-info"></i></div>
+                            </label>
+                        </div>
+                        <div class="form-box d-flex align-items-center">
+                            <input type="checkbox" name="check">
+                            <label for="" class="d-flex ps-2 align-items-center">
+                                <p class="my-1 fs-5 pe-2">Bitcoin</p>
+                                <div ><i class="fa-brands fa-bitcoin fs-4 text-warning "></i></div>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                
+                <h2 class="mt-4">Payment Information</h2>
+                <form action="" class="w-75" id="payment-info">
+                    <div class="my-3">
+                        <label for="name" class="fs-5">Name on card</label><br>
+                        <input type="text" class="mt-1 border-1 w-100 px-4 fs-6 py-1">
+                    </div>
+                    <div class="mb-4">
+                        <label for="card-number" class="fs-5">Card Number</label><br>
+                        <input type="text" class="border-1 px-4 fs-6 w-100 py-1 mt-1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="expiration-date" class="fs-5">Expiration Date</label>
+                        <div class="row w-100">
+                            <div class="col-4">
+                                <input type="number" max="2" placeholder="MM" class="border-1 px-4 fs-6 py-1 mt-1 w-100">
+                            </div>
+                            <div class="col-4">
+                                <input type="number" max="4" placeholder="Year" class="border-1 px-4 fs-6 py-1 mt-1 w-100 me-auto">
+                            </div>
+                            <div class="col-4">
+                                <img src="./img/payment-cards.png" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="securtity mb-5">
+                        <label for="security-code" class="fs-5">Security Code</label>
+                        <div class="row w-80 align-items-center">
+                            <div class="col-5">
+                                <input type="number" max="3" placeholder="CVV" class="border-1 px-4 fs-6 py-1 mt-1 w-100">
+                            </div>
+                            <div class="col-7">
+                                <img src="./img/payment-CVV.png" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-80 mb-5">
+                        <a href="payment-confirmation.html" class="btn bg-orange text-white w-50">Pay Now</a>
+                    </div>
+                    <div class="help border-1 border-dark border px-1 py-3 w-80 mb-5 mt-2">
+                        <div class="help-body mx-auto w-80">
+                            <h4 class="border-bottom border-1 border-dark w-75 text-center pb-2 mx-auto">Need Help Booking?</h4>
+                            <p class="mt-3">Call our customer services team on the number below to speak to one of our advisors who
+                                will help you with all of your holiday needs</p>
+                            <div class="d-flex align-items-center">
+                                <div><i class="bi bi-telephone fs-4 pe-2"></i></div>
+                                <h4 class="m-0">+234-807-347-324-984</h4>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="right col-12 col-md-5 bg-pink h-100 p-3 rounded-2 pb-5 mb-3">
+                <h4 class="text-center">Tour Guide Booking Details</h4>
+                <div class="booking-details bg-white mx-3 mt-3 rounded-3 p-3 mb-5">
+                    <div class="row">
+                        <div class="col-6 px-1 px-lg-2">
+                            <h5>Richard Potter</h5>
+                            <p>Booking Date</p>
+                            <p>Time</p>
+                            <p>Subtotal</p>
+                            <p>Service fee</p>
+                            <p class="text-danger fw-bold">Total</p>
+                        </div>
+                        <div class="col-6 px-1 px-lg-2">
+                            <h5 class="text-center text-lg-start">$15<span class="fs-6">/hour</span></h5>
+                            <p>Mon 22 July 2022</p>
+                            <p>12:00 - 18:00</p>
+                            <p>$90.00</p>
+                            <p>$50.00</p>
+                            <p class="text-danger fw-bold">$950.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mx-4">
+                    <img src="./img/index-richard.png" class="img-fluid" alt="">
+                    <div class="card-body px-3">
+                        <div class="top row">
+                            <div class="col-lg-9 col-8">
+                                <h5 class="">Richard Potter</h5>
+                                <div class="d-lg-flex align-items-center mb-2 d-none">
+                                    <div class="rating d-flex pe-2">
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill fs-4"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill fs-4"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill fs-4"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill fs-4"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill fs-4"></i>
+                                        </div>
+                                    </div>
+                                    <p class="m-0"><span class="fw-bold m-0">4.9</span>(65 Reviews)</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-4 px-0 px-lg-2">
+                                <h5 class="">$15<span class="fs-6">/hour</span></h5>
+                            </div>
+                        </div>
+                        <div class="mid row align-items-center mb-2">
+                            <div class="col-lg-9 col-8 d-flex align-items-center">
+                                <img src="./img/index-location.png">
+                                <p class="text-dark m-0 ps-2 fs-5">France</p>
+                            </div>
+                            <div class="col-lg-3 col-4 px-0 px-lg-2">
+                                <p class="m-0">Available</p>
+                            </div>
+                        </div>
+                        <div class="w-100 d-flex d-lg-none align-items-center mb-3 mx-auto justify-content-center">
+                            <div class="rating d-flex pe-1">
+                                <div class="icons pe-1">
+                                    <i class="bi bi-star-fill fs-4"></i>
+                                </div>
+                                <div class="icons pe-1">
+                                    <i class="bi bi-star-fill fs-4"></i>
+                                </div>
+                                <div class="icons pe-1">
+                                    <i class="bi bi-star-fill fs-4"></i>
+                                </div>
+                                <div class="icons pe-1">
+                                    <i class="bi bi-star-fill fs-4"></i>
+                                </div>
+                                <div class="icons pe-1">
+                                    <i class="bi bi-star-fill fs-4"></i>
+                                </div>
+                            </div>
+                            <p class="m-0 fs-6"><span class="fw-bold m-0">4.9</span>(65 Reviews)</p>
+                        </div>
+                        <p class="mx-1 mb-0">Hello there! I’m Richard but my clients call me Rich. I’ve lived in France my whole life
+                            and I know the in and outs of it. I love meeting new people and making them fall in love with France. I love
+                            exploring new places, food etc. If you want to have a great experience in France and discover hidden places
+                            I’m your go-to-guy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="pt-5">
+        <div class="container border-top border-1 border-white border-bottom text-white mb-5">
+            <div class="row pt-5 mt-3 px-2 pb-3 w-auto">
+                <div class="col-lg-3">
+                    <h3>Travel Guide</h3>
+                    <p class="pe-3">“The world is a book and those who do not travel read only one page.”</p>
+                    <div class="socials mt-5 d-flex justify-content-between w-75">
+                        <img src="./img/index-facebook.png">
+                        <img src="./img/index-instagram.png">
+                        <img src="./img/index-twitter.png">
+                        <img src="./img/index-linkedin.png">
+                    </div>
+                </div>
+                <div class="company col-lg-3 ps-5">
+                    <h4 class="pb-2">Company</h4>
+                    <ul class="p-0">
+                        <li class="list-unstyled pb-1"><a href="landing-page-after-sign-in.html" class="text-decoration-none text-white">Home</a>
+                        </li>
+                        <li class="list-unstyled pb-1"><a href="service.html"
+                                class="text-decoration-none text-white">Services</a></li>
+                        <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a>
+                        </li>
+                        <li class="list-unstyled pb-1"><a href="about.html" class="text-decoration-none text-white">About
+                                Us</a></li>
+                        <li class="list-unstyled pb-1"><a href="contact.html"
+                                class="text-decoration-none text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="pb-2">Services</h4>
+                    <ul class="p-0">
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Book flight</a>
+                        </li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Destinations</a>
+                        </li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Hotels</a></li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Car Hire</a></li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Resturants</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <label for="">Email address</label><br>
+                    <input type="email"
+                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                </div>
+            </div>
+            <div class="copyright position-relative w-30 text-center mb-2">
+                <h4>KodedTravels</h4>
+                <img src="./img/index-copyright.png">
+                <p class="d-inline-block ps-3 m-0">All simple rights reserved 2022</p>
+            </div>
+        </div>
+        <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white pb-2">
+            <a href="faq-after.html" class="text-decoration-none text-white">FAQs</a>
+            <a href="terms-and-policies.html"
+                class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
+            <a href="privacy-policy.html" class="text-decoration-none text-white">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

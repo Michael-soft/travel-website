@@ -1,0 +1,1254 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/c491194143.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <title>Landing Page</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light py-2 fixed-top">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand fw-bold blue fs-3" href="{% url 'home:index.html' %}">Travel<span class="orange">Guide</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark px-4" aria-current="page" href="{% url 'home:index.html' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="{% url 'home:service.html' %}">Services</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="{% url 'home:blog.html' %}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="{% url 'home:about.html' %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="{% url 'home:contact.html' %}">Contact Us</a>
+                    </li>
+                </ul>
+                <!-- <button class="bg-orange p-2 ms-3 rounded-3 border-0"><img src="./img/landing-bell.png"></button> -->
+                <div style="display: inline-grid;" class="pe-2">
+                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="sign-up.html">Create Account</a>
+                </div>
+                <!-- <div style="display: inline-grid;" class="actions d-none">
+                    <div class="bell">
+                        <a class=" bg-orange rounded-3 p-2" href="#">
+                            <img src="img/landing-bell.png" alt="" class="">
+                        </a>
+                    </div>
+                    <div class="noti">
+                        <h4 class="pt-3 ps-2">Notification</h4>
+                        <div class="all d-flex ps-2">
+                            <div><a href="#">All</a></div>
+                            <div class="ps-5"><a href="#">Unread</a></div>
+                        </div>
+                        <div class="new d-flex justify-content-between pt-2">
+                            <div class="ps-2">
+                                <p>New</p>
+                            </div>
+                            <div class="pe-2 see"> <a href="#">See all</a></div>
+                        </div>
+                        <div class="book">
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked Kenzi as your tour guide in Paris <br> 1h ago
+                                        <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked Kenzi as your tour guide in Paris <br> 1h ago
+                                        <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked Kenzi as your tour guide in Paris <br> 1h ago
+                                        <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    <section id="hero">
+        <div class="hero text-center">
+            <div class="hero-text text-white">
+                <h1>The world is yours</h1>
+                <h5>Explore the world of new experiences and new adventures <br> with KodedTravels, your discovery becomes
+                    easy.</h5>
+                <div class="explore bg-orange text-white text-decoration-none p-2 mt-3">
+                    <a href="#" class="text-decoration-none text-white">Explore more</a>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    <section class="search w-100 mt-2">
+        <div class="container search-body py-4 d-flex align-items-center">
+            <div class="position-relative search-box w-50">
+                <input type="text" class="py-1 rounded-pill border-1 ps-5 w-75" placeholder="Search locations">
+                <button class="bg-orange text-white rounded-pill border-0 px-4 position-absolute">Search</button>
+                <img src="img/index-search-icon.png" class="position-absolute search-icon" alt="">
+            </div>
+            <div class="stats w-50 row">
+                <div class="col-6  text-start">
+                    <h4>10000+</h4>
+                    <p class="m-0">Users Worldwide</p>
+                </div>
+                <div class="col-6 text-start">
+                    <h4>100+</h4>
+                    <p class="m-0">Local Guides</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="choose" class="container">
+        <h2 class="text-center pt-5 fw-bold">Why Choose Us</h2>
+        <p class="text-dark text-center">Find out why we have a trusted place in our customer’s heart</p>
+        <div class="row my-5">
+            <div class="col-lg-5">
+                <img src="img/index-soul.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-7 ps-5">
+                <p class="fs-5">At <span class="blue fw-bolder">TRAVEL</span> <span class="orange fw-bolder">GUIDE</span>, we help people find and schedule diverse travel services. It recommends activities in destination cities with safe measures that doesn’t cost much for traveler but benefiting. KodedTravels is known to provide you with all the information you need to know about traveling. Are you a First Time traveler? KodedTravels has got you covered with easy
+                booking system and paying for all your activities while on the go.</p>
+                <button class="btn btn-outline-warning px-5 mt-3 text-warning rounded-3">See more</button>
+            </div>
+        </div>
+    </section>
+    <section id="inspo" class="py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 d-flex align-items-center my-lg-0 my-md-3 my-4">
+                    <img src="img/index-location-world.png">
+                    <p class="m-0 ps-3 fs-6">Find inspiration and comprehensive information about your next trip</p>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center my-lg-0 my-md-3 my-2">
+                    <img src="img/index-guide.png">
+                    <p class="m-0 ps-3 fs-6">Connect with a local guide to get guides about your potential dream trip</p>
+                </div>
+                <div class="col-lg-4 d-flex align-items-center my-lg-0 my-md-3 my-4">
+                    <img src="img/index-security.png">
+                    <p class="m-0 ps-3 fs-6">Book and travel securely with our free and local expert assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="destinations" class="pt-5">
+        <div class="container">
+            <h2 class="text-center fw-bold">Top Travel Destinations</h2>
+            <p class="text-center text-dark mt-2 mb-4">Get inspirations and travel informations for world wide destinations with our online travel guide</p>
+            <div class="destination-gallery">
+                <div class="row d-lg-flex d-md-none d-none">
+                    <div class="col-lg-4">
+                        <div class="frame w-100 position-relative">
+                            <img src="img/index-dubai.png" class="img-fluid w-100" alt="">
+                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
+                                <p class="mb-1">Dubai,</p>
+                                <div class="d-flex text-white pb-3 align-items-center">
+                                    <img src="img/index-white-location.png" class="img-fluid pe-2"> 
+                                    <p class="m-0 ">United Arab Emirates</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="frame w-100 position-relative">
+                            <img src="img/index-wyoming.png" class="img-fluid w-100" alt="">
+                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
+                                <p class="mb-1">Wyoming</p>
+                                <div class="d-flex text-white pb-3 align-items-center">
+                                    <img src="img/index-white-location.png" class="img-fluid pe-2"> 
+                                    <p class="m-0 ">United States of America</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="frame w-100 position-relative">
+                            <img src="img/index-punta.png" class="img-fluid w-100" alt="">
+                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
+                                <p class="mb-1">Punta Cana</p>
+                                <div class="d-flex text-white pb-3 align-items-center">
+                                    <img src="img/index-white-location.png" class="img-fluid pe-2"> 
+                                    <p class="m-0 ">Dominican Republic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-lg-flex d-md-none d-none mt-3">
+                    <div class="col-lg-4">
+                        <div class="frame w-100 position-relative">
+                            <img src="img/index-moroco.png" class="img-fluid w-100" alt="">
+                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
+                                <p class="mb-1">Moroco</p>
+                                <div class="d-flex text-white pb-3 align-items-center">
+                                    <img src="img/index-white-location.png" class="img-fluid pe-2"> 
+                                    <p class="m-0 ">Africa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="frame w-100 position-relative">
+                            <img src="img/index-maldives.png" class="img-fluid w-100" alt="">
+                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
+                                <p class="mb-1">Maldives</p>
+                                <div class="d-flex text-white pb-3 align-items-center">
+                                    <img src="img/index-white-location.png" class="img-fluid pe-2"> 
+                                    <p class="m-0 ">Asia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="frame w-100 position-relative">
+                            <img src="img/index-bora.png" class="img-fluid w-100" alt="">
+                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
+                                <p class="mb-1">Bora Bora</p>
+                                <div class="d-flex text-white pb-3 align-items-center">
+                                    <img src="img/index-white-location.png" class="img-fluid pe-2"> 
+                                    <p class="m-0 ">French Polynesia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile View -->
+            <div class="swiper mySwiper d-lg-none mx-3">
+                <div class="swiper-wrapper mb-5">
+                    <div class="swiper-slide">
+                        <div class="frame w-100 position-relative">
+                            <img src="img/index-dubai.png" class="img-fluid w-100" alt="">
+                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
+                                <p class="mb-1">Dubai,</p>
+                                <div class="d-flex text-white pb-3 align-items-center">
+                                    <img src="img/index-white-location.png" class="img-fluid pe-2">
+                                    <p class="m-0 ">United Arab Emirates</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="frame w-100 position-relative">
+                            <img src="img/index-wyoming.png" class="img-fluid w-100" alt="">
+                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
+                                <p class="mb-1">Wyoming</p>
+                                <div class="d-flex text-white pb-3 align-items-center">
+                                    <img src="img/index-white-location.png" class="img-fluid pe-2">
+                                    <p class="m-0 ">United States of America</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="frame w-100 position-relative">
+                            <img src="img/index-punta.png" class="img-fluid w-100" alt="">
+                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
+                                <p class="mb-1">Punta Cana</p>
+                                <div class="d-flex text-white pb-3 align-items-center">
+                                    <img src="img/index-white-location.png" class="img-fluid pe-2">
+                                    <p class="m-0 ">Dominican Republic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="frame w-100 position-relative">
+                            <img src="img/index-moroco.png" class="img-fluid w-100" alt="">
+                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
+                                <p class="mb-1">Moroco</p>
+                                <div class="d-flex text-white pb-3 align-items-center">
+                                    <img src="img/index-white-location.png" class="img-fluid pe-2">
+                                    <p class="m-0 ">Africa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="frame w-100 position-relative">
+                            <img src="img/index-maldives.png" class="img-fluid w-100" alt="">
+                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
+                                <p class="mb-1">Maldives</p>
+                                <div class="d-flex text-white pb-3 align-items-center">
+                                    <img src="img/index-white-location.png" class="img-fluid pe-2">
+                                    <p class="m-0 ">Asia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="frame w-100 position-relative">
+                            <img src="img/index-bora.png" class="img-fluid w-100" alt="">
+                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
+                                <p class="mb-1">Bora Bora</p>
+                                <div class="d-flex text-white pb-3 align-items-center">
+                                    <img src="img/index-white-location.png" class="img-fluid pe-2">
+                                    <p class="m-0 ">French Polynesia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-1"></div>
+            </div>
+            <div class="view d-flex justify-content-center">
+                <a href="#" class="text-center my-4">View More Photos</a>
+            </div>
+        </div>
+    </section>
+    <section id="top-guides">
+        <div class="container">
+            <h2 class="text-center fw-bold fs-2 mt-5">Top Travel Guides</h2>
+            <p class="text-center text-dark">Meet our top guides from all around the world</p>
+            <div class="guides mb-4">
+                <div class="row d-lg-flex d-none">
+                    <div class="col-lg-4 px-3">
+                        <div class="card rounded-5">
+                            <img src="img/index-richard.png" class="img-fluid rounded-3">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center">
+                                    <h5 class="fw-bold fs-5 w-60 m-0">Richard Potter</h5>
+                                    <div class="rating d-flex ms-auto">
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mt-3">
+                                    <div class="d-flex align-items-center w-50">
+                                        <img src="img/index-location.png">
+                                        <p class="text-dark m-0 ps-2 fs-5">France</p>
+                                    </div>
+                                    <p class="text-dark m-0 w-50 text-end">Available</p>
+                                </div>
+                                <a href="#" class="btn mt-4 text-white">Travel With Me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 px-3">
+                        <div class="card rounded-5">
+                            <img src="img/index-gary.png" class="img-fluid rounded-3">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center">
+                                    <p class="fw-bold fs-5 w-60 m-0">Gary White</p>
+                                    <div class="rating d-flex ms-auto">
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mt-3">
+                                    <div class="d-flex align-items-center w-50">
+                                        <img src="img/index-location.png" alt="">
+                                        <p class="text-dark m-0 ps-3 fs-5">France</p>
+                                    </div>
+                                        <p class="text-dark m-0 w-50 text-end">Available</p>
+                                </div>
+                                <a href="#" class="btn mt-4 text-white">Travel With Me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 px-3">
+                        <div class="card rounded-5">
+                            <img src="img/index-joylyn.png" class="img-fluid rounded-3">
+                            <div class="card-body p-4">
+                                <div class="d-flex align-items-center">
+                                    <p class="fw-bold fs-5 w-60 m-0">Joylyn Nyada</p>
+                                    <div class="rating d-flex ms-auto">
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mt-3">
+                                    <div class="d-flex align-items-center w-50">
+                                        <img src="img/index-location.png" alt="">
+                                        <p class="text-dark m-0 ps-3 fs-5">France</p>
+                                    </div>
+                                        <p class="text-dark m-0 w-50 text-end">Available</p>
+                                </div>
+                                <a href="#" class="btn mt-4 text-white">Travel With Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile View -->
+                <div class="swiper mySwiper d-lg-none mx-3">
+                    <div class="swiper-wrapper mb-5">
+                        <div class="swiper-slide">
+                            <div class="card rounded-5">
+                                <img src="img/index-richard.png" class="img-fluid rounded-3">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-center">
+                                        <h5 class="fw-bold fs-5 w-60 m-0">Richard Potter</h5>
+                                        <div class="rating d-flex ms-auto">
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <div class="d-flex align-items-center w-50">
+                                            <img src="img/index-location.png">
+                                            <p class="text-dark m-0 ps-2 fs-5">France</p>
+                                        </div>
+                                        <p class="text-dark m-0 w-50 text-end">Available</p>
+                                    </div>
+                                    <a href="#" class="btn mt-4 text-white">Travel With Me</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card rounded-5">
+                                <img src="img/index-gary.png" class="img-fluid rounded-3">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-center">
+                                        <p class="fw-bold fs-5 w-60 m-0">Gary White</p>
+                                        <div class="rating d-flex ms-auto">
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <div class="d-flex align-items-center w-50">
+                                            <img src="img/index-location.png" alt="">
+                                            <p class="text-dark m-0 ps-3 fs-5">France</p>
+                                        </div>
+                                        <p class="text-dark m-0 w-50 text-end">Available</p>
+                                    </div>
+                                    <a href="#" class="btn mt-4 text-white">Travel With Me</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card rounded-5">
+                                <img src="img/index-joylyn.png" class="img-fluid rounded-3">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-center">
+                                        <p class="fw-bold fs-5 w-60 m-0">Joylyn Nyada</p>
+                                        <div class="rating d-flex ms-auto">
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-3">
+                                        <div class="d-flex align-items-center w-50">
+                                            <img src="img/index-location.png" alt="">
+                                            <p class="text-dark m-0 ps-3 fs-5">France</p>
+                                        </div>
+                                        <p class="text-dark m-0 w-50 text-end">Available</p>
+                                    </div>
+                                    <a href="#" class="btn mt-4 text-white">Travel With Me</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="swiper-pagination mt-1"></div>
+                </div>
+                <div class="view d-flex justify-content-center">
+                    <a href="#" class="text-center mt-4 ">See More Guides</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <section id="popular-places" class="pb-5">
+        <div class="container">
+            <h2 class="text-center fw-bold fs-2 mt-5">Most Popular Places</h2>
+            <p class="text-center text-dark mb-4">Discover places and what they are known for</p>
+            <div class="row my-3 d-lg-flex d-none">
+                <div class="col-lg-4 px-2">
+                    <div class="card">
+                        <img src="img/index-eiffel.png" class="img-fluid">
+                        <div class="card-body px-4 py-3">
+                            <div class="d-flex align-items-center">
+                                <p class="fw-bold fs-5 w-60 m-0">Eiffel Tower</p>
+                                <div class="rating d-flex mx-auto w-30">
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <div class="d-flex align-items-center w-50">
+                                    <img src="img/index-location.png" alt="">
+                                    <p class="text-dark m-0 ps-3 fs-5">Paris, France</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn bg-orange px-4 mt-5 text-white py-1 rounded-3">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 px-2">
+                    <div class="card">
+                        <img src="img/index-atlantis.png" class="img-fluid">
+                        <div class="card-body px-4 py-3">
+                            <div class="d-flex align-items-center w-100">
+                                <p class="fw-bold fs-5 m-0 w-80">Atlantis Aquaventure</p>
+                                <div class="rating d-flex">
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <div class="d-flex align-items-center w-50">
+                                    <img src="img/index-location.png" alt="">
+                                    <p class="text-dark m-0 ps-3 fs-5">Dubai, UAE</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn bg-orange px-4 mt-5 text-white py-1 rounded-3">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 px-2">
+                    <div class="card">
+                        <img src="img/index-eiffel.png" class="img-fluid">
+                        <div class="card-body px-4 py-3">
+                            <div class="d-flex align-items-center">
+                                <p class="fw-bold fs-5 w-60 m-0">Eiffel Tower</p>
+                                <div class="rating d-flex ms-auto w-30">
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <div class="d-flex align-items-center w-50">
+                                    <img src="img/index-location.png" alt="">
+                                    <p class="text-dark m-0 ps-3 fs-5">Paris, France</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn bg-orange px-4 mt-5 text-white py-1 rounded-3">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3 d-lg-flex d-none">
+                <div class="col-lg-4 px-2">
+                    <div class="card">
+                        <img src="img/index-nyc.png" class="img-fluid">
+                        <div class="card-body px-4 py-3">
+                            <div class="d-flex align-items-center">
+                                <p class="fw-bold fs-5 w-60 m-0">New York City</p>
+                                <div class="rating d-flex ms-auto w-30">
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/index-location.png" alt="">
+                                    <p class="text-dark m-0 ps-3 fs-5">New York City, USA</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn bg-orange px-4 mt-5 text-white py-1 rounded-3">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 px-2">
+                    <div class="card">
+                        <img src="img/index-atlantis.png" class="img-fluid">
+                        <div class="card-body px-4 py-3">
+                            <div class="d-flex align-items-center">
+                                <p class="fw-bold fs-5 m-0 w-60">Mount Corcovado</p>
+                                <div class="rating d-flex ms-auto w-30">
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/index-location.png" alt="">
+                                    <p class="text-dark m-0 ps-3 fs-5">Rio de Janeiro, USA</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn bg-orange px-4 mt-5 text-white py-1 rounded-3">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 px-2">
+                    <div class="card">
+                        <img src="img/index-computer-village.png" class="img-fluid">
+                        <div class="card-body px-4 py-3">
+                            <div class="d-flex align-items-center">
+                                <p class="fw-bold fs-5 w-60 m-0">Computer Village</p>
+                                <div class="rating d-flex ms-auto w-30">
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="icons pe-1">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mt-2">
+                                <div class="d-flex align-items-center">
+                                    <img src="img/index-location.png" alt="">
+                                    <p class="text-dark m-0 ps-3 fs-5">Lagos, Nigeria</p>
+                                </div>
+                            </div>
+                            <a href="#" class="btn bg-orange px-4 mt-5 text-white py-1 rounded-3">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile View -->
+                <div class="swiper mySwiper d-lg-none mx-2">
+                    <div class="swiper-wrapper mb-5">
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="img/index-eiffel.png" class="img-fluid">
+                                <div class="card-body px-4 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <p class="fw-bold fs-5 w-60 m-0">Eiffel Tower</p>
+                                        <div class="rating d-flex ms-auto w-30">
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="d-flex align-items-center w-50">
+                                            <img src="./img/index-location.png" alt="">
+                                            <p class="text-dark m-0 ps-3 fs-5">Paris, France</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn bg-orange px-4 mt-5 text-white py-1 rounded-3">View Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="./img/index-atlantis.png" class="img-fluid">
+                                <div class="card-body px-3 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <p class="fw-bold fs-5 m-0 w-75">Atlantis Aquaventure</p>
+                                        <div class="rating d-flex w-25 mx-auto">
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="d-flex align-items-center w-50">
+                                            <img src="./img/index-location.png" alt="">
+                                            <p class="text-dark m-0 ps-3 fs-5">Dubai, UAE</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn bg-orange px-4 mt-5 text-white py-1 rounded-3">View Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="./img/index-eiffel.png" class="img-fluid">
+                                <div class="card-body px-4 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <p class="fw-bold fs-5 w-60 m-0">Eiffel Tower</p>
+                                        <div class="rating d-flex ms-auto w-30">
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="d-flex align-items-center w-50">
+                                            <img src="./img/index-location.png" alt="">
+                                            <p class="text-dark m-0 ps-3 fs-5">Paris, France</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn bg-orange px-4 mt-5 text-white py-1 rounded-3">View Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="./img/index-nyc.png" class="img-fluid">
+                                <div class="card-body px-4 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <p class="fw-bold fs-5 w-60 m-0">New York City</p>
+                                        <div class="rating d-flex ms-auto w-30">
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="d-flex align-items-center">
+                                            <img src="./img/index-location.png" alt="">
+                                            <p class="text-dark m-0 ps-3 fs-5">New York City, USA</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn bg-orange px-4 mt-5 text-white py-1 rounded-3">View Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="./img/index-atlantis.png" class="img-fluid">
+                                <div class="card-body px-4 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <p class="fw-bold fs-5 m-0 w-60">Mount Corcovado</p>
+                                        <div class="rating d-flex ms-auto w-30">
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="d-flex align-items-center">
+                                            <img src="./img/index-location.png" alt="">
+                                            <p class="text-dark m-0 ps-3 fs-5">Rio de Janeiro, USA</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn bg-orange px-4 mt-5 text-white py-1 rounded-3">View Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="./img/index-computer-village.png" class="img-fluid">
+                                <div class="card-body px-4 py-3">
+                                    <div class="d-flex align-items-center">
+                                        <p class="fw-bold fs-5 w-60 m-0">Computer Village</p>
+                                        <div class="rating d-flex ms-auto w-30">
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <div class="icons pe-1">
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center mt-2">
+                                        <div class="d-flex align-items-center">
+                                            <img src="./img/index-location.png" alt="">
+                                            <p class="text-dark m-0 ps-3 fs-5">Lagos, Nigeria</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn bg-orange px-4 mt-5 text-white py-1 rounded-3">View Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination mt-1"></div>
+                </div>
+            <div class="view d-flex justify-content-center">
+                <a href="#" class="text-center mt-4">See More Guides</a>
+            </div>
+        </div>
+    </section>
+    <section id="about-us" class="bg-pink">
+        <div class="container">
+            <h2 class="fw-bold text-center fs-2 pt-4">About Us</h2>
+            <p class="text-center">Our History and Philosophy</p>
+            <div class="row pe-3">
+                <img src="./img/index-about-us.png" class="col-lg-5 img-fluid " alt="">
+                <p class="col-lg-7 pe-5 pt-2 fs-5 lh-base">At <span class="blue fw-bolder">TRAVEL</span> <span class="orange fw-bolder">GUIDE</span>, we help people find and schedule diverse travel services. It recommends activities in destination cities with safe measures that doesn’t cost much for traveler but benefiting. KodedTravels is known to provide you with all the information you need to know about traveling. Are you a First Time traveler? KodedTravels has got you covered with easy booking system and paying for all your activities while on the go.</p>
+            </div>
+            <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-outline-warning text-center my-4">See More Guides</a>
+            </div>
+        </div>
+    </section>
+    <section id="testimony" class="mb-3">
+        <div class="container">
+            <div class="ceo text-center my-5">
+                <img src="./img/index-williams.png" class="img-fluid mb-3">
+                <h5>William Goddins</h5>
+                <p class="mb-4">C.E.O KodedTravels</p>
+                <p class="">“It’s our aim and goal to give you the best traveling experience.”</p>
+                <div class="rate d-flex w-25 mx-auto justify-content-around">
+                    <div class="icons pe-1">
+                        <i class="bi bi-star-fill fs-4"></i>
+                    </div>
+                    <div class="icons pe-1">
+                        <i class="bi bi-star-fill fs-4"></i>
+                    </div>
+                    <div class="icons pe-1">
+                        <i class="bi bi-star-fill fs-4"></i>
+                    </div>
+                    <div class="icons pe-1">
+                        <i class="bi bi-star-fill fs-4"></i>
+                    </div>
+                    <div class="icons pe-1">
+                        <i class="bi bi-star-fill fs-4"></i>
+                    </div>
+                </div>
+            </div>
+            <div id="testimonies">
+                <h2 class="text-center">Testimonies</h2>
+                <p class="text-center fs-5">Read Review of our clients</p>
+            </div>
+            <div class="swiper mySwiper mb-3">
+                <div class="swiper-wrapper mb-5">
+                    <div class="swiper-slide">
+                        <div class="container text-center">
+                            <div class="bg-pink p-3 mb-3">
+                                <h5>Friendly Service</h5>
+                                <p class="grey">“Seeing destination images makes me happy but happier to see them exactly in real life.”</p>
+                            </div>
+                            <img src="./img/index-maya.png" class="img-fluid w-50">
+                            <h5 class="m-0">Maya Anderson</h5>
+                            <p class="grey m-0">Civil Servant</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="container text-center">
+                            <div class="bg-pink p-3 mb-3">
+                                <h5>Mindblowing Service</h5>
+                                <p class="grey">“Due to my nature of work, it is required for me to travel a lot. KodedTravels is of great help to me.”</p>
+                            </div>
+                            <img src="./img/index-kayla.png" class="img-fluid w-50">
+                            <h5 class="m-0">Kayla Williams</h5>
+                            <p class="grey m-0">CEO of Bulliam</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="container text-center">
+                            <div class="bg-pink p-3 mb-3">
+                                <h5>Efficient Collaborating</h5>
+                                <p class="grey">“Traveling has not always been easy but with travel guide i found ease in my trips, this means a lot to me.”</p>
+                            </div>
+                            <img src="./img/index-haotian.png" class="img-fluid w-50">
+                            <h5 class="m-0">Ou Haotian</h5>
+                            <p class="grey m-0">CEO of Kempah</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="container text-center">
+                            <div class="bg-pink p-3 mb-3">
+                                <h5>Friendly Service</h5>
+                                <p class="grey">“Seeing destination images makes me happy but happier to see them exactly in real life.”</p>
+                            </div>
+                            <img src="./img/index-maya.png" class="img-fluid w-50">
+                            <h5 class="m-0">Maya Anderson</h5>
+                            <p class="grey m-0">Civil Servant</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="container text-center">
+                            <div class="bg-pink p-3 mb-3">
+                                <h5>Mindblowing Service</h5>
+                                <p class="grey">“Due to my nature of work, it is required for me to travel a lot. KodedTravels is of great
+                                    help to me.”</p>
+                            </div>
+                            <img src="./img/index-kayla.png" class="img-fluid w-50">
+                            <h5 class="m-0">Kayla Williams</h5>
+                            <p class="grey m-0">CEO of Bulliam</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="container text-center">
+                            <div class="bg-pink p-3 mb-3">
+                                <h5>Efficient Collaborating</h5>
+                                <p class="grey">“Traveling has not always been easy but with travel guide i found ease in my trips, this
+                                    means a lot to me.”</p>
+                            </div>
+                            <img src="./img/index-haotian.png" class="img-fluid w-50">
+                            <h5 class="m-0">Ou Haotian</h5>
+                            <p class="grey m-0">CEO of Kempah</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="container text-center">
+                            <div class="bg-pink p-3 mb-3">
+                                <h5>Friendly Service</h5>
+                                <p class="grey">“Seeing destination images makes me happy but happier to see them exactly in real life.”</p>
+                            </div>
+                            <img src="./img/index-maya.png" class="img-fluid w-50">
+                            <h5 class="m-0">Maya Anderson</h5>
+                            <p class="grey m-0">Civil Servant</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="container text-center">
+                            <div class="bg-pink p-3 mb-3">
+                                <h5>Mindblowing Service</h5>
+                                <p class="grey">“Due to my nature of work, it is required for me to travel a lot. KodedTravels is of great
+                                    help to me.”</p>
+                            </div>
+                            <img src="./img/index-kayla.png" class="img-fluid w-50">
+                            <h5 class="m-0">Kayla Williams</h5>
+                            <p class="grey m-0">CEO of Bulliam</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="container text-center">
+                            <div class="bg-pink p-3 mb-3">
+                                <h5>Efficient Collaborating</h5>
+                                <p class="grey">“Traveling has not always been easy but with travel guide i found ease in my trips, this
+                                    means a lot to me.”</p>
+                            </div>
+                            <img src="./img/index-haotian.png" class="img-fluid w-50">
+                            <h5 class="m-0">Ou Haotian</h5>
+                            <p class="grey m-0">CEO of Kempah</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-1"></div>
+            </div>
+        </div>
+    </section>
+    <footer class="pt-5">
+        <div class="container border-top border-1 border-white border-bottom text-white mb-5">
+            <div class="row pt-5 mt-3 px-2 pb-3 w-auto">
+                <div class="col-lg-3">
+                    <h3>Travel Guide</h3>
+                    <p class="pe-3">“The world is a book and those who do not travel read only one page.”</p>
+                    <div class="socials mt-5 d-flex justify-content-between w-75">
+                        <img src="./img/index-facebook.png">
+                        <img src="./img/index-instagram.png">
+                        <img src="./img/index-twitter.png">
+                        <img src="./img/index-linkedin.png">
+                    </div>
+                </div>
+                <div class="company col-lg-3 ps-5">
+                    <h4 class="pb-2">Company</h4>
+                    <ul class="p-0">
+                        <li class="list-unstyled pb-1"><a href="index.html" class="text-decoration-none text-white">Home</a></li>
+                        <li class="list-unstyled pb-1"><a href="service.html" class="text-decoration-none text-white">Services</a></li> 
+                        <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a></li> 
+                        <li class="list-unstyled pb-1"><a href="about.html" class="text-decoration-none text-white">About Us</a></li> 
+                        <li class="list-unstyled pb-1"><a href="contact.html" class="text-decoration-none text-white">Contact Us</a></li> 
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="pb-2">Services</h4>
+                    <ul class="p-0">
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Book flight</a></li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Destinations</a></li> 
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Hotels</a></li> 
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Car Hire</a></li> 
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Resturants</a></li> 
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <label for="">Email address</label><br>
+                    <input type="email" class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                </div>
+            </div>
+            <div class="copyright position-relative w-30 text-center mb-2">
+                <h4>KodedTravels</h4>
+                <img src="./img/index-copyright.png">
+                <p class="d-inline-block ps-3 m-0">All simple rights reserved 2022</p>
+            </div>
+        </div>
+        <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white pb-2">
+            <a href="faq-before.html" class="text-decoration-none text-white">FAQs</a>
+            <a href="terms-and-policies-signup.html" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
+            <a href="privacy-policy.html" class="text-decoration-none text-white">Privacy Policy</a>
+        </div>
+    </footer>
+    
+    <script src="./js/app.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+            centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.orange {
+    color: #FD9519;
+}
+
+.blue {
+    color: #2A0ACD !important;
+}
+
+.bg-orange {
+    background-color: #FD9519;
+}
+
+/* Notification Drropdown */
+
+header {
+    position: relative;
+}
+
+.noti {
+    width: 350px;
+    position: absolute;
+    top: 75px;
+    color: black;
+    right: 20px;
+    background-color: white;
+    /* height: 400px; */
+    padding: 5px 0px;
+    display: none;
+
+}
+
+section {
+    margin-top: 50px;
+}
+
+.vieww .noti {
+    display: block;
+}
+
+.noti a {
+    text-decoration: none;
+    color: black;
+}
+
+.see a {
+    color: #FD9519;
+}
+
+.book .ook {
+    background-color: #FFEAD1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 3px 5px;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+}
+
+.ook span {
+    font-size: 30px;
+}
+
+.book img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.book p {
+    font-size: 11px;
+}
+
+.new {
+    font-size: 12px;
+}
+
+.all {
+    font-size: 13px;
+}
+
+.pp {
+    margin-top: 10px;
+}
+
+.icons .bi {
+    color: #FD9519;
+    font-size: 15px;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.bell {
+    background-color: orangered;
+}
+
+footer,
+.copyright {
+    background-color: #070222 !important;
+}
+
+input {
+    outline: none;
+}
+
+.copyright {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+input {
+    border-radius: 10px;
+}
+
+button {
+    border-radius: 12px !important;
+}
+
+.bg-pink {
+    background-color: #FFEAD1;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .socials {
+        margin: 15px auto 30px !important;
+        width: 60% !important;
+    }
+
+    .copyright {
+        width: 70%;
+    }
+
+    footer .position-relative {
+        width: 90%;
+    }
+
+    .company {
+        padding-left: 12px !important;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .faq {
+        /* width: 80%; */
+        font-size: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* .terms {
+        border: none;
+        padding: 3px;
+    } */
+
+    #payment-info {
+        width: 90% !important;
+    }
+
+    .help {
+        width: 100% !important;
+    }
+
+    .help-body {
+        width: 85%;
+    }
+    .right {
+        padding: 7px !important;
+    }
+    .booking-details {
+        margin: 0 !important;
+    }
+    .card {
+        margin: 30px 0 !important;
+    }
+}
+

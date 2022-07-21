@@ -1,0 +1,342 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.orange {
+    color: #FD9519;
+}
+
+.blue {
+    color: #2A0ACD !important;
+}
+
+.bg-orange {
+    background-color: #FD9519;
+}
+
+/* Notification Drropdown */
+
+header {
+    position: relative;
+}
+
+.noti {
+    width: 350px;
+    position: absolute;
+    top: 75px;
+    color: black;
+    right: 20px;
+    background-color: white;
+    /* height: 400px; */
+    padding: 5px 0px;
+    display: none;
+
+}
+
+section {
+    margin-top: 50px;
+}
+
+.vieww .noti {
+    display: block;
+}
+
+.noti a {
+    text-decoration: none;
+    color: black;
+}
+
+.see a {
+    color: #FD9519;
+}
+
+.book .ook {
+    background-color: #FFEAD1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 3px 5px;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+}
+
+.ook span {
+    font-size: 30px;
+}
+
+.book img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+.book p {
+    font-size: 11px;
+}
+
+.new {
+    font-size: 12px;
+}
+
+.all {
+    font-size: 13px;
+}
+
+.pp {
+    margin-top: 10px;
+}
+
+#hero {
+    background-image: url(../img/aboutdubai-hero.png);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .buttons {
+    padding-top: 110px !important;
+}
+
+.hero-text {
+    padding-top: 100px;
+}
+
+button {
+    border-radius: 8px !important;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.hero-text h5 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.explore {
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.explore:hover {
+    background: transparent;
+    border: 1px solid #FD9519;
+}
+
+.search {
+    background-color: #f9f9f9;
+}
+
+.search input {
+    width: 50%;
+}
+
+.search button {
+    right: 20%;
+    padding: 5px 0;
+}
+
+.search-icon {
+    top: 25%;
+    left: 4%;
+    width: 15px;
+}
+
+.bell {
+    background-color: orangered;
+}
+
+#about-dubai p {
+    font-weight: 500;
+}
+
+.view a {
+    text-decoration: none;
+    color: #FD9519;
+    border: 1px solid #FD9519;
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 7px;
+}
+
+.card .card-body a {
+    background-color: #FD9519;
+    text-align: center;
+    border-radius: 8px;
+    padding: 5px 25px;
+    text-decoration: none;
+}
+
+.card {
+    border-radius: 15px !important;
+    overflow: hidden;
+}
+
+.card-body .name {
+    font-weight: 500;
+}
+
+.card .place {
+    height: 250px !important;
+}
+
+.icons .bi {
+    color: #FD9519;
+    font-size: 15px;
+}
+
+<<<<<<< HEAD:css/about-dubai.css
+=======
+.w-80 {
+    width: 80%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+>>>>>>> cd934caeec5c167ea9cbbb11f2edd8af1018f8c6:css/style.css
+.w-60 {
+    width: 65%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-80 {
+    width: 80% !important;
+}
+
+.swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    opacity: 1 !important;
+    background-color: #FD9519 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: white !important;
+    border: 1px solid #FD9519;
+    transform: scale(1.3);
+}
+
+footer,
+.copyright {
+    background-color: black !important;
+}
+
+input {
+    outline: none;
+}
+
+.copyright {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* @media (max-width: 426px) {
+    .search-body {
+        flex-direction: column !important;
+    }
+    .search-body .search-box {
+        width: 100% !important;
+    }
+    .search-body .search-box input {
+        width: 80% !important;
+    }
+    .search button {
+        right: 4%;
+    }
+    .search-body .stats {
+        width: 90% !important;
+        margin: 20px auto 0;
+    }
+    .socials {
+        margin: 15px auto 30px !important;
+        width: 60% !important;
+    }
+    .copyright {
+        width: 70%;
+    }
+    footer .position-relative {
+        width: 90%;
+    }
+    .company {
+        padding-left: 12px !important;
+    }
+} */
+
+@media (max-width: 768px) {
+
+    .search-body {
+        flex-direction: column !important;
+    }
+
+    .search-box {
+        width: 100% !important;
+    }
+
+    .search-box input {
+        width: 90% !important;
+    }
+
+    .search button {
+        right: 2%;
+    }
+
+    .search {
+        width: 80%;
+    }
+
+    .stats {
+        width: 100% !important;
+        margin: 20px auto 0;
+        font-size: 15px;
+    }
+
+    .socials {
+        margin: 15px auto 30px !important;
+        width: 60% !important;
+    }
+
+    .copyright {
+        width: 70%;
+    }
+
+    footer .position-relative {
+        width: 90%;
+    }
+
+    .company {
+        padding-left: 12px !important;
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .faq {
+        /* width: 80%; */
+        font-size: 10px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .destination-gallery .col-lg-4 {
+        margin: 8px auto;
+        width: 50%;
+    }
+}

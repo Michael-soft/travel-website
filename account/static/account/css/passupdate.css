@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+.w-40{
+    width:40%;
+
+}
+.w-60{
+    width:60%;
+}
+.flex-direction-column{
+    flex-direction: column;
+
+}
+.image-session{
+     background-image: url(../img/travel.png);
+    
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     width:100%;
+      height: 100vh;
+}
+.text2{
+    text-align: center;
+    align-items: center;
+    padding-right: 182px;
+}
+.text3{
+    padding-right: 75px;
+    width:372px
+    
+}
+.form-check{
+     padding-right: 165px;
+}
+.form-check2{
+    padding-left: 57px;
+   
+}
+.color1{
+    background-color: rgb(218, 211, 211);
+}
+.sign{
+    color: blue!important;
+}
+.form-check3{
+     padding-right: 200px;
+}
+.terms{
+    word-spacing: 3px;
+}
+.term{
+    text-decoration: underline;
+}
+.email-icon{
+    top:40%;
+    left:3%;
+}
+.email-error{
+    top:36%;
+    left:3%;
+}
+
+.password-icon{
+    top:31%;
+    left:3%;
+}
+.password-error{
+    top:31%;
+    left:3%;
+
+}
+.userIcon{
+    top:60%;
+    left:3%;
+}
+.newIcon{
+    top:56%;
+    left:3%;
+
+}
+.validEmail{
+    top:35%;
+    right:2%;
+}
+.show,.hide{
+    top:30%;
+    right:3%;
+    cursor: pointer;
+}
+/* .view,.hidden{
+    top:56%;
+    right:3%;
+    cursor: pointer;
+} */
+.orange{
+    color:#fd9519;
+}
+.orange2{
+    background-color: #fd9519;
+}
+ .sign-option
+ {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  padding-right: 250px;
+}
+ .sign-image{
+    padding-right: 100px;
+    
+}
+
+ .writeup{
+    padding-right: 300px;
+} 
+.sign-image2{
+    padding-left:100px;
+    /* margin-left:100px; */
+}
+.w-33{
+    width:31.9%;
+}
+.w-18{
+    width:25px;
+}
+
+
+
+
+/* CSS recovery.html */
+.recovery{
+ margin-top: 80px;
+}
+.text4{
+    padding-right: 40px;
+}
+
+
+/* CSS update.html */
+.update{
+    margin-top: 130px;
+}
+.passtext,.emailText{
+    /* font-style: italic; */
+    color:red;
+}
+/* PasswordRecovery */
+.email-icon2{
+    top:42%;
+    left:3%;
+}
+.email-error2{
+    top:40%;
+    left:3%;
+}
+.validEmail2{
+    top:40%;
+    right:3%;
+}
+
+@media (max-width: 426px) {
+    .image-holder {
+        display: none;
+    }
+
+    .recovery {
+        width: 100%!important;
+        padding: 5px!important;
+        margin-left: 10px;
+    }
+    
+}
+
+@media (max-width: 769px) {
+    .recovery {
+        padding-right: 0px!important;
+    }
+}

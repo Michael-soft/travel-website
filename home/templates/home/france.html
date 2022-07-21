@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/france.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <header class="navbar navbar-expand-lg navbar-light bg-light py-2 fixed-top">
+            <div class="container-fluid px-5">
+                <a class="navbar-brand fw-bold blue fs-3" href="#">Travel<span class="orange">Guide</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark px-4" aria-current="page" href="landing-page-after-sign-in.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark px-4" href="services.html">Services</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark px-4" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark px-4" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark px-4" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <!-- <button class="bg-orange p-2 ms-3 rounded-3 border-0"><img src="./img/landing-bell.png"></button> -->
+                    <div style="display: inline-grid;" class="pe-2">
+                        <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="#">My Account</a>
+                    </div>
+                    <div style="display: inline-grid;" class="actions">
+                        <div class="bell">
+                            <a class=" bg-orange rounded-3 p-2" href="#">
+                                <img src="img/landing-bell.png" alt="" class="">
+                            </a>
+                        </div>
+                        <div class="noti">
+                            <h4 class="pt-3 ps-2">Notification</h4>
+                            <div class="all d-flex ps-2">
+                                <div ><a href="#">All</a></div>
+                                <div class="ps-5"><a href="#">Unread</a></div>
+                            </div>
+                            <div class="new d-flex justify-content-between pt-2">
+                                <div class="ps-2"><p>New</p></div>
+                                <div class="pe-2 see"> <a href="#">See all</a></div>
+                            </div>
+                            <div class="book">
+                                <div class="ook">
+                                    <div>
+                                        <img src="img/noti-1.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                    </div>
+                                </div>
+                                <div class="ook">
+                                    <div>
+                                        <img src="img/noti-1.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                    </div>
+                                </div>
+                                <div class="ook">
+                                    <div>
+                                        <img src="img/noti-1.png" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="first-session">
+            <div class="buttons p-5 d-flex justify-content-between">
+            <a href="#"><button class="btn btn-outline-warning cool px-4 rounded-3" type="submit">Back</button></a>
+            <div class="second-btns">
+                <a href="#"><button class="btn btn-outline-warning cool px-4 rounded-3" type="submit">Save</button></a>
+                <a href="#"><button class="btn btn-outline-warning cool px-4 rounded-3 ms-5" type="submit">Share</button></a>
+            </div>
+            </div>
+            <h1 class="text-center text-light p-5">France</h1>
+        </div>
+        <div class="search w-100">
+            <div class="container search-body py-4 d-flex align-items-center">
+                <div class="position-relative search-box w-50">
+                    <input type="text" class="py-1 rounded-pill border-1 ps-5 w-75" placeholder="Search locations">
+                    <button class="bg-orange text-white rounded-pill border-0 px-4 position-absolute">Search</button>
+                    <img src="./img/index-search-icon.png" class="position-absolute search-icon" alt="">
+                </div>
+                <div class="stats w-50 row">
+                    <div class="col-6  text-start">
+                        <h4>10000+</h4>
+                        <p class="m-0">Users Worldwide</p>
+                    </div>
+                    <div class="col-6 text-start">
+                        <h4>100+</h4>
+                        <p class="m-0">Local Guides</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about pt-5 container">
+            <h2 class="fw-bold text-center mb-3">About France.</h2>
+            <p class="fw-bold text-center mb-3">Top Attractions For You In France.</p>
+            <p class="mb-4 france-about">France is a transcontinental country spanning Western Europe and overseas regions and territories in the Americas and the Atlantic, Pacific and Indian Oceans. Its metropolitan area extends from the Rhine to the Atlantic Ocean and from the Mediterranean Sea to the English Channel and the North Sea; overseas territories include French Guiana in South America, Saint Pierre and Miquelon in the North Atlantic, the French West Indies, and many islands in Oceania and the Indian Ocean. Due to its several coastal territories, France has the largest exclusive economic zone in the world. France borders Belgium, Luxembourg, Germany, Switzerland, Monaco, Italy, Andorra, and Spain in continental Europe, as well as the Netherlands, Suriname, and Brazil in the Americas via its overseas territories in French Guiana and Saint Martin. Its eighteen integral regions (five of which are overseas) span a combined area of 643,801 km2 (248,573 sq mi) and over 67 million people (as of May 2021). France is a unitary semi-presidential republic with its capital in Paris, the country's largest city and main cultural and commercial centre; other major urban areas include Marseille, Lyon, Toulouse, Lille, Bordeaux, and Nice.
+            Inhabited since the Palaeolithic era, the territory of Metropolitan France was settled by Celtic tribes known as Gauls during the Iron Age. Rome annexed the area in 51 BC, leading to a distinct Gallo-Roman culture that laid the foundation of the French language. France retains its centuries-long status as a global centre of art, science and philosophy. It hosts the fifth-largest number of UNESCO World Heritage Sites and is the world's leading tourist destination, receiving over 89 million foreign visitors in 2018. France is a developed country with the world's seventh-largest economy by nominal GDP and tenth-largest by PPP; in terms of aggregate household wealth, it ranks fourth in the world. France performs well in international rankings of education, health care, life expectancy and human development.</p>
+        </div>
+        
+        <div class="cities pt-5 container">
+            <h2 class="fw-bold text-center mb-3">Top Cities in France.</h2>
+            <p class="fw-bold text-center mb-3">Top Attractions For You In France.</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <img src="./img/paris france.png" class="m-3 img-fluid" alt="france">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img src="./img/masielle france.png" class="m-3 img-fluid" alt="france">
+                </div> 
+                <div class="col-lg-4 col-md-6">
+                    <img src="./img/lyon france.png" class="m-3 img-fluid" alt="france">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img src="./img/nice france.png" class="m-3 img-fluid" alt="france">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img src="./img/nantes france.png" class="m-3 img-fluid" alt="france">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img src="./img/lille france.png" class="m-3 img-fluid" alt="france">
+                </div>
+            </div>
+            <div class="button text-center mb-5">
+            <a href="#"><button class="btn btn-outline-warning px-4 rounded-3" type="submit">View more cities</button></a>
+            </div>
+        </div>
+        <div class="recommend pt-5 container">
+            <h2 class="fw-bold text-center mb-3">Recommended Places in France</h2>
+            <p class="text-center mb-3">Top Attractions For You In France.</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Eiffel Tower.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Eiffel Tower</h5>
+                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                            </div>
+                            <div class="d-flex">
+                                <img src="./img/location.png" alt="france">
+                                <p class="card-text ms-3">Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Palace of Versailles.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Palace of Versailles</h5>
+                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                            </div>
+                            <div class="d-flex">
+                                <img src="./img/location.png" alt="france">
+                                <p class="card-text ms-3">Versailies, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Musee d’ Orsay.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Musee d' Orsay</h5>
+                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                            </div>
+                            <div class="d-flex">
+                                <img src="./img/location.png" alt="france">
+                                <p class="card-text ms-3">Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Louvre Museum.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Louvre Museum</h5>
+                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                            </div>
+                            <div class="d-flex">
+                                <img src="./img/location.png" alt="france">
+                                <p class="card-text ms-3">Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Paris Catacombs.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Paris Catacombs</h5>
+                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                            </div>
+                            <div class="d-flex">
+                                <img src="./img/location.png" alt="france">
+                                <p class="card-text ms-3">Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Arc de Triomphe.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Arc de Triomphe</h5>
+                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                            </div>
+                            <div class="d-flex">
+                                <img src="./img/location.png" alt="france">
+                                <p class="card-text ms-3">Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button text-center mb-5">
+                <a href="#"><button class="btn btn-outline-warning px-4 rounded-3" type="submit">View more places</button></a>
+            </div>
+        </div>
+        <div class="activities pt-5 container">
+            <h2 class="fw-bold text-center mb-3">Top Activities For You in France</h2>
+            <p class=" text-center mb-5">Explore Various Activities In Your Favourite Locations</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Museums & Exhibitions.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Museums & Exhibitions</h5>
+                                <p>$150</p>
+                            </div>
+                            <div class="d-flex">
+                                <img src="./img/location.png" alt="france">
+                                <p class="card-text ms-3">Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Cabarets.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Cabarets</h5>
+                                <p>$300</p>
+                            </div>
+                            <div class="d-flex">
+                                <img src="./img/location.png" alt="france">
+                                <p class="card-text ms-3">Lyon, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Sightseeing Cruise.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Sightseeing Cruise</h5>
+                                <p>$200</p>
+                            </div>
+                            <div class="d-flex">
+                                <img src="./img/location.png" alt="france">
+                                <p class="card-text ms-3">Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Bike Tours.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Bike Tours</h5>
+                                <p>$30</p>
+                            </div>
+                            <div class="d-flex">
+                                <img src="./img/location.png" alt="france">
+                                <p class="card-text ms-3">Nantes, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Cooking classes.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Cooking classes</h5>
+                                <p>$50</p>
+                            </div>
+                            <div class="d-flex">
+                                <img src="./img/location.png" alt="france">
+                                <p class="card-text ms-3">Lille, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Lunch & Dinner Cruises.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Lunch & Dinner Cruises</h5>
+                                <p>$100</p>
+                            </div>
+                            <div class="d-flex">
+                                <img src="./img/location.png" alt="france">
+                                <p class="card-text ms-3">Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button text-center mb-5">
+                <a href="#"><button class="btn btn-outline-warning px-4 rounded-3" type="submit">View more activities</button></a>
+            </div>
+        </div>
+        <div class="guides pt-5 container">
+            <h2 class="fw-bold text-center mb-3">Top Guides In France</h2>
+            <p class=" text-center mb-5">Meet The Best Guides Recommended For You</p>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Charles Babbage.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Charles Babbage</h5>
+                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                            </div>
+                            <div class="bigger d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <img src="./img/location.png" style="width: 12%; height:3vh;" alt="france">
+                                    <p class="card-text ms-2">France</p>
+                                </div>
+                                <p>Available</p>
+                            </div>
+                            
+                            <a href="#" class="btn btn-warning px-5 text-light book">Book me</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Delphine Pete.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Delphine Pete</h5>
+                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                            </div>
+                            <div class="bigger d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <img src="./img/location.png" style="width: 12%; height:3vh;" alt="france">
+                                    <p class="card-text ms-2">France</p>
+                                </div>
+                                <p>Available</p>
+                            </div>
+                            
+                            <a href="france-travel-agent.html" class="btn btn-warning px-5 text-light book">Book me</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./img/Alexandre Kitt.png" class="card-img-top" alt="paris">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title mb-3">Alexandre Kitt</h5>
+                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                            </div>
+                            <div class="bigger d-flex justify-content-between">
+                                <div class="d-flex">
+                                    <img src="./img/location.png" style="width: 12%; height:3vh;" alt="france">
+                                    <p class="card-text ms-2">France</p>
+                                </div>
+                                <p>Available</p>
+                            </div>
+                            
+                            <a href="#" class="btn btn-warning px-5 text-light book">Book me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button text-center mb-5">
+                <a href="#"><button class="btn btn-outline-warning px-4 rounded-3" type="submit">View more activities</button></a> 
+            </div>
+        </div>
+        <footer class="pt-5">
+            <div class="container border-top border-1 border-white border-bottom text-white mb-5">
+                <div class="row pt-5 mt-3 px-2 pb-3 w-auto">
+                    <div class="col-lg-3">
+                        <h3>Travel Guide</h3>
+                        <p class="pe-3">“The world is a book and those who do not travel read only one page.”</p>
+                        <div class="socials mt-5 d-flex justify-content-between w-75">
+                            <img src="./img/landing-facebook.png">
+                            <img src="./img/landing-instagram.png">
+                            <img src="./img/landing-twitter.png">
+                            <img src="./img/landing-linkedin.png">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ps-5 company">
+                        <h4 class="pb-2">Company</h4>
+                        <ul class="p-0">
+                            <li class="list-unstyled pb-1"><a href="index.html" class="text-decoration-none text-white">Home</a>
+                            </li>
+                            <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Services</a></li>
+                            <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Blog</a></li>
+                            <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">About Us</a></li>
+                            <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <h4 class="pb-2">Services</h4>
+                        <ul class="p-0">
+                            <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Book flight</a>
+                            </li>
+                            <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Destinations</a>
+                            </li>
+                            <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Hotels</a></li>
+                            <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Car Hire</a></li>
+                            <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Resturants</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                        <label for="">Email address</label><br>
+                        <input type="email"
+                            class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
+                        <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                    </div>
+                </div>
+                <div class="copyright position-relative w-30 text-center mb-2">
+                    <h4>KodedTravels</h4>
+                    <img src="./img/landing-copyright.png">
+                    <p class="d-inline-block ps-3 m-0">All simple rights reserved 2022</p>
+                </div>
+            </div>
+            <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white faq">
+                <p>FAQs</p>
+                <p class="border-start border-end px-4 terms">Terms & Conditions</p>
+                <p>Privacy Policy</p>
+            </div>
+        </footer>
+    </section>
+    <script src="js/francee.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

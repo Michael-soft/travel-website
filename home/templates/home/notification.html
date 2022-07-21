@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/notification.css">
+    <title>notification</title>
+</head>
+<body>
+
+    <!-- header section -->
+
+    <header class="navbar navbar-expand-lg navbar-light bg-light py-2 fixed-top">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand fw-bold blue fs-3" href="#">Travel<span class="orange">Guide</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark px-4" aria-current="page" href="landing-page-after-sign-in.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="service.html">Services</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <!-- <button class="bg-orange p-2 ms-3 rounded-3 border-0"><img src="./img/landing-bell.png"></button> -->
+                <div style="display: inline-grid;" class="pe-2">
+                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="my-account.html">My Account</a>
+                </div>
+                <div style="display: inline-grid;" class="actions">
+                    <div class="bell">
+                        <a class=" bg-orange rounded-3 p-2" href="#">
+                            <img src="img/landing-bell.png" alt="" class="">
+                        </a>
+                    </div>
+                    <div class="noti">
+                        <h4 class="pt-3 ps-2">Notification</h4>
+                        <div class="all d-flex ps-2">
+                            <div ><a href="#">All</a></div>
+                            <div class="ps-5"><a href="#">Unread</a></div>
+                        </div>
+                        <div class="new d-flex justify-content-between pt-2">
+                            <div class="ps-2"><p>New</p></div>
+                            <div class="pe-2 see"> <a href="notification.html">See all</a></div>
+                        </div>
+                        <div class="book">
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- <section class="search w-100">
+        <div class="container search-body py-4 d-flex align-items-center">
+            <div class="position-relative search-box w-50">
+                <input type="text" class="py-1 rounded-pill border-1 ps-5 w-75" placeholder="Search locations">
+                <button class="bg-orange text-white rounded-pill border-0 px-4 position-absolute">Search</button>
+                <img src="./img/index-search-icon.png" class="position-absolute search-icon" alt="">
+            </div>
+            <div class="stats w-50 row">
+                <div class="col-6  text-start">
+                    <h4>10000+</h4>
+                    <p class="m-0">Users Worldwide</p>
+                </div>
+                <div class="col-6 text-start">
+                    <h4>100+</h4>
+                    <p class="m-0">Local Guides</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Notification section -->
+
+    <section id="notification-section">
+        <div class="container mx-auto py-500 bg-light">
+            <h4 class="pt-3 ps-2">Notifications</h4>
+            <div class="all d-flex ps-2">
+                <div class="orange"><a href="#">All</a></div>
+                <div class="ps-5"><a href="#">Unread</a></div>
+            </div>
+            <!-- <div class="new d-flex justify-content-between pt-2">
+                <div class="ps-2"><p>New</p></div>
+                <div class="pe-2 see"> <a href="#">See all</a></div>
+            </div> -->
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-3.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-2.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-1.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1 book-bg">
+                        <div class="">
+                            <img src="img/noti-1.png" alt="">
+                        </div>
+                        <div class="">
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                    <div class="belly-button d-flex fs-2 flex-row">
+                        <div class="button-1">
+                            <a class="btn bg-orange text-light" href="#" role="button">Accept</a>
+                        </div>
+                        <div class="button-2">
+                            <a class="btn btn-outline-dark" href="#" role="button">Decline</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item container" href="#">
+                <div class="book">
+                    <div class="ook-1 book-bg">
+                        <div>
+                            <img src="img/noti-4.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1 book-bg">
+                        <div>
+                            <img src="img/noti-5.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-11.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1 book-bg">
+                        <div>
+                            <img src="img/noti-11.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                    <div class="belly-button d-flex fs-2 flex-row book-bg">
+                        <div class="button-1">
+                            <a class="btn bg-orange text-light" href="#" role="button">Accept</a>
+                        </div>
+                        <div class="button-2">
+                            <a class="btn btn-outline-dark" href="#" role="button">Decline</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-11.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-Group598.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-Group599.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-8.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-7.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-Group584.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-4.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-Group584.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a class="dropdown-item" href="#">
+                <div class="book">
+                    <div class="ook-1">
+                        <div>
+                            <img src="img/noti-Group584.png" alt="">
+                        </div>
+                        <div>
+                            <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- footer section -->
+
+    <footer class="pt-5 pt-50">
+        <div class="container border-top border-1 border-white border-bottom text-white mb-5">
+            <div class="row pt-5 mt-3 px-2 pb-3 w-auto">
+                <div class="col-lg-3">
+                    <h3>Travel Guide</h3>
+                    <p class="pe-3">“The world is a book and those who do not travel read only one page.”</p>
+                    <div class="socials mt-5 d-flex justify-content-between w-75">
+                        <img src="./img/landing-facebook.png">
+                        <img src="./img/landing-instagram.png">
+                        <img src="./img/landing-twitter.png">
+                        <img src="./img/landing-linkedin.png">
+                    </div>
+                </div>
+                <div class="company col-lg-3 ps-5">
+                    <h4 class="pb-2">Company</h4>
+                    <ul class="p-0">
+                        <li class="list-unstyled pb-1"><a href="index.html" class="text-decoration-none text-white">Home</a></li>
+                        <li class="list-unstyled pb-1"><a href="service.html" class="text-decoration-none text-white">Services</a></li> 
+                        <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a></li> 
+                        <li class="list-unstyled pb-1"><a href="about.html" class="text-decoration-none text-white">About Us</a></li> 
+                        <li class="list-unstyled pb-1"><a href="contact.html" class="text-decoration-none text-white">Contact Us</a></li> 
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="pb-2">Services</h4>
+                    <ul class="p-0">
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Book flight</a></li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Destinations</a></li> 
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Hotels</a></li> 
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Car Hire</a></li> 
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Restaurants</a></li> 
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <label for="">Email address</label><br>
+                    <input type="email" class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                </div>
+            </div>
+            <div class="copyright position-relative w-30 text-center mb-2">
+                <h4>KodedTravels</h4>
+                <img src="./img/landing-copyright.png">
+                <p class="d-inline-block ps-3 m-0">All simple rights reserved 2022</p>
+            </div>
+        </div>
+        <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white pb-2 faq" >
+            <a href="faq-after.html" class="text-decoration-none text-white">FAQs</a>
+            <a href="terms-and-policies.html" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
+            <a href="privacy-policy.html" class="text-decoration-none text-white">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

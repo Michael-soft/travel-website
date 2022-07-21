@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/c491194143.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/faq-after.css">
+    <title>FAQ</title>
+</head>
+<body>
+    <!-- header section -->
+
+    <header class="navbar navbar-expand-lg navbar-light bg-light py-2 fixed-top">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand fw-bold blue fs-3" href="landing-page-after-sign-in.html">Travel<span class="orange">Guide</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark px-4" aria-current="page" href="landing-page-after-sign-in.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="service.html">Services</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <!-- <button class="bg-orange p-2 ms-3 rounded-3 border-0"><img src="./img/landing-bell.png"></button> -->
+                <div style="display: inline-grid;" class="pe-2">
+                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="my-account.html">My Account</a>
+                </div>
+                <div style="display: inline-grid;" class="actions">
+                    <div class="bell">
+                        <a class=" bg-orange rounded-3 p-2" href="#">
+                            <img src="img/landing-bell.png" alt="" class="">
+                        </a>
+                    </div>
+                    <div class="noti">
+                        <h4 class="pt-3 ps-2">Notification</h4>
+                        <div class="all d-flex ps-2">
+                            <div ><a href="#">All</a></div>
+                            <div class="ps-5"><a href="#">Unread</a></div>
+                        </div>
+                        <div class="new d-flex justify-content-between pt-2">
+                            <div class="ps-2"><p>New</p></div>
+                            <div class="pe-2 see"> <a href="notification.html">See all</a></div>
+                        </div>
+                        <div class="book">
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--Hero Page-->
+     
+    <section class="hero-page d-flex flex-column justify-content-center align-items-center text-white">  
+        <h1 class="pb-4">Ask us anything</h1>
+        <p>Have any questions? We're here to assist you.</p>
+    </section>
+
+    <!-- search section -->
+
+    <section class="search w-100">
+        <div class="container search-body py-4 d-flex align-items-center">
+            <div class="position-relative search-box w-50">
+                <input type="text" class="py-1 rounded-pill border-1 ps-5 w-75" placeholder="Search locations">
+                <button class="bg-orange text-white rounded-pill border-0 px-4 position-absolute">Search</button>
+                <img src="./img/index-search-icon.png" class="position-absolute search-icon" alt="">
+            </div>
+            <div class="stats w-50 row">
+                <div class="col-6  text-start">
+                    <h4>10000+</h4>
+                    <p class="m-0">Users Worldwide</p>
+                </div>
+                <div class="col-6 text-start">
+                    <h4>100+</h4>
+                    <p class="m-0">Local Guides</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Faq-->
+
+    <section class="faq py-5 showw">
+        <h2 class="text-center pb-4 fw-bold">You could start with these</h2>
+        <div class="accordion container">
+            <div class="row pb-4">
+                <div class="col-lg-4">
+                    <div class="question-answer">
+                        <div class="question d-flex">
+                            <button class="control border-0 bg-transparent">
+                                <span class="down-arrow">
+                                    <i class="bi bi-arrow-down-circle icons fs-4"></i>
+                                </span>
+                                <span class="right-arrow">
+                                    <i class="bi bi-arrow-right-circle icons fs-4"></i>
+                                </span>
+                            </button>
+                            <h5 class="title pt-2 ps-3 lh-base fw-semibold">I can't see my country's flag.
+                                How can I view in my language?</h5>
+                        </div>
+                        <div class="answer" style="padding-left: 40px;">
+                            <p class="text-opacity-50 text-dark">Hello, at the top of the profile page we have language settings that are easily adjustable. Just go over to home, click on profile then, language preferences and search your country.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="question-answer">
+                        <div class="question d-flex">
+                            <button class="control border-0 bg-transparent">
+                                <span class="down-arrow">
+                                    <i class="bi bi-arrow-down-circle icons fs-4"></i>
+                                </span>
+                                <span class="right-arrow">
+                                    <i class="bi bi-arrow-right-circle icons fs-4"></i>
+                                </span>
+                            </button>
+                            <h5 class="title pt-2 ps-3 lh-base">Where can I find information on 
+                                currency exchange, taxes, etc?</h5>
+                        </div>
+                        <div class="answer" style="padding-left: 40px;">
+                            <p class="text-opacity-50 text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui explicabo doloremque! Beatae laudantium aliquid corporis atque eos similique reiciendis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="question-answer">
+                        <div class="question d-flex">
+                            <button class="control border-0 bg-transparent">
+                                <span class="down-arrow">
+                                    <i class="bi bi-arrow-down-circle icons fs-4"></i>
+                                </span>
+                                <span class="right-arrow">
+                                    <i class="bi bi-arrow-right-circle icons fs-4"></i>
+                                </span>
+                            </button>
+                            <h5 class="title pt-2 ps-3">As a tour guide, is it free for me to
+                                feature on the website?</h5>
+                        </div>
+                        <div class="answer" style="padding-left: 40px;">
+                            <p class="text-opacity-50 text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui explicabo doloremque! Beatae laudantium aliquid corporis atque eos similique reiciendis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pb-4">
+                <div class="col-lg-4">
+                    <div class="question-answer">
+                        <div class="question d-flex">
+                            <button class="control border-0 bg-transparent">
+                                <span class="down-arrow">
+                                    <i class="bi bi-arrow-down-circle icons fs-4"></i>
+                                </span>
+                                <span class="right-arrow">
+                                    <i class="bi bi-arrow-right-circle icons fs-4"></i>
+                                </span>
+                            </button>
+                            <h5 class="title pt-2 ps-3">Where should press and media
+                                inquiries be directed?</h5>
+                        </div>
+                        <div class="answer" style="padding-left: 40px;">
+                            <p class="text-opacity-50 text-dark">Go to the Contact Us page at the top and you'll see Become a media partner'. Click on it and send us an email. You'll be sure to get a prompt response.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="question-answer">
+                        <div class="question d-flex">
+                            <button class="control border-0 bg-transparent">
+                                <span class="down-arrow">
+                                    <i class="bi bi-arrow-down-circle icons fs-4"></i>
+                                </span>
+                                <span class="right-arrow">
+                                    <i class="bi bi-arrow-right-circle icons fs-4"></i>
+                                </span>
+                            </button>
+                            <h5 class="title pt-2 ps-3">Are the tour guides referenced on
+                                the website certified?</h5>
+                        </div>
+                        <div class="answer" style="padding-left: 40px;">
+                            <p class="text-opacity-50 text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui explicabo doloremque! Beatae laudantium aliquid corporis atque eos similique reiciendis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="question-answer">
+                        <div class="question d-flex">
+                            <button class="control border-0 bg-transparent">
+                                <span class="down-arrow">
+                                    <i class="bi bi-arrow-down-circle icons fs-4"></i>
+                                </span>
+                                <span class="right-arrow">
+                                    <i class="bi bi-arrow-right-circle icons fs-4"></i>
+                                </span>
+                            </button>
+                            <h5 class="title pt-2 ps-3">How can my organisation learn
+                                more about partnership with you?</h5>
+                        </div>
+                        <div class="answer" style="padding-left: 40px;">
+                            <p class="text-opacity-50 text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui explicabo doloremque! Beatae laudantium aliquid corporis atque eos similique reiciendis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="question-answer">
+                        <div class="question d-flex">
+                            <button class="control border-0 bg-transparent">
+                                <span class="down-arrow">
+                                    <i class="bi bi-arrow-down-circle icons fs-4"></i>
+                                </span>
+                                <span class="right-arrow">
+                                    <i class="bi bi-arrow-right-circle icons fs-4"></i>
+                                </span>
+                            </button>
+                            <h5 class="title pt-2 ps-3">Do I need to have a visa before 
+                                I can use your services?</h5>
+                        </div>
+                        <div class="answer" style="padding-left: 40px;">
+                            <p class="text-opacity-50 text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui explicabo doloremque! Beatae laudantium aliquid corporis atque eos similique reiciendis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="question-answer">
+                        <div class="question d-flex">
+                            <button class="control border-0 bg-transparent">
+                                <span class="down-arrow">
+                                    <i class="bi bi-arrow-down-circle icons fs-4"></i>
+                                </span>
+                                <span class="right-arrow">
+                                    <i class="bi bi-arrow-right-circle icons fs-4"></i>
+                                </span>
+                            </button>
+                            <h5 class="title pt-2 ps-3">What are the services you offer?</h5>
+                        </div>
+                        <div class="answer" style="padding-left: 40px;">
+                            <p class="text-opacity-50 text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus qui explicabo doloremque! Beatae laudantium aliquid corporis atque eos similique reiciendis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="question-answer">
+                        <div class="question d-flex">
+                            <button class="control border-0 bg-transparent">
+                                <span class="down-arrow">
+                                    <i class="bi bi-arrow-down-circle icons fs-4"></i>
+                                </span>
+                                <span class="right-arrow">
+                                    <i class="bi bi-arrow-right-circle icons fs-4"></i>
+                                </span>
+                            </button>
+                            <h5 class="title pt-2 ps-3">In the event of disputes between
+                                parties, will <a href="#" class="icons text-decoration-none">TravelGuide</a> intervene?</h5>
+                        </div>
+                        <div class="answer" style="padding-left: 40px;">
+                            <p class="text-opacity-50 text-dark">TravelGuide will always ensure to intervene between its clients and workers, if need arises. Every party can be rest assured that solutions will be provided and issues will be sorted.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Category-->
+
+    <section class="category pt-5 showw">
+        <div class="container pb-4">
+            <h2 class="text-center pb-4 fw-bold">Still got questions? Pick a category.</h2>
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card text-center bg-white py-4 border-0 rounded mb-5">
+                        <h5>Account</h5>
+                        <a href="#" class="text-dark py-4"><i class="fa-solid fa-user-gear icon-h" style="font-size: 79px;"></i></a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Forgot password</a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Update phone number</a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Unable to access profile</a>
+                        <a href="#" class="text-decoration-none text-dark py-3 icon-h">VIEW MORE</a>
+                    </div> 
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card text-center bg-white py-4 border-0 rounded mb-5">
+                        <h5>Products & Services</h5>
+                        <a href="#" class="text-dark py-4"><i class="fa-solid fa-user-tie icon-h" style="font-size: 79px;"></i></a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Language translator</a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Activities available near me</a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Visa services</a>
+                        <a href="#" class="text-decoration-none text-dark py-3 icon-h">VIEW MORE</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card text-center bg-white py-4 border-0 rounded mb-5">
+                        <h5>Payments</h5>
+                        <a href="#" class="text-dark py-4"><i class="fa-solid fa-money-bills icon-h" style="font-size: 79px;"></i></a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Transaction failed</a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Trip payment not updated</a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Pay for activities</a>
+                        <a href="#" class="text-decoration-none text-dark py-3 icon-h">VIEW MORE</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card text-center bg-white py-4 border-0 rounded mb-5">
+                        <h5>Travel points</h5>
+                        <a href="#" class="text-dark py-2"><i class="bi bi-gift icon-h" style="font-size: 75px;"></i></a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">What are Travel points</a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Last trip points  not received</a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Can my points be converted</a>
+                        <a href="#" class="text-decoration-none text-dark py-3 icon-h">VIEW MORE</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card text-center bg-white py-4 border-0 rounded mb-5">
+                        <h5>Refunds</h5>
+                        <a href="#" class="text-dark py-4"><i class="fa-solid fa-hand-holding-dollar icon-h" style="font-size: 79px;"></i></a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Refund not received</a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Coupon falsely activated</a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Can I resell my tickets</a>
+                        <a href="#" class="text-decoration-none text-dark py-3 icon-h">VIEW MORE</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-12">
+                    <div class="card text-center bg-white py-4 border-0 rounded mb-5">
+                        <h5>Insurance</h5>
+                        <a href="#" class="text-dark py-2"><i class="bi bi-shield-check icon-h" style="font-size: 75px;"></i></a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Is my entire trip covered</a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">What happens if I lose my bags</a>
+                        <a href="#" class="text-decoration-none text-dark text-opacity-50">Cancellation policy</a>
+                        <a href="#" class="text-decoration-none text-dark py-3 icon-h">VIEW MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contact-->
+
+    <section class="contact container py-5 showw">
+        <h2 class="text-center pb-4 fw-bold">We'll love to hear from you.</h2>
+        <div class="row">
+            <div class="col-lg-5">
+                <form action="">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="fullName" placeholder="Full name">
+                    </div>  
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Email address">
+                    </div>
+                    <div class="mb-3">
+                        <input type="telephone" class="form-control" id="number" placeholder="Phone number">
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-7"><div class="">
+                <input type="telephone" class="form-control ch-input" id="number" placeholder="How can we help you" disabled readonly>
+            </div>
+                <div class="mb-3 position-relative">
+                    <textarea class="form-control ch-textarea" id="message" rows="4" placeholder="Enter your message"></textarea>
+                    <div class=" position-absolute sm-md-icon icon-send">
+                        <button class="bg-transparent border-0"><i class="fa-solid fa-paperclip me-3 icons btn-h"></i></button>
+                        <button class="bg-transparent border-0"><i class="bi bi-send icons btn-h"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+
+    <footer class="pt-5">
+        <div class="container border-top border-1 border-white border-bottom text-white mb-5">
+            <div class="row pt-5 mt-3 px-2 pb-3 w-auto">
+                <div class="col-lg-3">
+                    <h3>Travel Guide</h3>
+                    <p class="pe-3">“The world is a book and those who do not travel read only one page.”</p>
+                    <div class="socials mt-5 d-flex justify-content-between w-75">
+                        <img src="./img/landing-facebook.png">
+                        <img src="./img/landing-instagram.png">
+                        <img src="./img/landing-twitter.png">
+                        <img src="./img/landing-linkedin.png">
+                    </div>
+                </div>
+                <div class="col-lg-3 ps-5 company">
+                    <h4 class="pb-2">Company</h4>
+                    <ul class="p-0">
+                        <li class="list-unstyled pb-1"><a href="landing-page-after-sign-in.html" class="text-decoration-none text-white">Home</a>
+                        </li>
+                        <li class="list-unstyled pb-1"><a href="service.html" class="text-decoration-none text-white">Services</a></li>
+                        <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a></li>
+                        <li class="list-unstyled pb-1"><a href="about.html" class="text-decoration-none text-white">About Us</a></li>
+                        <li class="list-unstyled pb-1"><a href="contact.html" class="text-decoration-none text-white">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="pb-2">Services</h4>
+                    <ul class="p-0">
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Book flight</a>
+                        </li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Destinations</a>
+                        </li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Hotels</a></li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Car Hire</a></li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Resturants</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <label for="">Email address</label><br>
+                    <input type="email"
+                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                </div>
+            </div>
+            <div class="copyright position-relative w-30 text-center mb-2">
+                <h4>KodedTravels</h4>
+                <img src="./img/landing-copyright.png">
+                <p class="d-inline-block ps-3 m-0">All simple rights reserved 2022</p>
+            </div>
+        </div>
+        <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white faq">
+            <p><a href="faq-after.html" class="text-decoration-none text-white">FAQs</a></p>
+            <p class="border-start border-end px-4 terms"><a href="terms-and-policies.html" class="text-decoration-none text-white">Terms & Conditions</a></p>
+            <p><a href="privacy-policy.html" class="text-decoration-none text-white">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/faq-after.js"></script>
+</body>
+</html>

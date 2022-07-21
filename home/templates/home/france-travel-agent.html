@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/france-guide.css">
+    <script src="https://kit.fontawesome.com/c491194143.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <title>Travel Guide Details</title>
+</head>
+<body>
+   <!-- Header Section -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light py-2 fixed-top">
+    <div class="container-fluid px-5">
+        <a class="navbar-brand fw-bold blue fs-3" href="landing-page-after-sign-in.html"><span class="blue">Travel</span><span class="orange">Guide</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-dark px-4" aria-current="page" href="landing-page-after-sign-in.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark px-4" href="service.html">Services</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li> -->
+                <li class="nav-item">
+                    <a class="nav-link text-dark px-4" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark px-4" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark px-4" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+            <!-- <button class="bg-orange p-2 ms-3 rounded-3 border-0"><img src="./img/landing-bell.png"></button> -->
+            <div style="display: inline-grid;" class="pe-2">
+                <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="my-account.html">My Account</a>
+            </div>
+            <div style="display: inline-grid;" class="action">
+                <div class="bell">
+                    <a class=" bg-orange rounded-3 p-2" href="#">
+                        <img src="img/fra-bell.png" alt="" class="">
+                    </a>
+                </div>
+                <div class="noti">
+                    <h4 class="pt-3 ps-2">Notification</h4>
+                    <div class="all d-flex ps-2">
+                        <div ><a href="#">All</a></div>
+                        <div class="ps-5"><a href="#">Unread</a></div>
+                    </div>
+                    <div class="new d-flex justify-content-between pt-2">
+                        <div class="ps-2"><p>New</p></div>
+                        <div class="pe-2 see"> <a href="notification.html">See all</a></div>
+                    </div>
+                    <div class="book">
+                        <div class="ook">
+                            <div>
+                                <img src="img/noti-1.png" alt="">
+                            </div>
+                            <div>
+                                <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                            </div>
+                        </div>
+                        <div class="ook">
+                            <div>
+                                <img src="img/noti-1.png" alt="">
+                            </div>
+                            <div>
+                                <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                            </div>
+                        </div>
+                        <div class="ook">
+                            <div>
+                                <img src="img/noti-1.png" alt="">
+                            </div>
+                            <div>
+                                <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <section id="actions">
+        <div class="container">
+            <div class="actions d-flex justify-content-between">
+                <div class="back text-decoration-none ">
+                    <a href="france.html"><img src="img/fra-back.png" alt=""><span class="ps-3">Back</span></a>
+                </div>
+                <div class="share-save d-flex">
+                    <div class="save pe-3">
+                        <a href="#">Save</a>
+                    </div>
+                    <div class="share">
+                        <a href="#">Share</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-3 card">
+                <img src="img/france-pete.png" class="card-img-top w-100 alt="...">
+                <div class="card-body">
+                    <div class="name d-flex justify-content-between">
+                        <div>
+                            <h6 class="fw-bold">Delphine Pete</h6>
+                        </div>
+                        <div>
+                            <span class="fw-bold">$25/hour</span>
+                        </div>
+                    </div>
+                    
+                    <div class="stars d-flex justify-content-between">
+                        <div class="star">
+                            <img src="img/fra-stars.png" alt="">
+                        </div>
+                        <div class="rate">
+                            <p><span style="font-weight: bold;">4.9</span>(65 Reviews)</p>
+                        </div>
+                    </div>
+                    <div class="loccc d-flex align-item-center">
+                        <div class="loc"><img src="img/fra-Vector.png" alt="" class="mt-2"></div>
+                        <div class="place pt-2 ps-2"><p>Lives in France</p></div>
+                    </div>
+                    <div class="locc d-flex align-item-center justify-content-between">
+                        <div class="fluent d-flex align-item-center">
+                            <div class="loc"><img src="img/fra-fluent.png" alt="" class="mt-2"></div>
+                            <div class="place pt-2 ps-2"><p>Fluent in English & French</p></div>
+                        </div>
+                        <div class="button pt-2 ps-1">
+                            <a href="#">Contact me</a>
+                        </div> 
+                    </div>
+                    </div>
+                    <!-- <img src="img/guide stars.png" alt="" style="width: 25%;" <h6 class="p-1 fw-bold">4.9 (65 Reviews)</h6>  -->
+                </div>
+                <div class="col-lg-6 col-md-12 book">
+                    <div class="text-center">
+                        <h3>Book Your Guide</h3>
+                        <p>$15/hour</p>
+                        <input type="date" name="" id="" class="mb-3">
+                        <input type="time" name="" id="" class="mb-3">
+                        <input type="text" name="" id="" placeholder="Fluent in English and French">
+                        <div class="d-grid mt-3">
+                            <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3 text-center" type="submit">Book Now</a>
+
+                            <!-- <button class="bg-orange text-white text-decoration-none" type="submit">Book Now</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            
+
+    </section>
+    <section id="about" class="showw mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 col-sm-6">
+                    <div class="question-answer">
+                        <div class="question d-flex justify-content-between pb-3">
+                            <h5 class="title">About Delphine Pete</h5>
+                            <button class="control">
+                                <span class="up-arrow">
+                                    <i class="fa-solid fa-chevron-up"></i>
+                                </span>
+                                <span class="down-arrow">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="answer pt-3">
+                            <p>Hello there! I'm Delphine but my clients call me Delph. I've lived in France my whole life and I know the in and outs of it. I love meeting new people and making them fall in love with France. I love exploring new places, food etc. 
+                                If you want to have a great experience in France and discover hidden places I'm your go-to-guy.</p>
+                        </div>
+                    </div>
+                    <div class="question-answer pt-5">
+                        <div class="question d-flex justify-content-between pb-3">
+                            <h5 class="title">Activities</h5>
+                            <button class="control">
+                                <span class="up-arrow">
+                                    <i class="fa-solid fa-chevron-up"></i>
+                                </span>
+                                <span class="down-arrow">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="answer pt-3">
+                           <ul>
+                            <li>
+                                <p>Go to the Eiffel Tower and watch sunset : Here we learn about Paris culture, traditions, and history. We also have a panoromic view from the 2nd and 3rd story viewing platforms.</p>
+                            </li>
+                            <li>
+                                <p>Paris Local Districts and Stories Off the Beaten Track Guided Bike Tour: Discover the rich history of the City of Light, absorb the local atmosphere.</p>
+                            </li>
+                            <li>
+                                <p>Louvre Museum Skip the line Access Guided Tour: Paris Maoulin Rouge Cabaret Show with Champagne Only or Dinner: Witness the iconic Can-Can dance and much more during a 3- hour performance at the Paradis Latin in Paris.</p>
+                            </li>
+                            <li>
+                                <p>Go on a big bus Paris hop-On hop-off tour:  Enjoy the convenience of hop-on hop-off access at any stop along the route, and soak in the views from an open-top, double decker bus.</p>
+                            </li>
+                            <li>
+                                <p>Go to Disneyland: Experience the Disney Magic you know and love with attractions, shows and parades, as well as opportunities for selfies at character meet ‘n’ greets.</p>
+                            </li>
+                            <li>
+                                <p>Normandy D-Day Beaches & American Cemetery Trip from Paris: Explore Omaha Beach, the American Cemetery, and Arromanches artificial habor.</p>
+                            </li>
+                            <li>
+                                <p>Versailles Monarchy Private Tour: Visit the Palace of Versailles on a private day trip from Paris. See the Hall of Mirrors, the gardens, and the Petit Trianon.</p>
+                            </li>
+                            <li>
+                                <p>Catamaran from Cannes: Take in views of the fabulous French Riviera from the water on a luxury catamaran cruise.Sail along the Bay of Cannes while relaxing on deck, and splash into the sea for a swim and snorkel if you like.</p>
+                            </li>
+                            <li>
+                                <p>Attend the Royal Serenade at the Chateau de Versailles</p>
+                            </li>
+                           </ul>
+                        </div>
+                    </div>
+                    <div class="question-answer pt-5">
+                        <div class="question d-flex justify-content-between pb-3">
+                            <h5 class="title">Why you should choose me</h5>
+                            <button class="control">
+                                <span class="up-arrow">
+                                    <i class="fa-solid fa-chevron-up"></i>
+                                </span>
+                                <span class="down-arrow">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="answer pt-3">
+                            <p>Hello there! I'm Richard but my clients call me Rich. I’ve lived in France my whole life and I know the in and outs of it. I love meeting new people and making them fall in love with France. I love exploring new places, food etc. 
+                                If you want to have a great experience in France and discover hidden places I’m your go-to-guy.</p>
+                        </div>
+                    </div>
+                    <div class="question-answer quess pt-5">
+                        <div class="question d-flex justify-content-between pb-3">
+                            <h5 class="title">Where will we meet?</h5>
+                            <button class="control">
+                                <span class="up-arrow">
+                                    <i class="fa-solid fa-chevron-up"></i>
+                                </span>
+                                <span class="down-arrow">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="answer pt-3">
+                            <p>Hello there! I'm Richard but my clients call me Rich. I’ve lived in France my whole life and I know the in and outs of it. I love meeting new people and making them fall in love with France. I love exploring new places, food etc. 
+                                If you want to have a great experience in France and discover hidden places I’m your go-to-guy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-3 reviews">
+                    <div class="text text-center">
+                        <h6>Clients reviews about Richard Potter  </h6>
+                    </div>
+                    <div class="review mt-5">
+                        <div class="person d-flex justify-content-between">
+                            <div class="person-image d-flex">
+                                <div class="pic">
+                                    <img src="img/fra-rihenna.png" alt="">
+                                </div>
+                                <div class="name pt-3 mt-2 ps-2">
+                                    <p>Rihanna Henry</p>
+                                </div>
+                            </div>
+                            <div class="rating pt-3 mt-2">
+                                <img src="img/fra-stars.png" alt="">
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <p>I booked richard potter as my travel guide 2 weeksand he really wowed me, he is so good at what he does, in fact in my next vacation i'm still going to choose him.</p>
+                        </div>
+                    </div>
+                    <div class="review mt-5">
+                        <div class="person d-flex justify-content-between">
+                            <div class="person-image d-flex">
+                                <div class="pic">
+                                    <img src="img/fra-jonah.png" alt="">
+                                </div>
+                                <div class="name pt-3 mt-2 ps-2">
+                                    <p>Angela Brown</p>
+                                </div>
+                            </div>
+                            <div class="rating pt-3 mt-2">
+                                <img src="img/fra-stars.png" alt="">
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <p>I booked richard potter as my travel guide 2 weeksand he really wowed me, he is so good at what he does, in fact in my next vacation i'm still going to choose him.</p>
+                        </div>
+                    </div>
+                    <div class="review mt-5">
+                        <div class="person d-flex justify-content-between">
+                            <div class="person-image d-flex">
+                                <div class="pic">
+                                    <img src="img/fra-angela.png" alt="">
+                                </div>
+                                <div class="name pt-3 mt-2 ps-2">
+                                    <p>Jonah Salvador</p>
+                                </div>
+                            </div>
+                            <div class="rating pt-3 mt-2">
+                                <img src="img/fra-stars.png" alt="">
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <p>I booked richard potter as my travel guide 2 weeksand he really wowed me, he is so good at what he does, in fact in my next vacation i'm still going to choose him.</p>
+                        </div>
+                    </div>
+                    <div class="read-more text-center pt-5">
+                        <a href="#">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="guides" class="showw">
+        <div class="container">
+            <div class="guides">
+                <div class="text mb-5">
+                    <h2>Meet other guides</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <img src="img/france-agent-1.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="card-title d-flex justify-content-between align-item-center">
+                                    <div class="name"><h6>Charles Babbage</h6></div>
+                                    <div class="rating d-flex">
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                    </div>
+                                  </div>
+                              <div class="location-status d-flex justify-content-between pt-3">
+                                <div class="location d-flex">
+                                    <div class="icon pe-2">
+                                        <img src="img/fra-Vector.png" alt="">
+                                    </div>
+                                    <div class="place">
+                                        <p>France</p>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <p>Available</p>
+                                </div>
+                            </div>
+                              <a href="#" class="btn bg-orange text-white">Travel with me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <img src="img/france-agent-2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="card-title d-flex justify-content-between align-item-center">
+                                    <div class="name"><h6>Alexandre Kitt</h6></div>
+                                    <div class="rating d-flex">
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                    </div>
+                                  </div>
+                              <div class="location-status d-flex justify-content-between pt-3">
+                                <div class="location d-flex">
+                                    <div class="icon pe-2">
+                                        <img src="img/fra-Vector.png" alt="">
+                                    </div>
+                                    <div class="place">
+                                        <p>France</p>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <p>Available</p>
+                                </div>
+                            </div>
+                              <a href="#" class="btn bg-orange text-white">Travel with me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <img src="img/france-agent-3.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="card-title d-flex justify-content-between align-item-center">
+                                    <div class="name"><h6>Mary Jane</h6></div>
+                                    <div class="rating d-flex">
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div class="icons pe-1">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                    </div>
+                                  </div>
+                              <div class="location-status d-flex justify-content-between pt-3">
+                                <div class="location d-flex">
+                                    <div class="icon pe-2">
+                                        <img src="img/fra-Vector.png" alt="">
+                                    </div>
+                                    <div class="place">
+                                        <p>France</p>
+                                    </div>
+                                </div>
+                                <div class="status">
+                                    <p>Available</p>
+                                </div>
+                            </div>
+                              <a href="#" class="btn bg-orange text-white">Travel with me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="pt-5">
+        <div class="container border-top border-1 border-white border-bottom text-white mb-5">
+            <div class="row pt-5 mt-3 px-2 pb-3 w-auto">
+                <div class="col-lg-3">
+                    <h3>Travel Guide</h3>
+                    <p class="pe-3">“The world is a book and those who do not travel read only one page.”</p>
+                    <div class="socials mt-5 d-flex justify-content-between w-75">
+                        <img src="./img/fra-facebook.png">
+                        <img src="./img/fra-instagram.png">
+                        <img src="./img/fra-twitter.png">
+                        <img src="./img/fra-linkedin.png">
+                    </div>
+                </div>
+                <div class="col-lg-3 ps-5 company">
+                    <h4 class="pb-2">Company</h4>
+                    <ul class="p-0">
+                        <li class="list-unstyled pb-1"><a href="landing-page-after-sign-in.html" class="text-decoration-none text-white">Home</a>
+                        </li>
+                        <li class="list-unstyled pb-1"><a href="service.html" class="text-decoration-none text-white">Services</a></li>
+                        <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a></li>
+                        <li class="list-unstyled pb-1"><a href="about.html" class="text-decoration-none text-white">About Us</a></li>
+                        <li class="list-unstyled pb-1"><a href="contact.html" class="text-decoration-none text-white">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="pb-2">Services</h4>
+                    <ul class="p-0">
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Book flight</a>
+                        </li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Destinations</a>
+                        </li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Hotels</a></li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Car Hire</a></li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Resturants</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <label for="">Email address</label><br>
+                    <input type="email"
+                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                </div>
+            </div>
+            <div class="copyright position-relative w-30 text-center mb-2">
+                <h4>KodedTravels</h4>
+                <img src="./img/fra-copyright.png">
+                <p class="d-inline-block ps-3 m-0">All simple rights reserved 2022</p>
+            </div>
+        </div>
+        <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white faq">
+            <a href="faq-after.html"><p>FAQs</p></a> 
+            <a href="terms-and-policies.html"><p class="border-start border-end px-4 terms">Terms & Conditions</p></a> 
+            <a href="privacy-policy.html"><p>Privacy Policy</p></a> 
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/france.js"></script>
+</body>
+</html>

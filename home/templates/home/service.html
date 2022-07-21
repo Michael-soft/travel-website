@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Rancho&display=swap" rel="stylesheet">
+    
+    <!-- Link Swiper's CSS -->
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/c491194143.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+    <title>Services</title>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <header class="navbar navbar-expand-lg navbar-light bg-light py-2 fixed-top">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand fw-bold blue fs-3" href="#">Travel<span class="orange">Guide</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark px-4" aria-current="page" href="landing-page-after-sign-in.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="service.html">Services</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-4" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <!-- <button class="bg-orange p-2 ms-3 rounded-3 border-0"><img src="./img/landing-bell.png"></button> -->
+                <div style="display: inline-grid;" class="pe-2">
+                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="my-account.html">My Account</a>
+                </div>
+                <div style="display: inline-grid;" class="actions">
+                    <div class="bell">
+                        <a class=" bg-orange rounded-3 p-2" href="#">
+                            <img src="img/landing-bell.png" alt="" class="">
+                        </a>
+                    </div>
+                    <div class="noti">
+                        <h4 class="pt-3 ps-2">Notification</h4>
+                        <div class="all d-flex ps-2">
+                            <div ><a href="notification.html">All</a></div>
+                            <div class="ps-5"><a href="#">Unread</a></div>
+                        </div>
+                        <div class="new d-flex justify-content-between pt-2">
+                            <div class="ps-2"><p>New</p></div>
+                            <div class="pe-2 see"> <a href="notification.html">See all</a></div>
+                        </div>
+                        <div class="book">
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                            <div class="ook">
+                                <div>
+                                    <img src="img/noti-1.png" alt="">
+                                </div>
+                                <div>
+                                    <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Backgroung Image Section -->
+    <section id="background" class="">
+        <div class="background img-fluid text-center">
+            <div class="background-text text-white">
+                <h1>Services</h1>
+                <!-- <p class="fs-3">Catch up on all new blogs and updates about the best places to visit.</p> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="search w-100">
+        <div class="container search-body py-4 d-flex align-items-center">
+            <div class="position-relative search-box w-50">
+                <input type="text" class="py-1 rounded-pill border-1 ps-5 w-75" placeholder="Search locations">
+                <button class="bg-orange text-white rounded-pill border-0 px-4 position-absolute">Search</button>
+                <img src="./img/index-search-icon.png" class="position-absolute search-icon" alt="">
+            </div>
+            <div class="stats w-50 row">
+                <div class="col-6  text-start">
+                    <h4>10000+</h4>
+                    <p class="m-0">Users Worldwide</p>
+                </div>
+                <div class="col-6 text-start">
+                    <h4>100+</h4>
+                    <p class="m-0">Local Guides</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    <!-- Passion Section-->
+    
+    <section id="travelTips" class="container appear">
+        <div class="row mt-5">
+            <div class="col-lg-5 col-md-6 col-sm-12 img-me card-only pt-4">
+                <img src="img/service-frame-3.png" class="img-fluid" alt="An animation of a happy lady">
+            </div>
+            <div class="passion-btn col-lg-7 col-md-6 col-sm-12 px-40 py-5">
+                <h5 class="card-title fs-1 fw-bold">Our Passion<br>Is Your Success</h5>
+                <img src="img/service-line-1.png" alt="horizontal orange line">
+                <p class="card-text fs-5 fw-normal mt-3">We are aware that there is no one solution that works for everyone.
+                    We strive to make every important component of our customers' 
+                    journeys as distinctive and comfortable as possible.</p>
+                <a href="#" class="btn btn-warning-read fw-bold text-center text-light-1 px-5 mt-5">See More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+
+    <section id="travelTips" class="container-fliud appear">
+        <div class="row mt-5 mx-auto">
+            <div class="col-lg-4 col-md-6 col-sm-12 px-500 py-500 bg-warning">
+                <h5 class="card-title text-light fs-1 fw-bold">OUR<br>SERVICES.</h5>
+                <img src="img/service-line-2.png" alt="horizontal orange line">
+                <p class="card-text text-light fs-5 fw-normal mt-3">Making the correct decision requires the right information, 
+                    from local guides to vacation details.<span class="blue fw-bold">Travel</span>Guide provides everything you need on our website, 
+                    beautifully organized and available when you are, 
+                    saving you the time it would take you to gather reports and research.</p>
+                <a href="#" class="btn btn-warning-read fw-bold text-center text-light-1 px-5 mt-5">Read More</a>
+            </div>
+            <div class="col-lg-8 col-md-6 col-sm-12 service-me card-only pt-4">
+                <div class="container row text-light">
+                    <div class="col-lg-6 col-md-12 col-sm-12 row px-500 py-500">
+                        <div class="col-lg-4">
+                            <img src="img/service-airplane.png" alt="An animation of a happy lady">
+                        </div>
+                        <div class="col-lg-8">
+                            <h5 class="card-title fw-bold">Trip Destination</h5>
+                            <p class="card-text-2 fw-normal mt-3">Our information about places are 
+                            second to none with memories for a long time</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 row px-500 py-500">
+                        <div class="col-lg-4">
+                            <img src="img/service-house.png" alt="An animation of a happy lady">
+                        </div>
+                        <div class="col-lg-8">
+                            <h5 class="card-title fw-bold">Hotels And Resorts</h5>
+                            <p class="card-text-2 fw-normal mt-3">We partner with and recommend hotels and resorts
+                                offering the best quality of service</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 row px-500 py-500">
+                        <div class="col-lg-4">
+                            <img src="img/service-reporter.png" alt="An animation of a happy lady">
+                        </div>
+                        <div class="col-lg-8">
+                            <h5 class="card-title fw-bold">Local Guides</h5>
+                            <p class="card-text-2 fw-normal mt-3">When you need unrivaled service, <span class="blue fw-bold">Travel</span><span class="orange fw-bold">Guide</span> is your best 
+                                shot for great personalised service</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 row px-500 py-500">
+                        <div class="col-lg-4">
+                            <img src="img/service-map.png" alt="An animation of a happy lady">
+                        </div>
+                        <div class="col-lg-8">
+                            <h5 class="card-title fw-bold">Trip Activities</h5>
+                            <p class="card-text-2 fw-normal mt-3">See the exact location of visitors at attractions 
+                                and find activities to enrich your experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Gallery -->
+
+    <section id="travelGallery-Section top-guides" class="appear container mt-5">
+        <div class="text-center fw-bold fs-4 mt-3 mx-auto">
+            <p>Customers who travel with KodedTravels report an increase in trust, satisfaction and safety</p>
+        </div>
+        <div class="row mt-5 mb-5">
+            <div class="col-lg-3 col-md-6 col-sm-12 px-2 mx-auto text-center">
+                <img src="img/service-87.png" alt="An animation of a happy lady">
+                <p class="mx-auto">96% report a greater<br>sense of trust</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 px-2 text-center">
+                <img src="img/service-87.png" alt="An animation of a happy lady">
+                <p class="mx-auto">89% report satisfaction<br>with travel agents provided</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 px-2 text-center">
+                <img src="img/service-87.png" alt="An animation of a happy lady">
+                <p class="mx-auto">90% report ease in<br>navigating tour information</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 px-2 text-center">
+                <img src="img/service-87.png" alt="An animation of a happy lady">
+                <p class="mx-auto">87% report satisfaction<br>with travel agents provided</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer class="pt-5 pt-500">
+        <div class="container border-top border-1 border-white border-bottom text-white mb-5">
+            <div class="row pt-5 mt-3 px-2 pb-3 w-auto">
+                <div class="col-lg-3">
+                    <h3>Travel Guide</h3>
+                    <p class="pe-3">“The world is a book and those who do not travel read only one page.”</p>
+                    <div class="socials mt-5 d-flex justify-content-between w-75">
+                        <img src="./img/index-facebook.png">
+                        <img src="./img/index-instagram.png">
+                        <img src="./img/index-twitter.png">
+                        <img src="./img/index-linkedin.png">
+                    </div>
+                </div>
+                <div class="company col-lg-3 ps-5">
+                    <h4 class="pb-2">Company</h4>
+                    <ul class="p-0">
+                        <li class="list-unstyled pb-1"><a href="index.html" class="text-decoration-none text-white">Home</a></li>
+                        <li class="list-unstyled pb-1"><a href="service.html" class="text-decoration-none text-white">Services</a></li> 
+                        <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a></li> 
+                        <li class="list-unstyled pb-1"><a href="about.html" class="text-decoration-none text-white">About Us</a></li> 
+                        <li class="list-unstyled pb-1"><a href="contact.html" class="text-decoration-none text-white">Contact Us</a></li> 
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="pb-2">Services</h4>
+                    <ul class="p-0">
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Book flight</a></li>
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Destinations</a></li> 
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Hotels</a></li> 
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Car Hire</a></li> 
+                        <li class="list-unstyled pb-1"><a href="#" class="text-decoration-none text-white">Resturants</a></li> 
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <label for="">Email address</label><br>
+                    <input type="email" class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                </div>
+            </div>
+            <div class="copyright position-relative w-30 text-center mb-2">
+                <h4>KodedTravels</h4>
+                <img src="./img/index-copyright.png">
+                <p class="d-inline-block ps-3 m-0">All simple rights reserved 2022</p>
+            </div>
+        </div>
+        <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white pb-2 faq" >
+            <a href="faq-after.html" class="text-decoration-none text-white">FAQs</a>
+            <a href="terms-and-policies.html" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
+            <a href="privacy-policy.html" class="text-decoration-none text-white">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <!-- Javascript Section -->
+    
+    <script src="js/bootstrap.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/app.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+
+        var swiper1 = new Swiper(".swiper1", {
+        centeredSlides: true,
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+        },
+        pagination: {
+        el: ".swiper-pagination1",
+        clickable: true,
+        },
+        loop: true,
+        breakpoints: {
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 20, 
+            },
+            640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            },
+            768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            },
+            1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            },
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+        });
+
+        var swiper2 = new Swiper(".swiper2", {
+          cssMode: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination2",
+          },
+          loop: true,
+          breakpoints: {
+            320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            },
+            640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            },
+            768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            },
+            1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            },
+        },
+          mousewheel: true,
+          keyboard: true,
+        });
+
+    </script>
+
+</body>
+</html>
