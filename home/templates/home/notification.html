@@ -1,3 +1,5 @@
+{%extends "home/burj-khalifa-1.html"%}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -132,7 +134,7 @@
     </section> -->
 
     <!-- Notification section -->
-
+{%block content%}
     <section id="notification-section">
         <div class="container mx-auto py-500 bg-light">
             <h4 class="pt-3 ps-2">Notifications</h4>
@@ -148,7 +150,7 @@
                 <div class="book">
                     <div class="ook-1">
                         <div>
-                            <img src="img/noti-3.png" alt="">
+                            <img src="{% static 'home/img/noti-3.png'%}" alt="">
                         </div>
                         <div>
                             <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
@@ -161,7 +163,7 @@
                 <div class="book">
                     <div class="ook-1">
                         <div>
-                            <img src="img/noti-2.png" alt="">
+                            <img src="{% static 'home/img/noti-2.png'%}" alt="">
                         </div>
                         <div>
                             <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
@@ -174,7 +176,7 @@
                 <div class="book">
                     <div class="ook-1">
                         <div>
-                            <img src="img/noti-1.png" alt="">
+                            <img src="{% static 'home/img/noti-1.png'%}" alt="">
                         </div>
                         <div>
                             <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
@@ -187,7 +189,7 @@
                 <div class="book">
                     <div class="ook-1 book-bg">
                         <div class="">
-                            <img src="img/noti-1.png" alt="">
+                            <img src="{% static 'home/img/noti-1.png'%}" alt="">
                         </div>
                         <div class="">
                             <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
@@ -208,7 +210,7 @@
                 <div class="book">
                     <div class="ook-1 book-bg">
                         <div>
-                            <img src="img/noti-4.png" alt="">
+                            <img src="{% static 'home/img/noti-4.png'%}" alt="">
                         </div>
                         <div>
                             <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
@@ -221,7 +223,7 @@
                 <div class="book">
                     <div class="ook-1 book-bg">
                         <div>
-                            <img src="img/noti-5.png" alt="">
+                            <img src="{% static 'home/img/noti-5.png'%}" alt="">
                         </div>
                         <div>
                             <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
@@ -229,8 +231,8 @@
                     </div>
                 </div>
             </a>
-            
-            <a class="dropdown-item" href="#">
+{%endblock content%}      
+            {% comment %} <a class="dropdown-item" href="#">
                 <div class="book">
                     <div class="ook-1">
                         <div>
@@ -381,7 +383,7 @@
                 </div>
             </a>
         </div>
-    </section>
+    </section> {% endcomment %}
 
     <!-- footer section -->
 

@@ -1,3 +1,4 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Account</title>
 
-    <link rel="stylesheet" href="./css/my-account.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="{% static 'accounts/css/my-account.css'%}">
+    <link rel="stylesheet" href="{% static 'accounts/css/bootstrap.css'%}">
 
     <script src="https://kit.fontawesome.com/c491194143.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -24,10 +25,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-dark px-4" aria-current="page" href="landing-page-after-sign-in.html">Home</a>
+                        <a class="nav-link active text-dark px-4" aria-current="page" href="{% url 'accounts:landing-page-after-sign-in.html' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="service.html">Services</a>
+                        <a class="nav-link text-dark px-4" href="{% url 'accounts:service.html' %}">Services</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -44,25 +45,26 @@
                                     </ul>
                                 </li> -->
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="blog.html">Blog</a>
+                        <a class="nav-link text-dark px-4" href="{% url 'accounts:blog.html' %}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="about.html">About Us</a>
+                        <a class="nav-link text-dark px-4" href="{% url 'accounts:about.html' %}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="contact.html">Contact Us</a>
+                        <a class="nav-link text-dark px-4" href="{% url 'accounts:contact.html' %}">Contact Us</a>
                     </li>
                 </ul>
                 <!-- <button class="bg-orange p-2 ms-3 rounded-3 border-0"><img src="./img/landing-bell.png"></button> -->
                 <div style="display: inline-grid;" class="pe-2">
-                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="my-account.html">My Account</a>
+                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="{% url 'accounts:my-account.html' %}">My Account</a>
                 </div>
                 <div style="display: inline-grid;" class="actions">
                     <div class="bell">
                         <a class=" bg-orange rounded-3 p-2" href="#">
-                            <img src="img/landing-bell.png" alt="" class="">
+                            <img src="{% static 'accounts/img/landing-bell.png'%}" alt="" class="">
                         </a>
                     </div>
+{%block content%}                  
                     <div class="noti">
                         <h4 class="pt-3 ps-2">Notification</h4>
                         <div class="all d-flex ps-2">
@@ -73,12 +75,12 @@
                             <div class="ps-2">
                                 <p>New</p>
                             </div>
-                            <div class="pe-2 see"> <a href="notification.html">See all</a></div>
+                            <div class="pe-2 see"> <a href="{% url 'accounts:notification.html' %}">See all</a></div>
                         </div>
                         <div class="book">
                             <div class="ook">
                                 <div>
-                                    <img src="img/noti-1.png" alt="">
+                                    <img src="{% static 'accounts/img/noti-1.png'%}" alt="">
                                 </div>
                                 <div>
                                     <p class="fw-bold pp">You just booked Kenzi as your tour guide in Paris <br> 1h ago
@@ -88,7 +90,7 @@
                             </div>
                             <div class="ook">
                                 <div>
-                                    <img src="img/noti-1.png" alt="">
+                                    <img src="{% static 'accounts/img/noti-1.png'%}" alt="">
                                 </div>
                                 <div>
                                     <p class="fw-bold pp">You just booked Kenzi as your tour guide in Paris <br> 1h ago
@@ -98,7 +100,7 @@
                             </div>
                             <div class="ook">
                                 <div>
-                                    <img src="img/noti-1.png" alt="">
+                                    <img src="{% static 'accounts/img/noti-1.png'%}" alt="">
                                 </div>
                                 <div>
                                     <p class="fw-bold pp">You just booked Kenzi as your tour guide in Paris <br> 1h ago
@@ -112,6 +114,7 @@
             </div>
         </div>
     </header>
+
     <main class="">
         <div class="container">
             <div class="full d-flex justify-content-between">
@@ -139,7 +142,7 @@
                 </div>
                 <div class="right-section w-80">
                     <div class="profile-picture d-flex align-items-center py-4 ps-5 rounded-3">
-                        <div><img src="./img/myaccount-picture.png" class="w-75"></div>
+                        <div><img src="{% static 'accounts/img/myaccount-picture.png'%}" class="w-75"></div>
                         <div><button class="btn btn-outline-warning px-4 ms-3">Change Photo</button></div>
                     </div>
                     <div class="personal-info border-1 border-dark w-100 border py-4 px-5 mt-5 mb-5 rounded-3">
@@ -198,6 +201,7 @@
             </div>
         </div>
     </main>
+{%endblock content%}
     <footer class="pt-5">
         <div class="container border-top border-1 border-white border-bottom text-white mb-5">
             <div class="row pt-5 mt-3 px-2 pb-3 w-auto">
@@ -205,21 +209,21 @@
                     <h3>Travel Guide</h3>
                     <p class="pe-3">“The world is a book and those who do not travel read only one page.”</p>
                     <div class="socials mt-5 d-flex justify-content-between w-75">
-                        <img src="./img/index-facebook.png">
-                        <img src="./img/index-instagram.png">
-                        <img src="./img/index-twitter.png">
-                        <img src="./img/index-linkedin.png">
+                        <img src="{% static 'accounts/img/index-facebook.png'%}">
+                        <img src="{% static 'accounts/img/index-instagram.png'%}">
+                        <img src="{% static 'accounts/img/index-twitter.png'%}">
+                        <img src="{% static 'accounts/img/index-linkedin.png'%}">
                     </div>
                 </div>
                 <div class="company col-lg-3 ps-5">
                     <h4 class="pb-2">Company</h4>
                     <ul class="p-0">
-                        <li class="list-unstyled pb-1"><a href="landing-page-after-sign-in.html" class="text-decoration-none text-white">Home</a>
+                        <li class="list-unstyled pb-1"><a href="{% url 'accounts:landing-page-after-sign-in.html'%}" class="text-decoration-none text-white">Home</a>
                         </li>
-                        <li class="list-unstyled pb-1"><a href="service.html" class="text-decoration-none text-white">Services</a></li>
-                        <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a></li>
-                        <li class="list-unstyled pb-1"><a href="about.html" class="text-decoration-none text-white">About Us</a></li>
-                        <li class="list-unstyled pb-1"><a href="contact.html" class="text-decoration-none text-white">Contact Us</a>
+                        <li class="list-unstyled pb-1"><a href="{% url 'accounts:service.html'%}" class="text-decoration-none text-white">Services</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'accounts:blog.html'%}" class="text-decoration-none text-white">Blog</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'accounts:about.html'%}" class="text-decoration-none text-white">About Us</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'accounts:contact.html'%}" class="text-decoration-none text-white">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -246,17 +250,17 @@
             </div>
             <div class="copyright position-relative w-30 text-center mb-2">
                 <h4>KodedTravels</h4>
-                <img src="./img/index-copyright.png">
+                <img src="{% static 'accounts/img/index-copyright.png'%}">
                 <p class="d-inline-block ps-3 m-0">All simple rights reserved 2022</p>
             </div>
         </div>
         <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white pb-2">
-            <a href="faq-after.html" class="text-decoration-none text-white">FAQs</a>
-            <a href="terms-and-policies.html" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
-            <a href="privacy-policy.html" class="text-decoration-none text-white">Privacy Policy</a>
+            <a href="{% url 'accounts:faq-after.html'%}" class="text-decoration-none text-white">FAQs</a>
+            <a href="{% url 'accounts:terms-and-policies.html'%}" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
+            <a href="{% url 'accounts:privacy-policy.html'%}" class="text-decoration-none text-white">Privacy Policy</a>
         </div>
     </footer>
 </body>
-    <script src="js/bootstrap.js"></script>
-    <script src="./js/app.js"></script>
+    <script src="{% static 'accounts/js/bootstrap.js'%}"></script>
+    <script src="{% static 'accounts/js/app.js'%}"></script>
 </html>

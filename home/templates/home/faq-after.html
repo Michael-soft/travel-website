@@ -1,3 +1,5 @@
+{%extends "home/burj-khalifa-1.html"%}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,7 +107,7 @@
     </header>
 
     <!--Hero Page-->
-     
+{%block content%}   
     <section class="hero-page d-flex flex-column justify-content-center align-items-center text-white">  
         <h1 class="pb-4">Ask us anything</h1>
         <p>Have any questions? We're here to assist you.</p>
@@ -420,7 +422,7 @@
             </div>
         </div>
     </section>
-
+{%endblock content%}
     <!-- footer section -->
 
     <footer class="pt-5">

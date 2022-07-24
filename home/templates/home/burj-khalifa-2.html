@@ -1,3 +1,5 @@
+{%extends "home/burj-khalifa-1.html"%}
+{%load static%} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,27 +24,27 @@
                         <a class="nav-link active text-dark px-4 fw-bold" aria-current="page" href="landing-page-after-sign-in.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="service.html">Services</a>
+                        <a class="nav-link text-dark px-4" href="{% url'home:service.html'%}">Services</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="blog.html">Blog</a>
+                        <a class="nav-link text-dark px-4" href="{% url'home:blog.html'%}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="about.html">About Us</a>
+                        <a class="nav-link text-dark px-4" href="{% url'home:about.html'%}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="contact.html">Contact Us</a>
+                        <a class="nav-link text-dark px-4" href="{% url'home:contact.html'%}">Contact Us</a>
                     </li>
                 </ul>
                 <!-- <button class="bg-orange p-2 ms-3 rounded-3 border-0"><img src="./img/landing-bell.png"></button> -->
                 <div style="display: inline-grid;" class="pe-2">
-                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="my-account.html">My Account</a>
+                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="{% url'home:my-account.html'%}">My Account</a>
                 </div>
                 <div style="display: inline-grid;" class="actions">
                     <div class="bell">
-                        <a class=" bg-orange rounded-3 border-0" href="notification.html">
-                            <img src="img/guide bell.png" alt="" class="">
+                        <a class=" bg-orange rounded-3 border-0" href="{% url'home:notification.html'%}">
+                            <img src="{% static 'home/img/guide bell.png'%}" alt="" class="">
                         </a>
                     </div>
                     <div class="noti">
@@ -58,7 +60,7 @@
                         <div class="book">
                             <div class="ook">
                                 <div>
-                                    <img src="img/noti.png" alt="">
+                                    <img src="{% static 'home/img/noti.png'%}" alt="">
                                 </div>
                                 <div>
                                     <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
@@ -66,7 +68,7 @@
                             </div>
                             <div class="ook">
                                 <div>
-                                    <img src="img/noti.png" alt="">
+                                    <img src="{% static 'home/img/noti.png'%}" alt="">
                                 </div>
                                 <div>
                                     <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
@@ -74,7 +76,7 @@
                             </div>
                             <div class="ook">
                                 <div>
-                                    <img src="img/noti.png" alt="">
+                                    <img src="{% static 'home/img/noti.png' %}" alt="">
                                 </div>
                                 <div>
                                     <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
@@ -86,9 +88,9 @@
             </div>
         </div>
     </header>
-
+{%block content%}
     <section class="back py-3">
-        <a href="burj-khalifa-1.html"><button type="button" class="btn btn-outline-orange mt-2 m-5"><img src="img/Group 231.png" alt=""></button>
+        <a href="{% url'home:burj-khalifa-1.html'%}"><button type="button" class="btn btn-outline-orange mt-2 m-5"><img src="{% static 'home/img/Group 231.png'%}" alt=""></button>
         </a>
     </section>
 
@@ -100,33 +102,33 @@
             <div class="row mt-5">
                 <div class="col-lg-6 mt-3">
                     <div class="bur-j2">
-                        <img src="img/B1.png" alt="">
+                        <img src="{% static 'home/img/B1.png'%}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 mt-3">
                     <div class="bur-j2">
-                        <img src="img/B2.png" alt="">
+                        <img src="{% static 'home/img/B2.png'%}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-7 mt-3">
                     <div class="bur-j2">
-                        <img src="img/B3.png" alt="">
+                        <img src="{% static 'home/img/B3.png'%}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-5 mt-3">
                     <div class="bur-j2">
-                        <img src="img/B4.png" alt="">
-                        <img src="img/B5.png" alt="" class="mt-3">
+                        <img src="{% static 'home/img/B4.png'%}" alt="">
+                        <img src="{% static 'home/img/B5.png'%}" alt="" class="mt-3">
                     </div>
                 </div>
                 <div class="col-lg-6 mt-3">
                     <div class="bur-j2">
-                        <img src="img/B6.png" alt="">
+                        <img src="{% static 'home/img/B6.png'%}" alt="">
                     </div>
                 </div>        
                 <div class="col-lg-6 mt-3">
                     <div class="bur-j2">
-                        <img src="img/B7.png" alt="">
+                        <img src="{% static 'home/img/B7.png'%}" alt="">
                     </div>
                 </div>
             </div>
@@ -135,13 +137,13 @@
 
     <section class="group py-5 d-flex justify-content-center">
         <div class="arrow">
-            <a href="burj-khalifa-1.html"><button type="button" class="btn btn-outline mt-2"><img src="img/Bp.png" alt=""></button>
+            <a href="{% url'home:burj-khalifa-1.html'%}"><button type="button" class="btn btn-outline mt-2"><img src="img/Bp.png" alt=""></button>
             </a>
-            <button type="button" class="btn btn-outline mt-2"><img src="img/Bn.png" alt=""></button>
+            <button type="button" class="btn btn-outline mt-2"><img src="{% static 'home/img/Bn.png'%}" alt=""></button>
 
         </div>
     </section>
-
+{%endblock content %}
     <footer class="pt-5">
         <div class="container border-top border-1 border-white border-bottom text-white mb-5">
             <div class="row pt-5 mt-3 px-2 pb-3 w-auto">

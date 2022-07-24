@@ -1,3 +1,5 @@
+{%extends "home/burj-khalifa-1.html"%}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +61,7 @@
             </div>
         </div>
     </header>
-
+{%block content%}
     <!--Hero Page-->
 
     <section class="hero-page d-flex flex-column justify-content-center align-items-center text-white">  
@@ -74,7 +76,7 @@
             <div class="position-relative search-box w-50">
                 <input type="text" class="py-1 rounded-pill border-1 ps-5 w-75" placeholder="Search locations">
                 <button class="bg-orange text-white rounded-pill border-0 px-4 position-absolute">Search</button>
-                <img src="./img/index-search-icon.png" class="position-absolute search-icon" alt="">
+                <img src="{% static 'home/img/index-search-icon.png' %}" class="position-absolute search-icon" alt="">
             </div>
             <div class="stats w-50 row">
                 <div class="col-6  text-start">
@@ -375,7 +377,7 @@
             </div>
         </div>
     </section>
-
+{%endblock content%}
     <!-- footer -->
 
     <footer class="pt-5">

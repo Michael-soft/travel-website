@@ -1,3 +1,5 @@
+{%extends "home/burj-khalifa-1.html"%}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,7 +94,7 @@
                             </div>
                             <div class="ook">
                                 <div>
-                                    <img src="img/noti-1.png" alt="">
+                                    <img src="{% static 'home/img/noti-1.png'%}" alt="">
                                 </div>
                                 <div>
                                     <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
@@ -100,7 +102,7 @@
                             </div>
                             <div class="ook">
                                 <div>
-                                    <img src="img/noti-1.png" alt="">
+                                    <img src="{% static 'home/img/noti-1.png'%}" alt="">
                                 </div>
                                 <div>
                                     <p class="fw-bold pp">You just booked  Kenzi as your tour guide in Paris <br> 1h ago <span class="fw-bold">.</span> Travel Guide</p>
@@ -112,7 +114,7 @@
             </div>
         </div>
     </header>
-    
+ {%block content%}  
     <!-- Backgroung Image Section -->
     <section id="background" class="">
         <div class="background img-fluid text-center">
@@ -148,11 +150,11 @@
     <section id="travelTips" class="container appear">
         <div class="row mt-5">
             <div class="col-lg-5 col-md-6 col-sm-12 img-me card-only pt-4">
-                <img src="img/service-frame-3.png" class="img-fluid" alt="An animation of a happy lady">
+                <img src="{% static 'home/img/service-frame-3.png'%}" class="img-fluid" alt="An animation of a happy lady">
             </div>
             <div class="passion-btn col-lg-7 col-md-6 col-sm-12 px-40 py-5">
                 <h5 class="card-title fs-1 fw-bold">Our Passion<br>Is Your Success</h5>
-                <img src="img/service-line-1.png" alt="horizontal orange line">
+                <img src="{% static 'home/img/service-line-1.png'%}" alt="horizontal orange line">
                 <p class="card-text fs-5 fw-normal mt-3">We are aware that there is no one solution that works for everyone.
                     We strive to make every important component of our customers' 
                     journeys as distinctive and comfortable as possible.</p>
@@ -167,7 +169,7 @@
         <div class="row mt-5 mx-auto">
             <div class="col-lg-4 col-md-6 col-sm-12 px-500 py-500 bg-warning">
                 <h5 class="card-title text-light fs-1 fw-bold">OUR<br>SERVICES.</h5>
-                <img src="img/service-line-2.png" alt="horizontal orange line">
+                <img src="{% static 'home/img/service-line-2.png'%}" alt="horizontal orange line">
                 <p class="card-text text-light fs-5 fw-normal mt-3">Making the correct decision requires the right information, 
                     from local guides to vacation details.<span class="blue fw-bold">Travel</span>Guide provides everything you need on our website, 
                     beautifully organized and available when you are, 
@@ -178,7 +180,7 @@
                 <div class="container row text-light">
                     <div class="col-lg-6 col-md-12 col-sm-12 row px-500 py-500">
                         <div class="col-lg-4">
-                            <img src="img/service-airplane.png" alt="An animation of a happy lady">
+                            <img src="{% static 'home/img/service-airplane.png'%}" alt="An animation of a happy lady">
                         </div>
                         <div class="col-lg-8">
                             <h5 class="card-title fw-bold">Trip Destination</h5>
@@ -188,7 +190,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 row px-500 py-500">
                         <div class="col-lg-4">
-                            <img src="img/service-house.png" alt="An animation of a happy lady">
+                            <img src="{% static 'home/img/service-house.png'%}" alt="An animation of a happy lady">
                         </div>
                         <div class="col-lg-8">
                             <h5 class="card-title fw-bold">Hotels And Resorts</h5>
@@ -198,7 +200,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 row px-500 py-500">
                         <div class="col-lg-4">
-                            <img src="img/service-reporter.png" alt="An animation of a happy lady">
+                            <img src="{% static 'home/img/service-reporter.png'%}" alt="An animation of a happy lady">
                         </div>
                         <div class="col-lg-8">
                             <h5 class="card-title fw-bold">Local Guides</h5>
@@ -208,7 +210,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 row px-500 py-500">
                         <div class="col-lg-4">
-                            <img src="img/service-map.png" alt="An animation of a happy lady">
+                            <img src="{% static 'home/img/service-map.png'%}" alt="An animation of a happy lady">
                         </div>
                         <div class="col-lg-8">
                             <h5 class="card-title fw-bold">Trip Activities</h5>
@@ -229,19 +231,19 @@
         </div>
         <div class="row mt-5 mb-5">
             <div class="col-lg-3 col-md-6 col-sm-12 px-2 mx-auto text-center">
-                <img src="img/service-87.png" alt="An animation of a happy lady">
+                <img src="{% static 'home/img/service-87.png'%}" alt="An animation of a happy lady">
                 <p class="mx-auto">96% report a greater<br>sense of trust</p>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 px-2 text-center">
-                <img src="img/service-87.png" alt="An animation of a happy lady">
+                <img src="{% static 'home/img/service-87.png'%}" alt="An animation of a happy lady">
                 <p class="mx-auto">89% report satisfaction<br>with travel agents provided</p>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 px-2 text-center">
-                <img src="img/service-87.png" alt="An animation of a happy lady">
+                <img src="{% static 'home/img/service-87.png'%}" alt="An animation of a happy lady">
                 <p class="mx-auto">90% report ease in<br>navigating tour information</p>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 px-2 text-center">
-                <img src="img/service-87.png" alt="An animation of a happy lady">
+                <img src="{% static 'home/img/service-87.png'%}" alt="An animation of a happy lady">
                 <p class="mx-auto">87% report satisfaction<br>with travel agents provided</p>
             </div>
         </div>
@@ -256,20 +258,19 @@
                     <h3>Travel Guide</h3>
                     <p class="pe-3">“The world is a book and those who do not travel read only one page.”</p>
                     <div class="socials mt-5 d-flex justify-content-between w-75">
-                        <img src="./img/index-facebook.png">
-                        <img src="./img/index-instagram.png">
-                        <img src="./img/index-twitter.png">
-                        <img src="./img/index-linkedin.png">
+                        <img src="{% static 'home/img/index-facebook.png'%}">
+                        <img src="{% static 'home/img/index-instagram.png'%}">
+                        <img src="{% static 'home/img/index-twitter.png'%}">
+                        <img src="{% static 'home/img/index-linkedin.png'%}">
                     </div>
                 </div>
                 <div class="company col-lg-3 ps-5">
                     <h4 class="pb-2">Company</h4>
                     <ul class="p-0">
-                        <li class="list-unstyled pb-1"><a href="index.html" class="text-decoration-none text-white">Home</a></li>
-                        <li class="list-unstyled pb-1"><a href="service.html" class="text-decoration-none text-white">Services</a></li> 
-                        <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a></li> 
-                        <li class="list-unstyled pb-1"><a href="about.html" class="text-decoration-none text-white">About Us</a></li> 
-                        <li class="list-unstyled pb-1"><a href="contact.html" class="text-decoration-none text-white">Contact Us</a></li> 
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:service.html'%}" class="text-decoration-none text-white">Services</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:blog.html'%}" class="text-decoration-none text-white">Blog</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:about.html'%}" class="text-decoration-none text-white">About Us</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:contact.html'%}" class="text-decoration-none text-white">Contact Us</a>
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -291,22 +292,22 @@
             </div>
             <div class="copyright position-relative w-30 text-center mb-2">
                 <h4>KodedTravels</h4>
-                <img src="./img/index-copyright.png">
+                <img src="{% static 'home/img/index-copyright.png'%}">
                 <p class="d-inline-block ps-3 m-0">All simple rights reserved 2022</p>
             </div>
         </div>
         <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white pb-2 faq" >
-            <a href="faq-after.html" class="text-decoration-none text-white">FAQs</a>
-            <a href="terms-and-policies.html" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
-            <a href="privacy-policy.html" class="text-decoration-none text-white">Privacy Policy</a>
+            <a href="{% url 'home:faq-after.html'%}" class="text-decoration-none text-white">FAQs</a>
+            <a href="{% url 'home:terms-and-policies.html'%}" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
+            <a href="{% url 'home:privacy-policy.html'%}" class="text-decoration-none text-white">Privacy Policy</a>
         </div>
     </footer>
 
     <!-- Javascript Section -->
     
-    <script src="js/bootstrap.js"></script>
-    <script src="js/service.js"></script>
-    <script src="js/app.js"></script>
+    <script src="{% static 'home/js/bootstrap.js'%}"></script>
+    <script src="{% static 'home/js/service.js'%}"></script>
+    <script src="{% static 'home/js/app.js'%}"></script>
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -382,6 +383,6 @@
         });
 
     </script>
-
+{%endblock content%} 
 </body>
 </html>

@@ -1,3 +1,4 @@
+{%load static%} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,8 @@
     <title>Kodecamp Travel Guide</title>
     
     <!-- CORE CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/signup.css" rel="stylesheet">
+    <link href="{% static 'accounts/css/bootstrap.css'%}" rel="stylesheet">
+    <link href="{% static 'accounts/css/signup.css'%}" rel="stylesheet">
     <link href="">
     <style>
 a{ text-decoration: none;
@@ -47,23 +48,23 @@ a{ text-decoration: none;
                             <div class=" mb-2 w-75  position-relative">
                                <label for="userName" class="form-label">Username</label>
                                <input type="name" class="form-control rounded px-5 " id="inputName" aria-describedby="emailHelp">
-                               <img class="userIcon position-absolute" src="img/Vector.png">
+                               <img class="userIcon position-absolute" src="{% static 'accounts/img/Vector.png'%}">
                                
                             </div>
                             <form action="">
                                 <div class=" mb-2 w-75  position-relative">
                                     <label for="inputEmail" class="form-label">Email address</label>
                                     <input type="email" class="form-control rounded px-5 " id="inputEmail" aria-describedby="emailHelp">
-                                    <img class="email-icon position-absolute invisible" src="img/Email.png">
-                                    <img class="email-error position-absolute invisible" src="img/Mail Error.png">
-                                    <img class="validEmail w-18 position-absolute invisible" src="img/Vector2.png">
+                                    <img class="email-icon position-absolute invisible" src="{% static 'accounts/img/Email.png'%}">
+                                    <img class="email-error position-absolute invisible" src="{% static 'accounts/img/Mail Error.png'%}">
+                                    <img class="validEmail w-18 position-absolute invisible" src="{% static 'accounts/img/Vector2.png'%}">
                                 </div>
                     
                             <div class="mb-2 w-75 position-relative ">
                                <label for="inputPassword" class="form-label">Password</label>
                                <input type="password" class="form-control rounded px-5" id="inputPassword">
-                               <img class="password-icon position-absolute invisible " src="img/password-icon.png">
-                               <img class="password-error position-absolute invisible" src="img/Forgot Password.png">
+                               <img class="password-icon position-absolute invisible " src="{% static 'accounts/img/password-icon.png'%}">
+                               <img class="password-error position-absolute invisible" src="{% static 'accounts/img/Forgot Password.png'%}">
                                <p class="show position-absolute invisible bg-white px-1" onclick="showPassword()">Show<p>
                                <p class="hide position-absolute invisible bg-white px-1"onclick="hidePassword()">Hide<p>
                                    
@@ -71,8 +72,8 @@ a{ text-decoration: none;
                             <div class="mb-2 w-75 position-relative ">
                                 <label for="newPassword" class="form-label">Re-enter Password</label>
                                 <input type="password" class="form-control rounded px-5" id="newPassword">
-                                <img class="newIcon position-absolute invisible" src="img/password-icon.png">
-                                <img class="newError position-absolute invisible" src="img/Forgot Password.png">
+                                <img class="newIcon position-absolute invisible" src="{% static 'accounts/img/password-icon.png'%}">
+                                <img class="newError position-absolute invisible" src="{% static 'accounts/img/Forgot Password.png'%}">
                                 <p class="show position-absolute invisible bg-white px-1" onclick="showPassword()">Show<p>
                                 <p class="hide position-absolute invisible bg-white px-1"onclick="hidePassword()">Hide<p>
                                     
@@ -83,7 +84,7 @@ a{ text-decoration: none;
                             <button type="submit" class="orange2 signal btn bg-dark bg-opacity-50 w-75 rounded-3 p-2 border-0 text-white fs-5 fw-bold mb-4">sign up</button>
 
                             <div class=" form-check3 align-items-center justify-content-center text-center mb-4">
-                                Already have an account? <a class="sign" href="signIn.html">Sign in</a>
+                                Already have an account? <a class="sign" href="{% url 'accounts:signIn.html' %}">Sign in</a>
   
                        </div>
 
@@ -96,15 +97,15 @@ a{ text-decoration: none;
     
                         <div class="icon4 d-flex w-75 align-items-center justify-content-between">
                                  <div class="icon1 d-flex align-items-center justify-content-center border p-2 w-33" >
-                                <img src="img/fb-icon.png">
+                                <img src="{% static 'accounts/img/fb-icon.png'%}">
                                 <a class="m-0 ps-2" href="">Facebook</a>
                                 </div>
                                 <div class="icon2 d-flex align-items-center justify-content-center border p-2 w-33">
-                                <img src="img/google-icon.png">
+                                <img src="{% static 'accounts/img/google-icon.png'%}">
                                  <a class=" m-0 ps-2" href="">Google</a>
                                </div>
                              <div class="icon3 d-flex align-items-center justify-content-center border p-2  w-33">
-                              <img src="img/twitter-icon.png">
+                              <img src="{% static 'accounts/img/twitter-icon.png'%}">
                                 <a class="m-0 ps-2" href="">Twitter</a>
                              </div>
                         </div>
@@ -128,8 +129,8 @@ a{ text-decoration: none;
 
 
 
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/sign-up.js"></script>
+    <script src="{% static 'accounts/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'accounts/js/sign-up.js'%}"></script>
     
 
 </body>

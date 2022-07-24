@@ -1,3 +1,5 @@
+{%extends "home/burj-khalifa-1.html"%}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,6 +102,7 @@
                 </div>
             </div>
         </header>
+{%block content%}
         <div class="first-session">
             <div class="buttons p-5 d-flex justify-content-between">
             <a href="#"><button class="btn btn-outline-warning cool px-4 rounded-3" type="submit">Back</button></a>
@@ -115,7 +118,7 @@
                 <div class="position-relative search-box w-50">
                     <input type="text" class="py-1 rounded-pill border-1 ps-5 w-75" placeholder="Search locations">
                     <button class="bg-orange text-white rounded-pill border-0 px-4 position-absolute">Search</button>
-                    <img src="./img/index-search-icon.png" class="position-absolute search-icon" alt="">
+                    <img src="{% static 'home/img/index-search-icon.png' %}" class="position-absolute search-icon" alt="">
                 </div>
                 <div class="stats w-50 row">
                     <div class="col-6  text-start">
@@ -142,22 +145,22 @@
             <p class="fw-bold text-center mb-3">Top Attractions For You In France.</p>
             <div class="row">
                 <div class="col-lg-4 col-md-6">
-                    <img src="./img/paris france.png" class="m-3 img-fluid" alt="france">
+                    <img src="{% static 'home/img/paris france.png'%}" class="m-3 img-fluid" alt="france">
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <img src="./img/masielle france.png" class="m-3 img-fluid" alt="france">
+                    <img src="{% static 'home/img/masielle france.png'%}" class="m-3 img-fluid" alt="france">
                 </div> 
                 <div class="col-lg-4 col-md-6">
-                    <img src="./img/lyon france.png" class="m-3 img-fluid" alt="france">
+                    <img src="{% static 'home/img/lyon france.png'%}" class="m-3 img-fluid" alt="france">
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <img src="./img/nice france.png" class="m-3 img-fluid" alt="france">
+                    <img src="{% static 'home/img/nice france.png'%}" class="m-3 img-fluid" alt="france">
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <img src="./img/nantes france.png" class="m-3 img-fluid" alt="france">
+                    <img src="{% static 'home/img/nantes france.png'%}" class="m-3 img-fluid" alt="france">
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <img src="./img/lille france.png" class="m-3 img-fluid" alt="france">
+                    <img src="{% static 'home/img/lille france.png'%}" class="m-3 img-fluid" alt="france">
                 </div>
             </div>
             <div class="button text-center mb-5">
@@ -170,14 +173,14 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Eiffel Tower.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Eiffel Tower.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Eiffel Tower</h5>
-                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                                <img src="{% static 'home/img/Frame 47767.png'%}" style="width: 30%; height:3vh;" alt="paris">
                             </div>
                             <div class="d-flex">
-                                <img src="./img/location.png" alt="france">
+                                <img src="{% static 'home/img/location.png'%}" alt="france">
                                 <p class="card-text ms-3">Paris, France</p>
                             </div>
                         </div>
@@ -185,14 +188,14 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Palace of Versailles.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Palace of Versailles.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Palace of Versailles</h5>
-                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                                <img src="{% static 'home/img/Frame 47767.png'%}" style="width: 30%; height:3vh;" alt="paris">
                             </div>
                             <div class="d-flex">
-                                <img src="./img/location.png" alt="france">
+                                <img src="{% static 'home/img/location.png'%}" alt="france">
                                 <p class="card-text ms-3">Versailies, France</p>
                             </div>
                         </div>
@@ -200,14 +203,14 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Musee d’ Orsay.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Musee d’ Orsay.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Musee d' Orsay</h5>
-                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                                <img src="{% static 'home/img/Frame 47767.png'%}" style="width: 30%; height:3vh;" alt="paris">
                             </div>
                             <div class="d-flex">
-                                <img src="./img/location.png" alt="france">
+                                <img src="{% static 'home/img/location.png'%}" alt="france">
                                 <p class="card-text ms-3">Paris, France</p>
                             </div>
                         </div>
@@ -215,14 +218,14 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-3">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Louvre Museum.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Louvre Museum.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Louvre Museum</h5>
-                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                                <img src="{% static 'home/img/Frame 47767.png'%}" style="width: 30%; height:3vh;" alt="paris">
                             </div>
                             <div class="d-flex">
-                                <img src="./img/location.png" alt="france">
+                                <img src="{% static 'home/img/location.png'%}" alt="france">
                                 <p class="card-text ms-3">Paris, France</p>
                             </div>
                         </div>
@@ -230,14 +233,14 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-3">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Paris Catacombs.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Paris Catacombs.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Paris Catacombs</h5>
-                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                                <img src="{% static 'home/img/Frame 47767.png'%}" style="width: 30%; height:3vh;" alt="paris">
                             </div>
                             <div class="d-flex">
-                                <img src="./img/location.png" alt="france">
+                                <img src="{% static 'home/img/location.png'%}" alt="france">
                                 <p class="card-text ms-3">Paris, France</p>
                             </div>
                         </div>
@@ -245,14 +248,14 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-3">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Arc de Triomphe.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Arc de Triomphe.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Arc de Triomphe</h5>
-                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                                <img src="{% static 'home/img/Frame 47767.png'%}" style="width: 30%; height:3vh;" alt="paris">
                             </div>
                             <div class="d-flex">
-                                <img src="./img/location.png" alt="france">
+                                <img src="{% static 'home/img/location.png'%}" alt="france">
                                 <p class="card-text ms-3">Paris, France</p>
                             </div>
                         </div>
@@ -269,14 +272,14 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Museums & Exhibitions.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Museums & Exhibitions.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Museums & Exhibitions</h5>
                                 <p>$150</p>
                             </div>
                             <div class="d-flex">
-                                <img src="./img/location.png" alt="france">
+                                <img src="{% static 'home/img/location.png'%}" alt="france">
                                 <p class="card-text ms-3">Paris, France</p>
                             </div>
                         </div>
@@ -284,14 +287,14 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Cabarets.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Cabarets.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Cabarets</h5>
                                 <p>$300</p>
                             </div>
                             <div class="d-flex">
-                                <img src="./img/location.png" alt="france">
+                                <img src="{% static 'home/img/location.png'%}" alt="france">
                                 <p class="card-text ms-3">Lyon, France</p>
                             </div>
                         </div>
@@ -299,14 +302,14 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Sightseeing Cruise.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Sightseeing Cruise.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Sightseeing Cruise</h5>
                                 <p>$200</p>
                             </div>
                             <div class="d-flex">
-                                <img src="./img/location.png" alt="france">
+                                <img src="{% static 'home/img/location.png'%}" alt="france">
                                 <p class="card-text ms-3">Paris, France</p>
                             </div>
                         </div>
@@ -314,14 +317,14 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Bike Tours.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Bike Tours.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Bike Tours</h5>
                                 <p>$30</p>
                             </div>
                             <div class="d-flex">
-                                <img src="./img/location.png" alt="france">
+                                <img src="{% static 'home/img/location.png'%}" alt="france">
                                 <p class="card-text ms-3">Nantes, France</p>
                             </div>
                         </div>
@@ -329,14 +332,14 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Cooking classes.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Cooking classes.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Cooking classes</h5>
                                 <p>$50</p>
                             </div>
                             <div class="d-flex">
-                                <img src="./img/location.png" alt="france">
+                                <img src="{% static 'home/img/location.png'%}" alt="france">
                                 <p class="card-text ms-3">Lille, France</p>
                             </div>
                         </div>
@@ -344,14 +347,14 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-3">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Lunch & Dinner Cruises.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Lunch & Dinner Cruises.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Lunch & Dinner Cruises</h5>
                                 <p>$100</p>
                             </div>
                             <div class="d-flex">
-                                <img src="./img/location.png" alt="france">
+                                <img src="{% static 'home/img/location.png'%}" alt="france">
                                 <p class="card-text ms-3">Paris, France</p>
                             </div>
                         </div>
@@ -368,15 +371,15 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Charles Babbage.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Charles Babbage.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Charles Babbage</h5>
-                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                                <img src="{% static 'home/img/Frame 47767.png'%}" style="width: 30%; height:3vh;" alt="paris">
                             </div>
                             <div class="bigger d-flex justify-content-between">
                                 <div class="d-flex">
-                                    <img src="./img/location.png" style="width: 12%; height:3vh;" alt="france">
+                                    <img src="{% static 'home/img/location.png'%}" style="width: 12%; height:3vh;" alt="france">
                                     <p class="card-text ms-2">France</p>
                                 </div>
                                 <p>Available</p>
@@ -388,35 +391,35 @@
                 </div>
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Delphine Pete.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Delphine Pete.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Delphine Pete</h5>
-                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                                <img src="{% static 'home/img/Frame 47767.png'%}" style="width: 30%; height:3vh;" alt="paris">
                             </div>
                             <div class="bigger d-flex justify-content-between">
                                 <div class="d-flex">
-                                    <img src="./img/location.png" style="width: 12%; height:3vh;" alt="france">
+                                    <img src="{% static 'home/img/location.png'%}" style="width: 12%; height:3vh;" alt="france">
                                     <p class="card-text ms-2">France</p>
                                 </div>
                                 <p>Available</p>
                             </div>
                             
-                            <a href="france-travel-agent.html" class="btn btn-warning px-5 text-light book">Book me</a>
+                            <a href="{% url 'home:france-travel-agent.html' %}" class="btn btn-warning px-5 text-light book">Book me</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-5">
                     <div class="card" style="width: 18rem;">
-                        <img src="./img/Alexandre Kitt.png" class="card-img-top" alt="paris">
+                        <img src="{% static 'home/img/Alexandre Kitt.png'%}" class="card-img-top" alt="paris">
                         <div class="card-body">
                             <div class="d-flex justify-content-between">
                                 <h5 class="card-title mb-3">Alexandre Kitt</h5>
-                                <img src="./img/Frame 47767.png" style="width: 30%; height:3vh;" alt="paris">
+                                <img src="{% static 'home/img/Frame 47767.png'%}" style="width: 30%; height:3vh;" alt="paris">
                             </div>
                             <div class="bigger d-flex justify-content-between">
                                 <div class="d-flex">
-                                    <img src="./img/location.png" style="width: 12%; height:3vh;" alt="france">
+                                    <img src="{% static 'home/img/location.png'%}" style="width: 12%; height:3vh;" alt="france">
                                     <p class="card-text ms-2">France</p>
                                 </div>
                                 <p>Available</p>
@@ -431,6 +434,7 @@
                 <a href="#"><button class="btn btn-outline-warning px-4 rounded-3" type="submit">View more activities</button></a> 
             </div>
         </div>
+{%endblock content%}
         <footer class="pt-5">
             <div class="container border-top border-1 border-white border-bottom text-white mb-5">
                 <div class="row pt-5 mt-3 px-2 pb-3 w-auto">

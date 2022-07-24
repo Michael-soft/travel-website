@@ -1,3 +1,5 @@
+{%extends "home/burj-khalifa-1.html"%}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,11 +104,12 @@
         </div>
     </div>
 </header>
+{%block content%}
     <section id="actions">
         <div class="container">
             <div class="actions d-flex justify-content-between">
                 <div class="back text-decoration-none ">
-                    <a href="burj-khalifa.html"><img src="img/dub-back.png" alt=""><span class="ps-3">Back</span></a>
+                    <a href="{% url 'home:burj-khalifa.html'%}"><img src="{% static 'home/img/dub-back.png' %}" alt=""><span class="ps-3">Back</span></a>
                 </div>
                 <div class="share-save d-flex">
                     <div class="save pe-3">
@@ -124,7 +127,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-12 col-sm-3 card">
-                <img src="img/dubai-trael-guide.png" class="card-img-top" alt="...">
+                <img src="{% static 'home/img/dubai-trael-guide.png'%}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <div class="name d-flex justify-content-between">
                         <div>
@@ -137,19 +140,19 @@
                     
                     <div class="stars d-flex justify-content-between">
                         <div class="star">
-                            <img src="img/dub-stars.png" alt="">
+                            <img src=" {% static 'home/img/dub-stars.png'%}" alt="">
                         </div>
                         <div class="rate">
                             <p><span style="font-weight: bold;">4.9</span>(65 Reviews)</p>
                         </div>
                     </div>
                     <div class="loccc d-flex align-item-center">
-                        <div class="loc"><img src="img/dub-Vector.png" alt="" class="mt-2"></div>
+                        <div class="loc"><img src="{% static 'home/img/dub-Vector.png'%}" alt="" class="mt-2"></div>
                         <div class="place pt-2 ps-2"><p>Lives in Dubai</p></div>
                     </div>
                     <div class="locc d-flex align-item-center justify-content-between">
                         <div class="fluent d-flex align-item-center">
-                            <div class="loc"><img src="img/dub-fluent.png" alt="" class="mt-2"></div>
+                            <div class="loc"><img src="{% static 'home/img/dub-fluent.png'%}" alt="" class="mt-2"></div>
                             <div class="place pt-2 ps-2"><p>Fluent in English & Arabic</p></div>
                         </div>
                         <div class="button pt-2 ps-1">
@@ -287,14 +290,14 @@
                         <div class="person d-flex justify-content-between">
                             <div class="person-image d-flex">
                                 <div class="pic">
-                                    <img src="img/dub-rihenna.png" alt="">
+                                    <img src="{% static 'home/img/dub-rihenna.png'%}" alt="">
                                 </div>
                                 <div class="name pt-3 mt-2 ps-2">
                                     <p>Rihanna Henry</p>
                                 </div>
                             </div>
                             <div class="rating pt-3 mt-2">
-                                <img src="img/dub-stars.png" alt="">
+                                <img src="{% static 'home/img/dub-stars.png'%}" alt="">
                             </div>
                         </div>
                         <div class="comment">
@@ -305,14 +308,14 @@
                         <div class="person d-flex justify-content-between">
                             <div class="person-image d-flex">
                                 <div class="pic">
-                                    <img src="img/dub-jonah.png" alt="">
+                                    <img src="{% static 'home/img/dub-jonah.png'%}" alt="">
                                 </div>
                                 <div class="name pt-3 mt-2 ps-2">
                                     <p>Angela Brown</p>
                                 </div>
                             </div>
                             <div class="rating pt-3 mt-2">
-                                <img src="img/dub-stars.png" alt="">
+                                <img src="{% static 'home/img/dub-stars.png'%}" alt="">
                             </div>
                         </div>
                         <div class="comment">
@@ -323,14 +326,14 @@
                         <div class="person d-flex justify-content-between">
                             <div class="person-image d-flex">
                                 <div class="pic">
-                                    <img src="img/dub-angela.png" alt="">
+                                    <img src="{% static 'home/img/dub-angela.png'%}" alt="">
                                 </div>
                                 <div class="name pt-3 mt-2 ps-2">
                                     <p>Jonah Salvador</p>
                                 </div>
                             </div>
                             <div class="rating pt-3 mt-2">
-                                <img src="img/dub-stars.png" alt="">
+                                <img src="{% static 'home/img/dub-stars.png'%}" alt="">
                             </div>
                         </div>
                         <div class="comment">
@@ -353,7 +356,7 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="card">
-                            <img src="img/dubai-agent-1.png" class="card-img-top" alt="...">
+                            <img src="{% static 'home/img/dubai-agent-1.png'%}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="card-title d-flex justify-content-between align-item-center">
                                     <div class="name"><h6>Abdulahi Usman</h6></div>
@@ -378,7 +381,7 @@
                               <div class="location-status d-flex justify-content-between pt-3">
                                 <div class="location d-flex">
                                     <div class="icon pe-2">
-                                        <img src="img/dub-Vector.png" alt="">
+                                        <img src="{% static 'home/img/dub-Vector.png'%}" alt="">
                                     </div>
                                     <div class="place">
                                         <p>Dubai</p>
@@ -394,7 +397,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="card">
-                            <img src="img/dubai-agent-3.png" class="card-img-top" alt="...">
+                            <img src="{% static 'home/img/dubai-agent-3.png'%}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="card-title d-flex justify-content-between align-item-center">
                                     <div class="name"><h6>Raman Jago</h6></div>
@@ -419,7 +422,7 @@
                               <div class="location-status d-flex justify-content-between pt-3">
                                 <div class="location d-flex">
                                     <div class="icon pe-2">
-                                        <img src="img/dub-Vector.png" alt="">
+                                        <img src="{% static 'home/img/dub-Vector.png'%}" alt="">
                                     </div>
                                     <div class="place">
                                         <p>Dubai</p>
@@ -435,7 +438,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="card">
-                            <img src="img/dubai-agent-2.png" class="card-img-top" alt="...">
+                            <img src="{% static 'home/img/dubai-agent-2.png'%}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <div class="card-title d-flex justify-content-between align-item-center">
                                     <div class="name"><h6>Hajara Mustafah</h6></div>
@@ -460,7 +463,7 @@
                               <div class="location-status d-flex justify-content-between pt-3">
                                 <div class="location d-flex">
                                     <div class="icon pe-2">
-                                        <img src="img/dub-Vector.png" alt="">
+                                        <img src="{% static 'home/img/dub-Vector.png'%}" alt="">
                                     </div>
                                     <div class="place">
                                         <p>Dubai</p>
@@ -478,6 +481,7 @@
             </div>
         </div>
     </section>
+{%endblock content%}
     <footer class="pt-5">
         <div class="container border-top border-1 border-white border-bottom text-white mb-5">
             <div class="row pt-5 mt-3 px-2 pb-3 w-auto">
@@ -494,7 +498,7 @@
                 <div class="col-lg-3 ps-5 company">
                     <h4 class="pb-2">Company</h4>
                     <ul class="p-0">
-                        <li class="list-unstyled pb-1"><a href="landing-page-after-sign-in.html" class="text-decoration-none text-white">Home</a>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:landing-page-after-sign-in.html'%}" class="text-decoration-none text-white">Home</a>
                         </li>
                         <li class="list-unstyled pb-1"><a href="service.html" class="text-decoration-none text-white">Services</a></li>
                         <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a></li>

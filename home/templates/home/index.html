@@ -18,7 +18,7 @@
     <!-- Navbar -->
     <header class="navbar navbar-expand-lg navbar-light bg-light py-2 fixed-top">
         <div class="container-fluid px-5">
-            <a class="navbar-brand fw-bold blue fs-3" href="{% url 'home:index.html' %}">Travel<span class="orange">Guide</span></a>
+            <a class="navbar-brand fw-bold blue fs-3" href="index.html">Travel<span class="orange">Guide</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,7 +26,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-dark px-4" aria-current="page" href="{% url 'home:index.html' %}">Home</a>
+                        <a class="nav-link active text-dark px-4" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark px-4" href="{% url 'home:service.html' %}">Services</a>
@@ -57,7 +57,7 @@
                 </ul>
                 <!-- <button class="bg-orange p-2 ms-3 rounded-3 border-0"><img src="./img/landing-bell.png"></button> -->
                 <div style="display: inline-grid;" class="pe-2">
-                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="sign-up.html">Create Account</a>
+                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="{% url 'home:sign-up.html' %}">Create Account</a>
                 </div>
                 <!-- <div style="display: inline-grid;" class="actions d-none">
                     <div class="bell">
@@ -129,7 +129,7 @@
             <div class="position-relative search-box w-50">
                 <input type="text" class="py-1 rounded-pill border-1 ps-5 w-75" placeholder="Search locations">
                 <button class="bg-orange text-white rounded-pill border-0 px-4 position-absolute">Search</button>
-                <img src="img/index-search-icon.png" class="position-absolute search-icon" alt="">
+                <img src=" {% static 'home/img/index-search-icon.png' %}" class="position-absolute search-icon" alt="">
             </div>
             <div class="stats w-50 row">
                 <div class="col-6  text-start">
@@ -148,7 +148,7 @@
         <p class="text-dark text-center">Find out why we have a trusted place in our customer’s heart</p>
         <div class="row my-5">
             <div class="col-lg-5">
-                <img src="img/index-soul.png" class="img-fluid" alt="">
+                <img src="{% static 'home/img/index-soul.png'%}" class="img-fluid" alt="">
             </div>
             <div class="col-lg-7 ps-5">
                 <p class="fs-5">At <span class="blue fw-bolder">TRAVEL</span> <span class="orange fw-bolder">GUIDE</span>, we help people find and schedule diverse travel services. It recommends activities in destination cities with safe measures that doesn’t cost much for traveler but benefiting. KodedTravels is known to provide you with all the information you need to know about traveling. Are you a First Time traveler? KodedTravels has got you covered with easy
@@ -161,15 +161,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 d-flex align-items-center my-lg-0 my-md-3 my-4">
-                    <img src="img/index-location-world.png">
+                    <img src="{% static 'home/img/index-location-world.png' %}">
                     <p class="m-0 ps-3 fs-6">Find inspiration and comprehensive information about your next trip</p>
                 </div>
                 <div class="col-lg-4 d-flex align-items-center my-lg-0 my-md-3 my-2">
-                    <img src="img/index-guide.png">
+                    <img src="{% static 'home/img/index-guide.png'%}">
                     <p class="m-0 ps-3 fs-6">Connect with a local guide to get guides about your potential dream trip</p>
                 </div>
                 <div class="col-lg-4 d-flex align-items-center my-lg-0 my-md-3 my-4">
-                    <img src="img/index-security.png">
+                    <img src="{% static 'home/img/index-security.png' %}">
                     <p class="m-0 ps-3 fs-6">Book and travel securely with our free and local expert assistance</p>
                 </div>
             </div>
@@ -183,12 +183,12 @@
                 <div class="row d-lg-flex d-md-none d-none">
                     <div class="col-lg-4">
                         <div class="frame w-100 position-relative">
-                            <img src="img/index-dubai.png" class="img-fluid w-100" alt="">
-                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <img src="{% static 'home/img/index-dubai.png'%}" class="img-fluid w-100" alt="">
+                            <img src="{% static 'home/img/index-like.png'%}" class="position-absolute top-0 end-0 pt-4 pe-3">
                             <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
                                 <p class="mb-1">Dubai,</p>
                                 <div class="d-flex text-white pb-3 align-items-center">
-                                    <img src="img/index-white-location.png" class="img-fluid pe-2"> 
+                                    <img src="{% static 'home/img/index-white-location.png'%}" class="img-fluid pe-2"> 
                                     <p class="m-0 ">United Arab Emirates</p>
                                 </div>
                             </div>
@@ -196,12 +196,12 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="frame w-100 position-relative">
-                            <img src="img/index-wyoming.png" class="img-fluid w-100" alt="">
-                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <img src="{% static 'home/img/index-wyoming.png'%}" class="img-fluid w-100" alt="">
+                            <img src="{% static 'home/img/index-like.png'%}" class="position-absolute top-0 end-0 pt-4 pe-3">
                             <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
                                 <p class="mb-1">Wyoming</p>
                                 <div class="d-flex text-white pb-3 align-items-center">
-                                    <img src="img/index-white-location.png" class="img-fluid pe-2"> 
+                                    <img src="{% static 'home/img/index-white-location.png'%}" class="img-fluid pe-2"> 
                                     <p class="m-0 ">United States of America</p>
                                 </div>
                             </div>
@@ -209,12 +209,12 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="frame w-100 position-relative">
-                            <img src="img/index-punta.png" class="img-fluid w-100" alt="">
-                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <img src="{% static 'home/img/index-punta.png'%}" class="img-fluid w-100" alt="">
+                            <img src="{% static 'home/img/index-like.png'%}" class="position-absolute top-0 end-0 pt-4 pe-3">
                             <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
                                 <p class="mb-1">Punta Cana</p>
                                 <div class="d-flex text-white pb-3 align-items-center">
-                                    <img src="img/index-white-location.png" class="img-fluid pe-2"> 
+                                    <img src="{% static 'home/img/index-white-location.png'%}" class="img-fluid pe-2"> 
                                     <p class="m-0 ">Dominican Republic</p>
                                 </div>
                             </div>
@@ -224,12 +224,12 @@
                 <div class="row d-lg-flex d-md-none d-none mt-3">
                     <div class="col-lg-4">
                         <div class="frame w-100 position-relative">
-                            <img src="img/index-moroco.png" class="img-fluid w-100" alt="">
-                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <img src="{% static 'home/img/index-moroco.png'%}" class="img-fluid w-100" alt="">
+                            <img src="{% static 'home/img/index-like.png'%}" class="position-absolute top-0 end-0 pt-4 pe-3">
                             <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
                                 <p class="mb-1">Moroco</p>
                                 <div class="d-flex text-white pb-3 align-items-center">
-                                    <img src="img/index-white-location.png" class="img-fluid pe-2"> 
+                                    <img src="{% static 'home/img/index-white-location.png'%}" class="img-fluid pe-2"> 
                                     <p class="m-0 ">Africa</p>
                                 </div>
                             </div>
@@ -237,12 +237,12 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="frame w-100 position-relative">
-                            <img src="img/index-maldives.png" class="img-fluid w-100" alt="">
-                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <img src="{% static 'home/img/index-maldives.png'%}" class="img-fluid w-100" alt="">
+                            <img src="{% static 'home/img/index-like.png'%}" class="position-absolute top-0 end-0 pt-4 pe-3">
                             <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
                                 <p class="mb-1">Maldives</p>
                                 <div class="d-flex text-white pb-3 align-items-center">
-                                    <img src="img/index-white-location.png" class="img-fluid pe-2"> 
+                                    <img src="{% static 'home/img/index-white-location.png'%}" class="img-fluid pe-2"> 
                                     <p class="m-0 ">Asia</p>
                                 </div>
                             </div>
@@ -250,12 +250,12 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="frame w-100 position-relative">
-                            <img src="img/index-bora.png" class="img-fluid w-100" alt="">
-                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <img src="{% static 'home/img/index-bora.png'%}" class="img-fluid w-100" alt="">
+                            <img src="{% static 'home/img/index-like.png'%}" class="position-absolute top-0 end-0 pt-4 pe-3">
                             <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
                                 <p class="mb-1">Bora Bora</p>
                                 <div class="d-flex text-white pb-3 align-items-center">
-                                    <img src="img/index-white-location.png" class="img-fluid pe-2"> 
+                                    <img src="{% static 'home/img/index-white-location.png'%}" class="img-fluid pe-2"> 
                                     <p class="m-0 ">French Polynesia</p>
                                 </div>
                             </div>
@@ -268,12 +268,12 @@
                 <div class="swiper-wrapper mb-5">
                     <div class="swiper-slide">
                         <div class="frame w-100 position-relative">
-                            <img src="img/index-dubai.png" class="img-fluid w-100" alt="">
-                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <img src="{% static 'home/img/index-dubai.png'%}" class="img-fluid w-100" alt="">
+                            <img src="{% static 'home/img/index-like.png'%}" class="position-absolute top-0 end-0 pt-4 pe-3">
                             <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
                                 <p class="mb-1">Dubai,</p>
                                 <div class="d-flex text-white pb-3 align-items-center">
-                                    <img src="img/index-white-location.png" class="img-fluid pe-2">
+                                    <img src="{% static 'home/img/index-white-location.png'%}" class="img-fluid pe-2">
                                     <p class="m-0 ">United Arab Emirates</p>
                                 </div>
                             </div>
@@ -281,8 +281,8 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="frame w-100 position-relative">
-                            <img src="img/index-wyoming.png" class="img-fluid w-100" alt="">
-                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <img src="{% static 'home/img/index-wyoming.png'%}" class="img-fluid w-100" alt="">
+                            <img src="{% static 'home/img/index-like.png'%}" class="position-absolute top-0 end-0 pt-4 pe-3">
                             <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
                                 <p class="mb-1">Wyoming</p>
                                 <div class="d-flex text-white pb-3 align-items-center">
@@ -294,12 +294,12 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="frame w-100 position-relative">
-                            <img src="img/index-punta.png" class="img-fluid w-100" alt="">
-                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <img src="{% static 'home/img/index-punta.png'%}" class="img-fluid w-100" alt="">
+                            <img src="{% static 'home/img/index-like.png'%}" class="position-absolute top-0 end-0 pt-4 pe-3">
                             <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
                                 <p class="mb-1">Punta Cana</p>
                                 <div class="d-flex text-white pb-3 align-items-center">
-                                    <img src="img/index-white-location.png" class="img-fluid pe-2">
+                                    <img src="{% static 'home/img/index-white-location.png'%}" class="img-fluid pe-2">
                                     <p class="m-0 ">Dominican Republic</p>
                                 </div>
                             </div>
@@ -307,12 +307,12 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="frame w-100 position-relative">
-                            <img src="img/index-moroco.png" class="img-fluid w-100" alt="">
-                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <img src="{% static 'home/img/index-moroco.png'%}" class="img-fluid w-100" alt="">
+                            <img src="{% static 'home/img/index-like.png'%}" class="position-absolute top-0 end-0 pt-4 pe-3">
                             <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
                                 <p class="mb-1">Moroco</p>
                                 <div class="d-flex text-white pb-3 align-items-center">
-                                    <img src="img/index-white-location.png" class="img-fluid pe-2">
+                                    <img src="{% static 'home/img/index-white-location.png'%}" class="img-fluid pe-2">
                                     <p class="m-0 ">Africa</p>
                                 </div>
                             </div>
@@ -320,12 +320,12 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="frame w-100 position-relative">
-                            <img src="img/index-maldives.png" class="img-fluid w-100" alt="">
-                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <img src="{% static 'home/img/index-maldives.png'%}" class="img-fluid w-100" alt="">
+                            <img src="{% static 'home/img/index-like.png'%}" class="position-absolute top-0 end-0 pt-4 pe-3">
                             <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
                                 <p class="mb-1">Maldives</p>
                                 <div class="d-flex text-white pb-3 align-items-center">
-                                    <img src="img/index-white-location.png" class="img-fluid pe-2">
+                                    <img src="{% static 'home/img/index-white-location.png'%}" class="img-fluid pe-2">
                                     <p class="m-0 ">Asia</p>
                                 </div>
                             </div>
@@ -333,12 +333,12 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="frame w-100 position-relative">
-                            <img src="img/index-bora.png" class="img-fluid w-100" alt="">
-                            <img src="img/index-like.png" class="position-absolute top-0 end-0 pt-4 pe-3">
+                            <img src="{% static 'home/img/index-bora.png'%}" class="img-fluid w-100" alt="">
+                            <img src="{% static 'home/img/index-like.png'%}" class="position-absolute top-0 end-0 pt-4 pe-3">
                             <div class="place position-absolute bottom-0 start-0 ps-4 text-white">
                                 <p class="mb-1">Bora Bora</p>
                                 <div class="d-flex text-white pb-3 align-items-center">
-                                    <img src="img/index-white-location.png" class="img-fluid pe-2">
+                                    <img src="{% static 'home/img/index-white-location.png'%}" class="img-fluid pe-2">
                                     <p class="m-0 ">French Polynesia</p>
                                 </div>
                             </div>
@@ -360,7 +360,7 @@
                 <div class="row d-lg-flex d-none">
                     <div class="col-lg-4 px-3">
                         <div class="card rounded-5">
-                            <img src="img/index-richard.png" class="img-fluid rounded-3">
+                            <img src="{% static 'home/img/index-richard.png'%}" class="img-fluid rounded-3">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center">
                                     <h5 class="fw-bold fs-5 w-60 m-0">Richard Potter</h5>
@@ -384,7 +384,7 @@
                                 </div>
                                 <div class="d-flex align-items-center mt-3">
                                     <div class="d-flex align-items-center w-50">
-                                        <img src="img/index-location.png">
+                                        <img src="{% static 'home/img/index-location.png'%}">
                                         <p class="text-dark m-0 ps-2 fs-5">France</p>
                                     </div>
                                     <p class="text-dark m-0 w-50 text-end">Available</p>
@@ -395,7 +395,7 @@
                     </div>
                     <div class="col-lg-4 px-3">
                         <div class="card rounded-5">
-                            <img src="img/index-gary.png" class="img-fluid rounded-3">
+                            <img src="{% static 'home/img/index-gary.png'%}" class="img-fluid rounded-3">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center">
                                     <p class="fw-bold fs-5 w-60 m-0">Gary White</p>
@@ -419,7 +419,7 @@
                                 </div>
                                 <div class="d-flex align-items-center mt-3">
                                     <div class="d-flex align-items-center w-50">
-                                        <img src="img/index-location.png" alt="">
+                                        <img src="{% static 'home/img/index-location.png'%}" alt="">
                                         <p class="text-dark m-0 ps-3 fs-5">France</p>
                                     </div>
                                         <p class="text-dark m-0 w-50 text-end">Available</p>
@@ -430,7 +430,7 @@
                     </div>
                     <div class="col-lg-4 px-3">
                         <div class="card rounded-5">
-                            <img src="img/index-joylyn.png" class="img-fluid rounded-3">
+                            <img src="{% static 'home/img/index-joylyn.png'%}" class="img-fluid rounded-3">
                             <div class="card-body p-4">
                                 <div class="d-flex align-items-center">
                                     <p class="fw-bold fs-5 w-60 m-0">Joylyn Nyada</p>
@@ -454,7 +454,7 @@
                                 </div>
                                 <div class="d-flex align-items-center mt-3">
                                     <div class="d-flex align-items-center w-50">
-                                        <img src="img/index-location.png" alt="">
+                                        <img src="{% static 'home/img/index-location.png'%}" alt="">
                                         <p class="text-dark m-0 ps-3 fs-5">France</p>
                                     </div>
                                         <p class="text-dark m-0 w-50 text-end">Available</p>
@@ -469,7 +469,7 @@
                     <div class="swiper-wrapper mb-5">
                         <div class="swiper-slide">
                             <div class="card rounded-5">
-                                <img src="img/index-richard.png" class="img-fluid rounded-3">
+                                <img src="{% static 'home/img/index-richard.png'%}" class="img-fluid rounded-3">
                                 <div class="card-body p-4">
                                     <div class="d-flex align-items-center">
                                         <h5 class="fw-bold fs-5 w-60 m-0">Richard Potter</h5>
@@ -493,7 +493,7 @@
                                     </div>
                                     <div class="d-flex align-items-center mt-3">
                                         <div class="d-flex align-items-center w-50">
-                                            <img src="img/index-location.png">
+                                            <img src="{% static 'home/img/index-location.png'%}">
                                             <p class="text-dark m-0 ps-2 fs-5">France</p>
                                         </div>
                                         <p class="text-dark m-0 w-50 text-end">Available</p>
@@ -504,7 +504,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card rounded-5">
-                                <img src="img/index-gary.png" class="img-fluid rounded-3">
+                                <img src="{% static 'home/img/index-gary.png'%}" class="img-fluid rounded-3">
                                 <div class="card-body p-4">
                                     <div class="d-flex align-items-center">
                                         <p class="fw-bold fs-5 w-60 m-0">Gary White</p>
@@ -528,7 +528,7 @@
                                     </div>
                                     <div class="d-flex align-items-center mt-3">
                                         <div class="d-flex align-items-center w-50">
-                                            <img src="img/index-location.png" alt="">
+                                            <img src="{% static 'home/img/index-location.png'%}" alt="">
                                             <p class="text-dark m-0 ps-3 fs-5">France</p>
                                         </div>
                                         <p class="text-dark m-0 w-50 text-end">Available</p>
@@ -539,7 +539,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card rounded-5">
-                                <img src="img/index-joylyn.png" class="img-fluid rounded-3">
+                                <img src="{% static 'home/img/index-joylyn.png'%}" class="img-fluid rounded-3">
                                 <div class="card-body p-4">
                                     <div class="d-flex align-items-center">
                                         <p class="fw-bold fs-5 w-60 m-0">Joylyn Nyada</p>
@@ -563,7 +563,7 @@
                                     </div>
                                     <div class="d-flex align-items-center mt-3">
                                         <div class="d-flex align-items-center w-50">
-                                            <img src="img/index-location.png" alt="">
+                                            <img src="{% static 'home/img/index-location.png'%}" alt="">
                                             <p class="text-dark m-0 ps-3 fs-5">France</p>
                                         </div>
                                         <p class="text-dark m-0 w-50 text-end">Available</p>
@@ -590,7 +590,7 @@
             <div class="row my-3 d-lg-flex d-none">
                 <div class="col-lg-4 px-2">
                     <div class="card">
-                        <img src="img/index-eiffel.png" class="img-fluid">
+                        <img src="{% static 'home/img/index-eiffel.png'%}" class="img-fluid">
                         <div class="card-body px-4 py-3">
                             <div class="d-flex align-items-center">
                                 <p class="fw-bold fs-5 w-60 m-0">Eiffel Tower</p>
@@ -614,7 +614,7 @@
                             </div>
                             <div class="d-flex align-items-center mt-2">
                                 <div class="d-flex align-items-center w-50">
-                                    <img src="img/index-location.png" alt="">
+                                    <img src="{% static 'home/img/index-location.png'%}" alt="">
                                     <p class="text-dark m-0 ps-3 fs-5">Paris, France</p>
                                 </div>
                             </div>
@@ -624,7 +624,7 @@
                 </div>
                 <div class="col-lg-4 px-2">
                     <div class="card">
-                        <img src="img/index-atlantis.png" class="img-fluid">
+                        <img src="{% static 'home/img/index-atlantis.png'%}" class="img-fluid">
                         <div class="card-body px-4 py-3">
                             <div class="d-flex align-items-center w-100">
                                 <p class="fw-bold fs-5 m-0 w-80">Atlantis Aquaventure</p>
@@ -648,7 +648,7 @@
                             </div>
                             <div class="d-flex align-items-center mt-2">
                                 <div class="d-flex align-items-center w-50">
-                                    <img src="img/index-location.png" alt="">
+                                    <img src="{% static 'home/img/index-location.png'%}" alt="">
                                     <p class="text-dark m-0 ps-3 fs-5">Dubai, UAE</p>
                                 </div>
                             </div>
@@ -658,7 +658,7 @@
                 </div>
                 <div class="col-lg-4 px-2">
                     <div class="card">
-                        <img src="img/index-eiffel.png" class="img-fluid">
+                        <img src="{% static 'home/img/index-eiffel.png'%}" class="img-fluid">
                         <div class="card-body px-4 py-3">
                             <div class="d-flex align-items-center">
                                 <p class="fw-bold fs-5 w-60 m-0">Eiffel Tower</p>
@@ -682,7 +682,8 @@
                             </div>
                             <div class="d-flex align-items-center mt-2">
                                 <div class="d-flex align-items-center w-50">
-                                    <img src="img/index-location.png" alt="">
+                        <img src="{% static 'home/img/index-eiffel.png" {% static 'home/" class="img-fluid">
+                                    <img src="{% static 'home/img/index-location.png'%}" alt="">
                                     <p class="text-dark m-0 ps-3 fs-5">Paris, France</p>
                                 </div>
                             </div>
@@ -694,7 +695,7 @@
             <div class="row mt-3 d-lg-flex d-none">
                 <div class="col-lg-4 px-2">
                     <div class="card">
-                        <img src="img/index-nyc.png" class="img-fluid">
+                        <img src="{% static 'home/img/index-nyc.png'%}" class="img-fluid">
                         <div class="card-body px-4 py-3">
                             <div class="d-flex align-items-center">
                                 <p class="fw-bold fs-5 w-60 m-0">New York City</p>
@@ -718,7 +719,7 @@
                             </div>
                             <div class="d-flex align-items-center mt-2">
                                 <div class="d-flex align-items-center">
-                                    <img src="img/index-location.png" alt="">
+                                    <img src="{% static 'home/img/index-location.png'%}" alt="">
                                     <p class="text-dark m-0 ps-3 fs-5">New York City, USA</p>
                                 </div>
                             </div>
@@ -728,7 +729,7 @@
                 </div>
                 <div class="col-lg-4 px-2">
                     <div class="card">
-                        <img src="img/index-atlantis.png" class="img-fluid">
+                        <img src="{% static 'home/img/index-atlantis.png'%}" class="img-fluid">
                         <div class="card-body px-4 py-3">
                             <div class="d-flex align-items-center">
                                 <p class="fw-bold fs-5 m-0 w-60">Mount Corcovado</p>
@@ -752,7 +753,7 @@
                             </div>
                             <div class="d-flex align-items-center mt-2">
                                 <div class="d-flex align-items-center">
-                                    <img src="img/index-location.png" alt="">
+                                    <img src="{% static 'home/img/index-location.png'%}" alt="">
                                     <p class="text-dark m-0 ps-3 fs-5">Rio de Janeiro, USA</p>
                                 </div>
                             </div>
@@ -762,7 +763,7 @@
                 </div>
                 <div class="col-lg-4 px-2">
                     <div class="card">
-                        <img src="img/index-computer-village.png" class="img-fluid">
+                        <img src="{% static 'home/img/index-computer-village.png'%}" class="img-fluid">
                         <div class="card-body px-4 py-3">
                             <div class="d-flex align-items-center">
                                 <p class="fw-bold fs-5 w-60 m-0">Computer Village</p>
@@ -786,7 +787,7 @@
                             </div>
                             <div class="d-flex align-items-center mt-2">
                                 <div class="d-flex align-items-center">
-                                    <img src="img/index-location.png" alt="">
+                                    <img src="{% static 'home/img/index-location.png'%}" alt="">
                                     <p class="text-dark m-0 ps-3 fs-5">Lagos, Nigeria</p>
                                 </div>
                             </div>
@@ -800,7 +801,7 @@
                     <div class="swiper-wrapper mb-5">
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="img/index-eiffel.png" class="img-fluid">
+                                <img src="{% static 'home/img/index-eiffel.png'%}" class="img-fluid">
                                 <div class="card-body px-4 py-3">
                                     <div class="d-flex align-items-center">
                                         <p class="fw-bold fs-5 w-60 m-0">Eiffel Tower</p>
@@ -824,7 +825,7 @@
                                     </div>
                                     <div class="d-flex align-items-center mt-2">
                                         <div class="d-flex align-items-center w-50">
-                                            <img src="./img/index-location.png" alt="">
+                                            <img src="{% static 'home/img/index-location.png'%}" alt="">
                                             <p class="text-dark m-0 ps-3 fs-5">Paris, France</p>
                                         </div>
                                     </div>
@@ -834,7 +835,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="./img/index-atlantis.png" class="img-fluid">
+                                <img src="{% static 'home/img/index-atlantis.png'%}" class="img-fluid">
                                 <div class="card-body px-3 py-3">
                                     <div class="d-flex align-items-center">
                                         <p class="fw-bold fs-5 m-0 w-75">Atlantis Aquaventure</p>
@@ -858,7 +859,7 @@
                                     </div>
                                     <div class="d-flex align-items-center mt-2">
                                         <div class="d-flex align-items-center w-50">
-                                            <img src="./img/index-location.png" alt="">
+                                            <img src="{% static 'home/img/index-location.png'%}" alt="">
                                             <p class="text-dark m-0 ps-3 fs-5">Dubai, UAE</p>
                                         </div>
                                     </div>
@@ -868,7 +869,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="./img/index-eiffel.png" class="img-fluid">
+                                <img src="{% static 'home/img/index-eiffel.png'%}" class="img-fluid">
                                 <div class="card-body px-4 py-3">
                                     <div class="d-flex align-items-center">
                                         <p class="fw-bold fs-5 w-60 m-0">Eiffel Tower</p>
@@ -892,7 +893,7 @@
                                     </div>
                                     <div class="d-flex align-items-center mt-2">
                                         <div class="d-flex align-items-center w-50">
-                                            <img src="./img/index-location.png" alt="">
+                                            <img src="{% static 'home/img/index-location.png'%}" alt="">
                                             <p class="text-dark m-0 ps-3 fs-5">Paris, France</p>
                                         </div>
                                     </div>
@@ -902,7 +903,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="./img/index-nyc.png" class="img-fluid">
+                                <img src="{% static 'home/img/index-nyc.png'%}" class="img-fluid">
                                 <div class="card-body px-4 py-3">
                                     <div class="d-flex align-items-center">
                                         <p class="fw-bold fs-5 w-60 m-0">New York City</p>
@@ -926,7 +927,7 @@
                                     </div>
                                     <div class="d-flex align-items-center mt-2">
                                         <div class="d-flex align-items-center">
-                                            <img src="./img/index-location.png" alt="">
+                                            <img src="{% static 'home/img/index-location.png'%}" alt="">
                                             <p class="text-dark m-0 ps-3 fs-5">New York City, USA</p>
                                         </div>
                                     </div>
@@ -936,7 +937,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="./img/index-atlantis.png" class="img-fluid">
+                                <img src="{% static 'home/img/index-atlantis.png'%}" class="img-fluid">
                                 <div class="card-body px-4 py-3">
                                     <div class="d-flex align-items-center">
                                         <p class="fw-bold fs-5 m-0 w-60">Mount Corcovado</p>
@@ -960,7 +961,7 @@
                                     </div>
                                     <div class="d-flex align-items-center mt-2">
                                         <div class="d-flex align-items-center">
-                                            <img src="./img/index-location.png" alt="">
+                                            <img src="{% static 'home/img/index-location.png'%}" alt="">
                                             <p class="text-dark m-0 ps-3 fs-5">Rio de Janeiro, USA</p>
                                         </div>
                                     </div>
@@ -970,7 +971,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="./img/index-computer-village.png" class="img-fluid">
+                                <img src="{% static 'home/img/index-computer-village.png'%}" class="img-fluid">
                                 <div class="card-body px-4 py-3">
                                     <div class="d-flex align-items-center">
                                         <p class="fw-bold fs-5 w-60 m-0">Computer Village</p>
@@ -994,7 +995,7 @@
                                     </div>
                                     <div class="d-flex align-items-center mt-2">
                                         <div class="d-flex align-items-center">
-                                            <img src="./img/index-location.png" alt="">
+                                            <img src="{% static 'home/img/index-location.png'%}" alt="">
                                             <p class="text-dark m-0 ps-3 fs-5">Lagos, Nigeria</p>
                                         </div>
                                     </div>
@@ -1015,7 +1016,7 @@
             <h2 class="fw-bold text-center fs-2 pt-4">About Us</h2>
             <p class="text-center">Our History and Philosophy</p>
             <div class="row pe-3">
-                <img src="./img/index-about-us.png" class="col-lg-5 img-fluid " alt="">
+                <img src="{% static 'home/img/index-about-us.png'%}" class="col-lg-5 img-fluid " alt="">
                 <p class="col-lg-7 pe-5 pt-2 fs-5 lh-base">At <span class="blue fw-bolder">TRAVEL</span> <span class="orange fw-bolder">GUIDE</span>, we help people find and schedule diverse travel services. It recommends activities in destination cities with safe measures that doesn’t cost much for traveler but benefiting. KodedTravels is known to provide you with all the information you need to know about traveling. Are you a First Time traveler? KodedTravels has got you covered with easy booking system and paying for all your activities while on the go.</p>
             </div>
             <div class="d-flex justify-content-center">
@@ -1026,7 +1027,7 @@
     <section id="testimony" class="mb-3">
         <div class="container">
             <div class="ceo text-center my-5">
-                <img src="./img/index-williams.png" class="img-fluid mb-3">
+                <img src="{% static 'home/img/index-williams.png'%}" class="img-fluid mb-3">
                 <h5>William Goddins</h5>
                 <p class="mb-4">C.E.O KodedTravels</p>
                 <p class="">“It’s our aim and goal to give you the best traveling experience.”</p>
@@ -1060,7 +1061,7 @@
                                 <h5>Friendly Service</h5>
                                 <p class="grey">“Seeing destination images makes me happy but happier to see them exactly in real life.”</p>
                             </div>
-                            <img src="./img/index-maya.png" class="img-fluid w-50">
+                            <img src="{% static 'home/img/index-maya.png'%}" class="img-fluid w-50">
                             <h5 class="m-0">Maya Anderson</h5>
                             <p class="grey m-0">Civil Servant</p>
                         </div>
@@ -1071,7 +1072,7 @@
                                 <h5>Mindblowing Service</h5>
                                 <p class="grey">“Due to my nature of work, it is required for me to travel a lot. KodedTravels is of great help to me.”</p>
                             </div>
-                            <img src="./img/index-kayla.png" class="img-fluid w-50">
+                            <img src="{% static 'home/img/index-kayla.png'%}" class="img-fluid w-50">
                             <h5 class="m-0">Kayla Williams</h5>
                             <p class="grey m-0">CEO of Bulliam</p>
                         </div>
@@ -1082,7 +1083,7 @@
                                 <h5>Efficient Collaborating</h5>
                                 <p class="grey">“Traveling has not always been easy but with travel guide i found ease in my trips, this means a lot to me.”</p>
                             </div>
-                            <img src="./img/index-haotian.png" class="img-fluid w-50">
+                            <img src="{% static 'home/img/index-haotian.png'%}" class="img-fluid w-50">
                             <h5 class="m-0">Ou Haotian</h5>
                             <p class="grey m-0">CEO of Kempah</p>
                         </div>
@@ -1093,7 +1094,7 @@
                                 <h5>Friendly Service</h5>
                                 <p class="grey">“Seeing destination images makes me happy but happier to see them exactly in real life.”</p>
                             </div>
-                            <img src="./img/index-maya.png" class="img-fluid w-50">
+                            <img src="{% static 'home/img/index-maya.png'%}" class="img-fluid w-50">
                             <h5 class="m-0">Maya Anderson</h5>
                             <p class="grey m-0">Civil Servant</p>
                         </div>
@@ -1105,7 +1106,7 @@
                                 <p class="grey">“Due to my nature of work, it is required for me to travel a lot. KodedTravels is of great
                                     help to me.”</p>
                             </div>
-                            <img src="./img/index-kayla.png" class="img-fluid w-50">
+                            <img src="{% static 'home/img/index-kayla.png'%}" class="img-fluid w-50">
                             <h5 class="m-0">Kayla Williams</h5>
                             <p class="grey m-0">CEO of Bulliam</p>
                         </div>
@@ -1117,7 +1118,7 @@
                                 <p class="grey">“Traveling has not always been easy but with travel guide i found ease in my trips, this
                                     means a lot to me.”</p>
                             </div>
-                            <img src="./img/index-haotian.png" class="img-fluid w-50">
+                            <img src="{% static 'home/img/index-haotian.png'%}" class="img-fluid w-50">
                             <h5 class="m-0">Ou Haotian</h5>
                             <p class="grey m-0">CEO of Kempah</p>
                         </div>
@@ -1128,7 +1129,7 @@
                                 <h5>Friendly Service</h5>
                                 <p class="grey">“Seeing destination images makes me happy but happier to see them exactly in real life.”</p>
                             </div>
-                            <img src="./img/index-maya.png" class="img-fluid w-50">
+                            <img src="{% static 'home/img/index-maya.png'%}" class="img-fluid w-50">
                             <h5 class="m-0">Maya Anderson</h5>
                             <p class="grey m-0">Civil Servant</p>
                         </div>
@@ -1140,7 +1141,7 @@
                                 <p class="grey">“Due to my nature of work, it is required for me to travel a lot. KodedTravels is of great
                                     help to me.”</p>
                             </div>
-                            <img src="./img/index-kayla.png" class="img-fluid w-50">
+                            <img src="{% static 'home/img/index-kayla.png'%}" class="img-fluid w-50">
                             <h5 class="m-0">Kayla Williams</h5>
                             <p class="grey m-0">CEO of Bulliam</p>
                         </div>
@@ -1152,7 +1153,7 @@
                                 <p class="grey">“Traveling has not always been easy but with travel guide i found ease in my trips, this
                                     means a lot to me.”</p>
                             </div>
-                            <img src="./img/index-haotian.png" class="img-fluid w-50">
+                            <img src="{% static 'home/img/index-haotian.png'%}" class="img-fluid w-50">
                             <h5 class="m-0">Ou Haotian</h5>
                             <p class="grey m-0">CEO of Kempah</p>
                         </div>
@@ -1169,20 +1170,20 @@
                     <h3>Travel Guide</h3>
                     <p class="pe-3">“The world is a book and those who do not travel read only one page.”</p>
                     <div class="socials mt-5 d-flex justify-content-between w-75">
-                        <img src="./img/index-facebook.png">
-                        <img src="./img/index-instagram.png">
-                        <img src="./img/index-twitter.png">
-                        <img src="./img/index-linkedin.png">
+                        <img src="{% static 'home/img/index-facebook.png'%}">
+                        <img src="{% static 'home/img/index-instagram.png'%}">
+                        <img src="{% static 'home/img/index-twitter.png'%}">
+                        <img src="{% static 'home/img/index-linkedin.png'%}">
                     </div>
                 </div>
                 <div class="company col-lg-3 ps-5">
                     <h4 class="pb-2">Company</h4>
                     <ul class="p-0">
-                        <li class="list-unstyled pb-1"><a href="index.html" class="text-decoration-none text-white">Home</a></li>
-                        <li class="list-unstyled pb-1"><a href="service.html" class="text-decoration-none text-white">Services</a></li> 
-                        <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a></li> 
-                        <li class="list-unstyled pb-1"><a href="about.html" class="text-decoration-none text-white">About Us</a></li> 
-                        <li class="list-unstyled pb-1"><a href="contact.html" class="text-decoration-none text-white">Contact Us</a></li> 
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:index.html'%}" class="text-decoration-none text-white">Home</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:service.html'%}" class="text-decoration-none text-white">Services</a></li> 
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:blog.html'%}" class="text-decoration-none text-white">Blog</a></li> 
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:about.html'%}" class="text-decoration-none text-white">About Us</a></li> 
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:contact.html'%}" class="text-decoration-none text-white">Contact Us</a></li> 
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -1204,19 +1205,19 @@
             </div>
             <div class="copyright position-relative w-30 text-center mb-2">
                 <h4>KodedTravels</h4>
-                <img src="./img/index-copyright.png">
+                <img src="{% static 'home/img/index-copyright.png'%}">
                 <p class="d-inline-block ps-3 m-0">All simple rights reserved 2022</p>
             </div>
         </div>
         <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white pb-2">
-            <a href="faq-before.html" class="text-decoration-none text-white">FAQs</a>
-            <a href="terms-and-policies-signup.html" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
-            <a href="privacy-policy.html" class="text-decoration-none text-white">Privacy Policy</a>
+            <a href="{% url 'home:faq-before.html'%}" class="text-decoration-none text-white">FAQs</a>
+            <a href="{% url 'accounts:terms-and-policies-signup.html'%}" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
+            <a href="{% url 'home:privacy-policy.html'%}" class="text-decoration-none text-white">Privacy Policy</a>
         </div>
     </footer>
     
-    <script src="./js/app.js"></script>
-    <script src="./js/bootstrap.js"></script>
+    <script src="{% static 'home/js/app.js'%}"></script>
+    <script src="{% static 'home/js/bootstrap.js'%}"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 

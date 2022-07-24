@@ -1,3 +1,5 @@
+{%extends "accounts/my-account.html"%}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +61,7 @@
         </div>
     </div>
     </header>
-
+{%block content %}
     <!-- Terms and policies -->
    
     <section class="terms container py-5">
@@ -69,17 +71,17 @@
         <h6 class="pb-5">HOW WE WORK</h6>
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <img src="img/terms-of-services.png" alt="Terms of Services" width="357" height="370" class="border img-small" style="padding: 70px;">
+                <img src="{% static 'accounts/img/terms-of-services.png'%}" alt="Terms of Services" width="357" height="370" class="border img-small" style="padding: 70px;">
                 <h6 class="py-4 fw-bold"><a href="terms-of-service.html" class="text-decoration-none text-dark">Terms of Service</a></h6>
                 <p>Terms you agree to when you use TravelGuide.</p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <img src="img/privacy-policy.png" alt="Privacy Policy" width="358" class="border py-5 img-small">
+                <img src="="{% static 'accounts/img/privacy-policy.png'%}" alt="Privacy Policy" width="358" class="border py-5 img-small">
                 <h6 class="py-4 fw-bold"><a href="privacy-policy.html" class="text-decoration-none text-dark">Privacy Policy</a></h6>
                 <p>Information we receive and how it's used.</p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <img src="img/community-standards.png" alt="Community Standards" width="355" class="border py-2 img-small">
+                <img src="="{% static 'accounts/img/community-standards.png'%}" alt="Community Standards" width="355" class="border py-2 img-small">
                 <h6 class="py-4 fw-bold"><a href="#" class="text-decoration-none text-dark">Community Standards</a></h6>
                 <p>What's not allowed and how to report abuse.</p>
             </div>
@@ -87,7 +89,7 @@
     </section>
 
     <!-- footer section -->
-
+{%endblock content%}
     <footer class="pt-5">
         <div class="container border-top border-1 border-white border-bottom text-white mb-5">
             <div class="row pt-5 mt-3 px-2 pb-3 w-auto">
