@@ -1,3 +1,5 @@
+{%extends "home/burj-khalifa-1.html"%}
+{%load static%} 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,21 +118,21 @@
             </div>
         </div>
     </header>
-
+{%block content%}
     <section id="hero">
-        <img src="./img/payment2-hero.png" class="img-fluid" alt="">
+        <img src="{% static 'home/img/payment2-hero.png'%}" class="img-fluid" alt="">
     </section>
 
     <main class="container">
         <div class="image mt-5 pt-3 w-100 d-flex justify-content-center mb-5">
-            <img src="./img/payment2-bg.png" class="img-fluid mx-auto" alt="">
+            <img src="{% static 'home/img/payment2-bg.png'%}" class="img-fluid mx-auto" alt="">
         </div>
         <div class=" text text-center">
             <h2>Booking Confirmation</h2>
             <p class="fs-5 mt-3">Thank you, your booking has been confirmed<br> and a receipt has been sent to:<br><span class="orange">youremail@domain.com</span></p>
         </div>
     </main>
-
+ {%endblock content%}
     <footer class="pt-5">
         <div class="container border-top border-1 border-white border-bottom text-white mb-5">
             <div class="row pt-5 mt-3 px-2 pb-3 w-auto">
@@ -138,10 +140,10 @@
                     <h3>Travel Guide</h3>
                     <p class="pe-3">“The world is a book and those who do not travel read only one page.”</p>
                     <div class="socials mt-5 d-flex justify-content-between w-75">
-                        <img src="./img/index-facebook.png">
-                        <img src="./img/index-instagram.png">
-                        <img src="./img/index-twitter.png">
-                        <img src="./img/index-linkedin.png">
+                        <img src="{% static 'home/img/index-facebook.png'%}">
+                        <img src="{% static 'home/img/index-instagram.png'%}">
+                        <img src="{% static 'home/img/index-twitter.png'%}">
+                        <img src="{% static 'home/img/index-linkedin.png'%}">
                     </div>
                 </div>
                 <div class="company col-lg-3 ps-5">
@@ -182,15 +184,18 @@
                 </div>
                 <div class="col-lg-3">
                     <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <form method="post">
+                        {% csrf_token %}
                     <label for="">Email address</label><br>
                     <input type="email"
-                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
-                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3" name="email">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3" type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="copyright position-relative w-30 text-center mb-2">
                 <h4>KodedTravels</h4>
-                <img src="./img/index-copyright.png">
+                <img src="{% static 'home/img/index-copyright.png'%}">
                 <p class="d-inline-block ps-3 m-0">All simple rights reserved 2022</p>
             </div>
         </div>

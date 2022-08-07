@@ -1,3 +1,5 @@
+{%extends "home/burj-khalifa-1.html"%}
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,9 +118,9 @@
             </div>
         </div>
     </header>
-
+{%block content%}
     <section id="hero">
-        <img src="./img/payment-hero.png" class="img-fluid" alt="">
+        <img src="{% static 'home/img/payment-hero.png' %}" class="img-fluid" alt="">
     </section>
 
     <main class="container">
@@ -164,7 +166,7 @@
                                 <input type="number" max="4" placeholder="Year" class="border-1 px-4 fs-6 py-1 mt-1 w-100 me-auto">
                             </div>
                             <div class="col-4">
-                                <img src="./img/payment-cards.png" class="img-fluid">
+                                <img src="{% static 'home/img/payment-cards.png'%}" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -175,12 +177,12 @@
                                 <input type="number" max="3" placeholder="CVV" class="border-1 px-4 fs-6 py-1 mt-1 w-100">
                             </div>
                             <div class="col-7">
-                                <img src="./img/payment-CVV.png" class="img-fluid" alt="">
+                                <img src="{% static 'home/img/payment-CVV.png'%}" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="w-80 mb-5">
-                        <a href="payment-confirmation.html" class="btn bg-orange text-white w-50">Pay Now</a>
+                        <a href="{% url 'home:paymentconfirm'%}" class="btn bg-orange text-white w-50">Pay Now</a>
                     </div>
                     <div class="help border-1 border-dark border px-1 py-3 w-80 mb-5 mt-2">
                         <div class="help-body mx-auto w-80">
@@ -218,7 +220,7 @@
                     </div>
                 </div>
                 <div class="card mx-4">
-                    <img src="./img/index-richard.png" class="img-fluid" alt="">
+                    <img src="{% static 'home/img/index-richard.png'%}" class="img-fluid" alt="">
                     <div class="card-body px-3">
                         <div class="top row">
                             <div class="col-lg-9 col-8">
@@ -250,7 +252,7 @@
                         </div>
                         <div class="mid row align-items-center mb-2">
                             <div class="col-lg-9 col-8 d-flex align-items-center">
-                                <img src="./img/index-location.png">
+                                <img src="{% static 'home/img/index-location.png'%}">
                                 <p class="text-dark m-0 ps-2 fs-5">France</p>
                             </div>
                             <div class="col-lg-3 col-4 px-0 px-lg-2">
@@ -286,7 +288,7 @@
             </div>
         </div>
     </main>
-
+{%endblock content%}
     <footer class="pt-5">
         <div class="container border-top border-1 border-white border-bottom text-white mb-5">
             <div class="row pt-5 mt-3 px-2 pb-3 w-auto">
@@ -303,7 +305,7 @@
                 <div class="company col-lg-3 ps-5">
                     <h4 class="pb-2">Company</h4>
                     <ul class="p-0">
-                        <li class="list-unstyled pb-1"><a href="landing-page-after-sign-in.html" class="text-decoration-none text-white">Home</a>
+                        <li class="list-unstyled pb-1"><a href="{% url 'accounts:landing-page-after-sign-in'%}" class="text-decoration-none text-white">Home</a>
                         </li>
                         <li class="list-unstyled pb-1"><a href="service.html"
                                 class="text-decoration-none text-white">Services</a></li>
@@ -330,10 +332,13 @@
                 </div>
                 <div class="col-lg-3">
                     <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <form method="post">
+                        {% csrf_token %}
                     <label for="">Email address</label><br>
                     <input type="email"
-                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
-                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3" name="email">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3" type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="copyright position-relative w-30 text-center mb-2">

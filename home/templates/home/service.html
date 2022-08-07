@@ -37,7 +37,7 @@
                         <a class="nav-link active text-dark px-4" aria-current="page" href="landing-page-after-sign-in.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="service.html">Services</a>
+                        <a class="nav-link text-dark px-4" href="{% url 'home:service'%}">Services</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -267,10 +267,10 @@
                 <div class="company col-lg-3 ps-5">
                     <h4 class="pb-2">Company</h4>
                     <ul class="p-0">
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:service.html'%}" class="text-decoration-none text-white">Services</a></li>
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:blog.html'%}" class="text-decoration-none text-white">Blog</a></li>
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:about.html'%}" class="text-decoration-none text-white">About Us</a></li>
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:contact.html'%}" class="text-decoration-none text-white">Contact Us</a>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:service'%}" class="text-decoration-none text-white">Services</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:blog'%}" class="text-decoration-none text-white">Blog</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:about'%}" class="text-decoration-none text-white">About Us</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:contact'%}" class="text-decoration-none text-white">Contact Us</a>
                     </ul>
                 </div>
                 <div class="col-lg-3">
@@ -285,9 +285,13 @@
                 </div>
                 <div class="col-lg-3">
                     <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <form method="post">
+                        {% csrf_token %}
                     <label for="">Email address</label><br>
-                    <input type="email" class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
-                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                    <input type="email"
+                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3" name="email">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3" type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="copyright position-relative w-30 text-center mb-2">
@@ -297,9 +301,9 @@
             </div>
         </div>
         <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white pb-2 faq" >
-            <a href="{% url 'home:faq-after.html'%}" class="text-decoration-none text-white">FAQs</a>
-            <a href="{% url 'home:terms-and-policies.html'%}" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
-            <a href="{% url 'home:privacy-policy.html'%}" class="text-decoration-none text-white">Privacy Policy</a>
+            <a href="{% url 'home:faq-after'%}" class="text-decoration-none text-white">FAQs</a>
+            <a href="{% url 'home:terms-and-policies'%}" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
+            <a href="{% url 'home:privacy-policy'%}" class="text-decoration-none text-white">Privacy Policy</a>
         </div>
     </footer>
 

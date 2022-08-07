@@ -109,7 +109,7 @@
         <div class="container">
             <div class="actions d-flex justify-content-between">
                 <div class="back text-decoration-none ">
-                    <a href="{% url 'home:burj-khalifa.html'%}"><img src="{% static 'home/img/dub-back.png' %}" alt=""><span class="ps-3">Back</span></a>
+                    <a href="{% url 'home:burj-khalifa'%}"><img src="{% static 'home/img/dub-back.png' %}" alt=""><span class="ps-3">Back</span></a>
                 </div>
                 <div class="share-save d-flex">
                     <div class="save pe-3">
@@ -498,7 +498,7 @@
                 <div class="col-lg-3 ps-5 company">
                     <h4 class="pb-2">Company</h4>
                     <ul class="p-0">
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:landing-page-after-sign-in.html'%}" class="text-decoration-none text-white">Home</a>
+                        <li class="list-unstyled pb-1"><a href="{% url 'accounts:landing-page-after-sign-in'%}" class="text-decoration-none text-white">Home</a>
                         </li>
                         <li class="list-unstyled pb-1"><a href="service.html" class="text-decoration-none text-white">Services</a></li>
                         <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a></li>
@@ -522,10 +522,13 @@
                 </div>
                 <div class="col-lg-3">
                     <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <form method="post">
+                        {% csrf_token %}
                     <label for="">Email address</label><br>
                     <input type="email"
-                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
-                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3" name="email">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3" type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="copyright position-relative w-30 text-center mb-2">

@@ -27,7 +27,7 @@
                     <a class="nav-link active text-dark px-4" aria-current="page" href="landing-page-after-sign-in.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark px-4" href="service.html">Services</a>
+                    <a class="nav-link text-dark px-4" href="{% url 'home:service'%}">Services</a>
                 </li>
                 <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -109,7 +109,7 @@
         <div class="container">
             <div class="actions d-flex justify-content-between">
                 <div class="back text-decoration-none ">
-                    <a href="{% url 'home:eiffel-tower.html'%}"><img src="{% static 'home/img/guide-back.png'%}" alt=""><span class="ps-3">Back</span></a>
+                    <a href="{% url 'home:eiffel-tower'%}"><img src="{% static 'home/img/guide-back.png'%}" alt=""><span class="ps-3">Back</span></a>
                 </div>
                 <div class="share-save d-flex">
                     <div class="save pe-3">
@@ -170,7 +170,7 @@
                         <input type="time" name="" id="" class="mb-3">
                         <input type="text" name="" id="" placeholder="Fluent in English and French">
                         <div class="d-grid mt-3">
-                            <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3 text-center" type="submit" href="{% url 'home:payment-checkout.html'%}">Book Now</a>
+                            <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3 text-center" type="submit" href="{% url 'home:payment-checkout'%}">Book Now</a>
 
                             <!-- <button class="bg-orange text-white text-decoration-none" type="submit">Book Now</button> -->
                         </div>
@@ -500,7 +500,7 @@
                     <ul class="p-0">
                         <li class="list-unstyled pb-1"><a href="landing-page-after-sign-in.html" class="text-decoration-none text-white">Home</a>
                         </li>
-                        <li class="list-unstyled pb-1"><a href="service.html" class="text-decoration-none text-white">Services</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:service'%}" class="text-decoration-none text-white">Services</a></li>
                         <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a></li>
                         <li class="list-unstyled pb-1"><a href="about.html" class="text-decoration-none text-white">About Us</a></li>
                         <li class="list-unstyled pb-1"><a href="contact.html" class="text-decoration-none text-white">Contact Us</a>
@@ -522,10 +522,13 @@
                 </div>
                 <div class="col-lg-3">
                     <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <form method="post">
+                        {% csrf_token %}
                     <label for="">Email address</label><br>
                     <input type="email"
-                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
-                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3" name="email">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3" type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="copyright position-relative w-30 text-center mb-2">

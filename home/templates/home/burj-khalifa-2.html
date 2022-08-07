@@ -24,26 +24,26 @@
                         <a class="nav-link active text-dark px-4 fw-bold" aria-current="page" href="landing-page-after-sign-in.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="{% url'home:service.html'%}">Services</a>
+                        <a class="nav-link text-dark px-4" href="{% url'home:service'%}">Services</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="{% url'home:blog.html'%}">Blog</a>
+                        <a class="nav-link text-dark px-4" href="{% url'home:blog'%}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="{% url'home:about.html'%}">About Us</a>
+                        <a class="nav-link text-dark px-4" href="{% url'home:about'%}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="{% url'home:contact.html'%}">Contact Us</a>
+                        <a class="nav-link text-dark px-4" href="{% url'home:contact'%}">Contact Us</a>
                     </li>
                 </ul>
                 <!-- <button class="bg-orange p-2 ms-3 rounded-3 border-0"><img src="./img/landing-bell.png"></button> -->
                 <div style="display: inline-grid;" class="pe-2">
-                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="{% url'home:my-account.html'%}">My Account</a>
+                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="{% url'accounts:my-account'%}">My Account</a>
                 </div>
                 <div style="display: inline-grid;" class="actions">
                     <div class="bell">
-                        <a class=" bg-orange rounded-3 border-0" href="{% url'home:notification.html'%}">
+                        <a class=" bg-orange rounded-3 border-0" href="{% url'home:notification'%}">
                             <img src="{% static 'home/img/guide bell.png'%}" alt="" class="">
                         </a>
                     </div>
@@ -90,7 +90,7 @@
     </header>
 {%block content%}
     <section class="back py-3">
-        <a href="{% url'home:burj-khalifa-1.html'%}"><button type="button" class="btn btn-outline-orange mt-2 m-5"><img src="{% static 'home/img/Group 231.png'%}" alt=""></button>
+        <a href="{% url'home:burj-khalifa-1'%}"><button type="button" class="btn btn-outline-orange mt-2 m-5"><img src="{% static 'home/img/Group 231.png'%}" alt=""></button>
         </a>
     </section>
 
@@ -137,7 +137,7 @@
 
     <section class="group py-5 d-flex justify-content-center">
         <div class="arrow">
-            <a href="{% url'home:burj-khalifa-1.html'%}"><button type="button" class="btn btn-outline mt-2"><img src="img/Bp.png" alt=""></button>
+            <a href="{% url'home:burj-khalifa-1'%}"><button type="button" class="btn btn-outline mt-2"><img src="img/Bp.png" alt=""></button>
             </a>
             <button type="button" class="btn btn-outline mt-2"><img src="{% static 'home/img/Bn.png'%}" alt=""></button>
 
@@ -160,7 +160,7 @@
                 <div class="col-lg-3 ps-5 company">
                     <h4 class="pb-2">Company</h4>
                     <ul class="p-0">
-                        <li class="list-unstyled pb-1"><a href="landing-page-after-sign-in.html" class="text-decoration-none text-white">Home</a>
+                        <li class="list-unstyled pb-1"><a href="landing-page-after-sign-in" class="text-decoration-none text-white">Home</a>
                         </li>
                         <li class="list-unstyled pb-1"><a href="service.html" class="text-decoration-none text-white">Services</a></li>
                         <li class="list-unstyled pb-1"><a href="blog.html" class="text-decoration-none text-white">Blog</a></li>
@@ -184,10 +184,13 @@
                 </div>
                 <div class="col-lg-3">
                     <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <form method="post">
+                        {% csrf_token %}
                     <label for="">Email address</label><br>
                     <input type="email"
-                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
-                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3" name="email">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3" type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="copyright position-relative w-30 text-center mb-2">

@@ -20,7 +20,7 @@
     <!-- Navbar -->
     <header class="navbar navbar-expand-lg navbar-light bg-light py-2 fixed-top">
         <div class="container-fluid px-5">
-            <a class="navbar-brand fw-bold blue fs-3" href="{% url 'home:landing-page-after-sign-in.html' %} ">Travel<span class="orange">Guide</span></a>
+            <a class="navbar-brand fw-bold blue fs-3" href="{% url 'accounts:landing-page-after-sign-in' %} ">Travel<span class="orange">Guide</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,10 +28,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-dark px-4" aria-current="page" href="{% url 'home:landing-page-after-sign-in.html' %} ">Home</a>
+                        <a class="nav-link active text-dark px-4" aria-current="page" href="{% url 'accounts:landing-page-after-sign-in' %} ">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="{% url 'home:service.html' %}">Services</a>
+                        <a class="nav-link text-dark px-4" href="{% url 'home:service' %}">Services</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -48,18 +48,18 @@
                                 </ul>
                             </li> -->
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="{% url 'home:blog.html' %}">Blog</a>
+                        <a class="nav-link text-dark px-4" href="{% url 'home:blog' %}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="{% url 'home:about.html' %}">About Us</a>
-                    </li>
+                        <a class="nav-link text-dark px-4" href="{% url 'home:about' %}">About Us</a>
+                    </li> 
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="{% url 'home:contact.html' %}">Contact Us</a>
+                        <a class="nav-link text-dark px-4" href="{% url 'home:contact' %}">Contact Us</a>
                     </li>
                 </ul>
                 <!-- <button class="bg-orange p-2 ms-3 rounded-3 border-0"><img src="./img/landing-bell.png"></button> -->
                 <div style="display: inline-grid;" class="pe-2">
-                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="{% url 'accounts:my-account.html' %}">My Account</a>
+                    <a class="bg-orange px-4 text-white py-2 text-decoration-none rounded-3" href="{% url 'accounts:my-account' %}">My Account</a>
                 </div>
                 <div style="display: inline-grid;" class="actions">
                     <div class="bell">
@@ -77,7 +77,7 @@
                             <div class="ps-2">
                                 <p>New</p>
                             </div>
-                            <div class="pe-2 see"> <a href="{% url 'home:notification.html' %}">See all</a></div>
+                            <div class="pe-2 see"> <a href="{% url 'home:notification' %}">See all</a></div>
                         </div>
                         <div class="book">
                             <div class="ook">
@@ -1227,7 +1227,7 @@
                                     </div>
                                     <p class="text-dark m-0 w-50 text-end">Available</p>
                                 </div>
-                                <a href="{% url 'home:dubai-travel-guide.html' %}" class="btn mt-4 text-white">Travel With Me</a>
+                                <a href="{% url 'home:dubai-travel-guide' %}" class="btn mt-4 text-white">Travel With Me</a>
                             </div>
                         </div>
                     </div>
@@ -1336,7 +1336,7 @@
                                         </div>
                                         <p class="text-dark m-0 w-50 text-end">Available</p>
                                     </div>
-                                    <a href="{% url 'home:dubai-travel-guide.html' %}" class="btn mt-4 text-white">Travel With Me</a>
+                                    <a href="{% url 'home:dubai-travel-guide' %}" class="btn mt-4 text-white">Travel With Me</a>
                                 </div>
                             </div>
                         </div>
@@ -1436,12 +1436,12 @@
                 <div class="company col-lg-3 ps-5">
                     <h4 class="pb-2">Company</h4>
                     <ul class="p-0">
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:landing-page-after-sign-in.html'%}" class="text-decoration-none text-white">Home</a>
+                        <li class="list-unstyled pb-1"><a href="{% url 'accounts:landing-page-after-sign-in'%}" class="text-decoration-none text-white">Home</a>
                         </li>
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:service.html'%}" class="text-decoration-none text-white">Services</a></li>
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:blog.html'%}" class="text-decoration-none text-white">Blog</a></li>
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:about.html'%}" class="text-decoration-none text-white">About Us</a></li>
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:contact.html'%}" class="text-decoration-none text-white">Contact Us</a>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:service'%}" class="text-decoration-none text-white">Services</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:blog'%}" class="text-decoration-none text-white">Blog</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:about'%}" class="text-decoration-none text-white">About Us</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:contact'%}" class="text-decoration-none text-white">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -1460,10 +1460,13 @@
                 </div>
                 <div class="col-lg-3">
                     <h5 class="pb-3">Subscribe to Our Newsletter</h5>
+                    <form method="post">
+                        {% csrf_token %}
                     <label for="">Email address</label><br>
                     <input type="email"
-                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3">
-                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3">Subscribe</button>
+                        class="w-100 bg-transparent border-1 rounded-3 border-white border mt-2 py-1 text-white px-3" name="email">
+                    <button class="w-100 bg-orange text-white mt-3 py-2 border-0 rounded-3" type="submit">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="copyright position-relative w-30 text-center mb-2">
@@ -1473,9 +1476,9 @@
             </div>
         </div>
         <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white pb-2">
-            <a href="{% url 'home:faq-after.html'%}" class="text-decoration-none text-white">FAQs</a>
-            <a href="{% url 'home:terms-and-policies.html'%}" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
-            <a href="{% url 'home:privacy-policy.html'%}" class="text-decoration-none text-white">Privacy Policy</a>
+            <a href="{% url 'home:faq-after'%}" class="text-decoration-none text-white">FAQs</a>
+            <a href="{% url 'home:terms-and-policies'%}" class="border-start border-end px-4 text-decoration-none text-white">Terms & Conditions</a>
+            <a href="{% url 'home:privacy-policy'%}" class="text-decoration-none text-white">Privacy Policy</a>
         </div>
     </footer>
 </body>

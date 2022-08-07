@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'home/css/bootstrap.css'%}">
-    <link rel="stylesheet" href="{% static 'home/css/landing-page.css'%}">
+    <link rel="stylesheet" href="{% static 'accounts/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'accounts/css/landing-page.css'%}">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/c491194143.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -17,7 +17,7 @@
 <body>
     <header class="navbar navbar-expand-lg navbar-light bg-light py-2 fixed-top">
         <div class="container-fluid px-5">
-            <a class="navbar-brand fw-bold blue fs-3" href="{% url 'home:landing-page-after-sign-in.html'%}"><span class="blue">Travel</span><span class="orange">Guide</span></a>
+            <a class="navbar-brand fw-bold blue fs-3" href="{% url 'accounts:landing-page-after-sign-in'%}"><span class="blue">Travel</span><span class="orange">Guide</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,10 +25,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-dark px-4" aria-current="page" href="landing-page-after-sign-in.html">Home</a>
+                        <a class="nav-link active text-dark px-4" aria-current="page" href="{% url 'accounts:landing-page-after-sign-in'%}">accounts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark px-4" href="service.html">Services</a>
+                        <a class="nav-link text-dark px-4" href="service">Services</a>
                     </li>
                     <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -109,6 +109,10 @@
     <section id="hero">
         <div class="hero text-center">
             <div class="hero-text text-white">
+                <br>
+                <br>
+              {%if user.is_authenticated%}
+                <h3>Hello {{username}} ! </h3>
                 <h1>The world is yours</h1>
                 <h5>Explore the world of new experiences and new adventures <br> with KodedTravels, your discovery becomes easy.</h5>
                 <div class="explore bg-orange text-white text-decoration-none p-2 mt-3">
@@ -122,8 +126,8 @@
         <div class="container search-body py-4 d-flex align-items-center">
             <div class="position-relative search-box w-50">
                 <input type="text" class="py-1 rounded-pill border-1 ps-5 w-75" placeholder="Search locations">
-                <button class="bg-orange text-white rounded-pill border-0 px-4 position-absolute" href="{% url 'home:france.html'%}" >Search</button>
-                <img src="{% static 'home/img/index-search-icon.png'%}" class="position-absolute search-icon" alt="">
+                <button class="bg-orange text-white rounded-pill border-0 px-4 position-absolute" href="{% url 'home:france'%}" >Search</button>
+                <img src="{% static 'accounts/img/index-search-icon.png'%}" class="position-absolute search-icon" alt="">
             </div>
             <div class="stats w-50 row">
                 <div class="col-6  text-start">
@@ -149,7 +153,7 @@
                         <div class="row d-lg-flex d-md-none d-none">
                             <div class="col-lg-4">
                                 <div class="card">
-                                    <img src="{% static 'home/img/landing-effiel.png'%}" class="card-img-top" alt="...">
+                                    <img src="{% static 'accounts/img/landing-effiel.png'%}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                     <div class="card-title d-flex justify-content-between align-item-center">
                                         <div class="name"><h5>Eiffel Tower</h5></div>
@@ -173,19 +177,19 @@
                                     </div>
                                     <div class="location d-flex">
                                             <div class="icon pe-2">
-                                                <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                                <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                             </div>
                                             <div class="place">
                                                 <p>Paris, France</p>
                                             </div>
                                         </div>
-                                    <a href="{% url 'home:eiffel-tower.html'%}" class="btn">view gallery</a>
+                                    <a href="{% url 'home:eiffel-tower'%}" class="btn">view gallery</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="card">
-                                            <img src="{% static 'home/img/landing-atlantis.png'%}" class="card-img-top" alt="...">
+                                            <img src="{% static 'accounts/img/landing-atlantis.png'%}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="card-title d-flex justify-content-between align-item-center">
                                             <div class="name"><h5>Atlantis Aquaventure</h5></div>
@@ -209,7 +213,7 @@
                                         </div>
                                     <div class="location d-flex">
                                     <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Dubai, UAE</p>
@@ -221,7 +225,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="card">
-                                    <img src="{% static 'home/img/landing-berverley.png'%}" class="card-img-top" alt="...">
+                                    <img src="{% static 'accounts/img/landing-berverley.png'%}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="card-title d-flex justify-content-between align-item-center">
                                             <div class="name"><h5>Beverley Hills</h5></div>
@@ -245,7 +249,7 @@
                                         </div>
                                     <div class="location d-flex">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>California, USA</p>
@@ -261,7 +265,7 @@
                         <div class="row d-lg-flex d-md-none d-none">
                             <div class="col-lg-4">
                                 <div class="card">
-                                    <img src="{% static 'home/img/landing-new-york.png'%}" class="card-img-top" alt="...">
+                                    <img src="{% static 'accounts/img/landing-new-york.png'%}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="card-title d-flex justify-content-between align-item-center">
                                             <div class="name"><h5>New York City</h5></div>
@@ -285,7 +289,7 @@
                                         </div>
                                     <div class="location d-flex">
                                             <div class="icon pe-2">
-                                                <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                                <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                             </div>
                                             <div class="place">
                                                 <p>New York, USA</p>
@@ -297,7 +301,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="card">
-                                    <img src="{% static 'home/img/landing-mount.png'%}" class="card-img-top" alt="...">
+                                    <img src="{% static 'accounts/img/landing-mount.png'%}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="card-title d-flex justify-content-between align-item-center">
                                             <div class="name"><h5>Mount Corcovado</h5></div>
@@ -321,7 +325,7 @@
                                         </div>
                                     <div class="location d-flex">
                                     <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Rio de Janeiro, USA</p>
@@ -333,7 +337,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="card">
-                                    <img src="{% static 'home/img/landing-computer.png'%}" class="card-img-top" alt="...">
+                                    <img src="{% static 'accounts/img/landing-computer.png'%}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="card-title d-flex justify-content-between align-item-center">
                                             <div class="name"><h5>Computer Village</h5></div>
@@ -357,7 +361,7 @@
                                         </div>
                                     <div class="location d-flex">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Lagos, Nigeria</p>
@@ -374,7 +378,7 @@
                         <div class="swiper-wrapper mb-5">
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img src="{% static 'home/img/landing-effiel.png'%}" class="card-img-top" alt="...">
+                                    <img src="{% static 'accounts/img/landing-effiel.png'%}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                     <div class="card-title d-flex justify-content-between align-item-center">
                                         <div class="name"><h5>Eiffel Tower</h5></div>
@@ -398,7 +402,7 @@
                                     </div>
                                     <div class="location d-flex">
                                             <div class="icon pe-2">
-                                                <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                                <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                             </div>
                                             <div class="place">
                                                 <p>Paris, France</p>
@@ -410,7 +414,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img src="{% static 'home/img/landing-atlantis.png'%}" class="card-img-top" alt="...">
+                                    <img src="{% static 'accounts/img/landing-atlantis.png'%}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="card-title d-flex justify-content-between align-item-center">
                                             <div class="name"><h5>Atlantis Aquaventure</h5></div>
@@ -434,7 +438,7 @@
                                         </div>
                                     <div class="location d-flex">
                                     <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Dubai, UAE</p>
@@ -446,7 +450,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img src="{% static 'home/img/landing-berverley.png'%}" class="card-img-top" alt="...">
+                                    <img src="{% static 'accounts/img/landing-berverley.png'%}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="card-title d-flex justify-content-between align-item-center">
                                             <div class="name"><h5>Beverley Hills</h5></div>
@@ -470,7 +474,7 @@
                                         </div>
                                     <div class="location d-flex">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>California, USA</p>
@@ -482,7 +486,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img src="{% static 'home/img/landing-new-york.png'%}" class="card-img-top" alt="...">
+                                    <img src="{% static 'accounts/img/landing-new-york.png'%}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="card-title d-flex justify-content-between align-item-center">
                                             <div class="name"><h5>New York City</h5></div>
@@ -506,7 +510,7 @@
                                         </div>
                                     <div class="location d-flex">
                                             <div class="icon pe-2">
-                                                <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                                <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                             </div>
                                             <div class="place">
                                                 <p>New York, USA</p>
@@ -518,7 +522,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img src="{% static 'home/img/landing-mount.png'%}" class="card-img-top" alt="...">
+                                    <img src="{% static 'accounts/img/landing-mount.png'%}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="card-title d-flex justify-content-between align-item-center">
                                             <div class="name"><h5>Mount Corcovado</h5></div>
@@ -542,7 +546,7 @@
                                         </div>
                                     <div class="location d-flex">
                                     <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Rio de Janeiro, USA</p>
@@ -554,7 +558,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <div class="card">
-                                    <img src="{% static 'home/img/landing-computer.png'%}" class="card-img-top" alt="...">
+                                    <img src="{% static 'accounts/img/landing-computer.png'%}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="card-title d-flex justify-content-between align-item-center">
                                             <div class="name"><h5>Computer Village</h5></div>
@@ -578,7 +582,7 @@
                                         </div>
                                     <div class="location d-flex">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Lagos, Nigeria</p>
@@ -609,17 +613,17 @@
                     <div class="row d-lg-flex d-md-none d-none">
                         <div class="col-lg-4">
                             <div class="image duuu">
-                                <a href="{% url 'home:about-dubai.html'%}"><img src="{% static 'home/img/landing-dubai.png'%}" alt=""></a> 
+                                <a href="{% url 'home:about-dubai'%}"><img src="{% static 'accounts/img/landing-dubai.png'%}" alt=""></a> 
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="image duuu">
-                               <a href="#"><img src="{% static 'home/img/landing-wycoming.png'%}" alt=""></a> 
+                               <a href="#"><img src="{% static 'accounts/img/landing-wycoming.png'%}" alt=""></a> 
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="image duuu">
-                                <a href="#"><img src="{% static 'home/img/landing-punta.png'%}" alt=""></a> 
+                                <a href="#"><img src="{% static 'accounts/img/landing-punta.png'%}" alt=""></a> 
                             </div>
                         </div>
                     </div>
@@ -628,17 +632,17 @@
                     <div class="row d-lg-flex d-md-none d-none">
                         <div class="col-lg-4">
                             <div class="image duuu">
-                               <a href="#"><img src="{% static 'home/img/landing-morocco.png'%}" alt=""></a> 
+                               <a href="#"><img src="{% static 'accounts/img/landing-morocco.png'%}" alt=""></a> 
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="image duuu">
-                               <a href="#"><img src="{% static 'home/img/landing-maldies.png'%}" alt=""></a> 
+                               <a href="#"><img src="{% static 'accounts/img/landing-maldies.png'%}" alt=""></a> 
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <div class="image duuu">
-                               <a href="#"><img src="{% static 'home/img/landing-bora.png'%}" alt=""></a> 
+                               <a href="#"><img src="{% static 'accounts/img/landing-bora.png'%}" alt=""></a> 
                             </div>
                         </div>
                     </div>
@@ -647,32 +651,32 @@
                     <div class="swiper-wrapper mb-5">
                         <div class="swiper-slide">
                             <div class="image">
-                                <img src="{% static 'home/img/landing-dubai.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-dubai.png'%}" alt="">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="image">
-                                <img src="{% static 'home/img/landing-wycoming.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-wycoming.png'%}" alt="">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="image">
-                                <img src="{% static 'home/img/landing-punta.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-punta.png'%}" alt="">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="image">
-                                <img src="{% static 'home/img/landing-morocco.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-morocco.png'%}" alt="">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="image">
-                                <img src="{% static 'home/img/landing-maldies.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-maldies.png'%}" alt="">
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="image">
-                                <img src="{% static 'home/img/landing-bora.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-bora.png'%}" alt="">
                             </div>
                         </div>
                     </div>
@@ -696,7 +700,7 @@
                     <div class="row d-lg-flex d-md-none d-none">
                         <div class="col-lg-4">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-desert.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-desert.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <div class="card-title d-flex justify-content-between">
                                     <div class="place">Desert Safari</div>
@@ -704,7 +708,7 @@
                                   </div>
                                   <div class="location d-flex pt-3">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Dubai</p>
@@ -715,7 +719,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-sky.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-sky.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between">
                                         <div class="place">Sky Diving</div>
@@ -723,7 +727,7 @@
                                     </div>
                                   <div class="location d-flex pt-3">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Marrakesh</p>
@@ -734,7 +738,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-boat.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-boat.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between">
                                         <div class="place">Boat Cruise</div>
@@ -742,7 +746,7 @@
                                     </div>
                                   <div class="location d-flex pt-3">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Boat Cruise</p>
@@ -757,7 +761,7 @@
                     <div class="row d-lg-flex d-md-none d-none">
                         <div class="col-lg-4">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-sand.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-sand.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <div class="card-title d-flex justify-content-between">
                                     <div class="place">Sandboarding</div>
@@ -765,7 +769,7 @@
                                   </div>
                                   <div class="location d-flex pt-3">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Abu Dhabi</p>
@@ -776,7 +780,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-kayaking.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-kayaking.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between">
                                         <div class="place">Kayaking</div>
@@ -784,7 +788,7 @@
                                     </div>
                                   <div class="location d-flex pt-3">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Bora Bora</p>
@@ -795,7 +799,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-cars.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-cars.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between">
                                         <div class="place">Exotic Car Racing</div>
@@ -803,7 +807,7 @@
                                     </div>
                                   <div class="location d-flex pt-3">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Punta Cana</p>
@@ -818,7 +822,7 @@
                     <div class="swiper-wrapper mb-5">
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-desert.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-desert.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <div class="card-title d-flex justify-content-between">
                                     <div class="place">Desert Safari</div>
@@ -826,7 +830,7 @@
                                   </div>
                                   <div class="location d-flex pt-3">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Dubai</p>
@@ -837,7 +841,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-sky.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-sky.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between">
                                         <div class="place">Sky Diving</div>
@@ -845,7 +849,7 @@
                                     </div>
                                   <div class="location d-flex pt-3">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Marrakesh</p>
@@ -856,7 +860,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-boat.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-boat.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between">
                                         <div class="place">Boat Cruise</div>
@@ -864,7 +868,7 @@
                                     </div>
                                   <div class="location d-flex pt-3">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Boat Cruise</p>
@@ -875,7 +879,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-sand.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-sand.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                   <div class="card-title d-flex justify-content-between">
                                     <div class="place">Sandboarding</div>
@@ -883,7 +887,7 @@
                                   </div>
                                   <div class="location d-flex pt-3">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Abu Dhabi</p>
@@ -894,7 +898,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-kayaking.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-kayaking.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between">
                                         <div class="place">Kayaking</div>
@@ -902,7 +906,7 @@
                                     </div>
                                   <div class="location d-flex pt-3">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Bora Bora</p>
@@ -913,7 +917,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-cars.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-cars.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between">
                                         <div class="place">Exotic Car Racing</div>
@@ -921,7 +925,7 @@
                                     </div>
                                   <div class="location d-flex pt-3">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Punta Cana</p>
@@ -950,7 +954,7 @@
                     <div class="row d-lg-flex d-md-none d-none">
                         <div class="col-lg-4">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-tom.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-tom.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between align-item-center">
                                         <div class="name"><h5>Tom Petterson</h5></div>
@@ -975,7 +979,7 @@
                                   <div class="location-status d-flex justify-content-between pt-3">
                                     <div class="location d-flex">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Qatar</p>
@@ -991,7 +995,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-sandrra.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-sandrra.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between align-item-center">
                                         <div class="name"><h5>Sandra Banks</h5></div>
@@ -1016,7 +1020,7 @@
                                   <div class="location-status d-flex justify-content-between pt-3">
                                     <div class="location d-flex">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Iran</p>
@@ -1032,7 +1036,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-jeff.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-jeff.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between align-item-center">
                                         <div class="name"><h5>Jeffery Sparks</h5></div>
@@ -1057,7 +1061,7 @@
                                     <div class="location-status d-flex justify-content-between pt-3">
                                         <div class="location d-flex">
                                             <div class="icon pe-2">
-                                                <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                                <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                             </div>
                                             <div class="place">
                                                 <p>Dubai</p>
@@ -1077,7 +1081,7 @@
                     <div class="swiper-wrapper mb-5">
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-tom.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-tom.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between align-item-center">
                                         <div class="name"><h5>Tom Petterson</h5></div>
@@ -1102,7 +1106,7 @@
                                   <div class="location-status d-flex justify-content-between pt-3">
                                     <div class="location d-flex">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Qatar</p>
@@ -1118,7 +1122,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-sandrra.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-sandrra.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between align-item-center">
                                         <div class="name"><h5>Sandra Banks</h5></div>
@@ -1143,7 +1147,7 @@
                                   <div class="location-status d-flex justify-content-between pt-3">
                                     <div class="location d-flex">
                                         <div class="icon pe-2">
-                                            <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                         </div>
                                         <div class="place">
                                             <p>Iran</p>
@@ -1159,7 +1163,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="card">
-                                <img src="{% static 'home/img/landing-jeff.png'%}" class="card-img-top" alt="...">
+                                <img src="{% static 'accounts/img/landing-jeff.png'%}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <div class="card-title d-flex justify-content-between align-item-center">
                                         <div class="name"><h5>Jeffery Sparks</h5></div>
@@ -1184,7 +1188,7 @@
                                     <div class="location-status d-flex justify-content-between pt-3">
                                         <div class="location d-flex">
                                             <div class="icon pe-2">
-                                                <img src="{% static 'home/img/landing-location-icon.png'%}" alt="">
+                                                <img src="{% static 'accounts/img/landing-location-icon.png'%}" alt="">
                                             </div>
                                             <div class="place">
                                                 <p>Dubai</p>
@@ -1218,15 +1222,15 @@
                     <div class="row d-lg-flex d-md-none d-none">
                         <div class="col-lg-4">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-burg-kha.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-burg-kha.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate w-100 position-absolute bottom-0 start-0 ps-3">
                                     <h5>Burj Khalifa</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Dubai, United Arab Emirates</p>
@@ -1239,13 +1243,13 @@
                             <div class="imagee position-relative">
                                 <img src="img/landing-eve-penthouse.png" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate position-absolute bottom-0 start-0 ps-3">
                                     <h5>Eve Penthouse</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Dubai, United Arab Emirates</p>
@@ -1256,15 +1260,15 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-clap-dubai.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-clap-dubai.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate position-absolute bottom-0 start-0 ps-3">
                                     <h5>Clap Dubai</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Dubai, United Arab Emirates</p>
@@ -1279,15 +1283,15 @@
                     <div class="row d-lg-flex d-md-none d-none">
                         <div class="col-lg-4">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-addu.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-addu.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate w-100 position-absolute bottom-0 start-0 ps-3">
                                     <h5>Addu City</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Maldives</p>
@@ -1298,15 +1302,15 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-vakahru.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-vakahru.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate position-absolute bottom-0 start-0 ps-3">
                                     <h5>Vakkaru Resort</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Maldives</p>
@@ -1317,15 +1321,15 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-baros.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-baros.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate position-absolute bottom-0 start-0 ps-3">
                                     <h5>Baros Hotels</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Maldives</p>
@@ -1340,15 +1344,15 @@
                     <div class="swiper-wrapper mb-5">
                         <div class="swiper-slide">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-burg-kha.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-burg-kha.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate w-100 position-absolute bottom-0 start-0 ps-3">
                                     <h5>Burj Khalifa</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Dubai, United Arab Emirates</p>
@@ -1359,15 +1363,15 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-burg-kha.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-burg-kha.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate w-100 position-absolute bottom-0 start-0 ps-3">
                                     <h5>Burj Khalifa</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Dubai, United Arab Emirates</p>
@@ -1378,15 +1382,15 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-burg-kha.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-burg-kha.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate w-100 position-absolute bottom-0 start-0 ps-3">
                                     <h5>Burj Khalifa</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Dubai, United Arab Emirates</p>
@@ -1416,15 +1420,15 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-burg-kha.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-burg-kha.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate w-100 position-absolute bottom-0 start-0 ps-3">
                                     <h5>Burj Khalifa</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Maldives</p>
@@ -1435,15 +1439,15 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-burg-kha.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-burg-kha.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate w-100 position-absolute bottom-0 start-0 ps-3">
                                     <h5>Burj Khalifa</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Maldives</p>
@@ -1472,9 +1476,9 @@
                     <div class="row d-lg-flex d-md-none d-none">
                         <div class="col-lg-4">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-mall.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-mall.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="located w-100 position-absolute bottom-0 start-0 ps-3">
                                     <h5>Malibu Bluffs Park,CA</h5>
@@ -1484,9 +1488,9 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-malibu.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-malibu.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="located position-absolute bottom-0 start-0 ps-3">
                                     <h5>Burj Khalifa Mall, Dubai</h5>
@@ -1496,9 +1500,9 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-stade.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-stade.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="located position-absolute bottom-0 start-0 ps-3">
                                     <h5>Stade de France, Paris</h5>
@@ -1512,9 +1516,9 @@
                     <div class="row d-lg-flex d-md-none d-none">
                         <div class="col-lg-4">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-next-door.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-next-door.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="located w-100 position-absolute bottom-0 start-0 ps-3">
                                     <h5>Next Door Lounge, Hollywood</h5>
@@ -1524,9 +1528,9 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-vakahru.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-vakahru.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="located position-absolute bottom-0 start-0 ps-3">
                                     <h5>Vakkaru Resort, Maldives</h5>
@@ -1536,15 +1540,15 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-vakahru.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-vakahru.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate position-absolute bottom-0 start-0 ps-3">
                                     <h5>Vakkaru Resort</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Maldives</p>
@@ -1559,9 +1563,9 @@
                     <div class="swiper-wrapper mb-5">
                         <div class="swiper-slide">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-mall.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-mall.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="located w-100 position-absolute bottom-0 start-0 ps-3">
                                     <h5>Malibu Bluffs Park,CA</h5>
@@ -1571,9 +1575,9 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-malibu.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-malibu.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="located position-absolute bottom-0 start-0 ps-3">
                                     <h5>Burj Khalifa Mall, Dubai</h5>
@@ -1583,9 +1587,9 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-stade.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-stade.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="located position-absolute bottom-0 start-0 ps-3">
                                     <h5>Stade de France, Paris</h5>
@@ -1595,9 +1599,9 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-next-door.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-next-door.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="located w-100 position-absolute bottom-0 start-0 ps-3">
                                     <h5>Next Door Lounge, Hollywood</h5>
@@ -1607,15 +1611,15 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-vakahru.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-vakahru.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate position-absolute bottom-0 start-0 ps-3">
                                     <h5>Vakkaru Resort</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Maldives</p>
@@ -1626,15 +1630,15 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="imagee position-relative">
-                                <img src="{% static 'home/img/landing-vakahru.png'%}" alt="">
+                                <img src="{% static 'accounts/img/landing-vakahru.png'%}" alt="">
                                 <div class="save position-absolute top-0 end-0 pe-3 pt-3">
-                                    <img src="{% static 'home/img/landing-love.png'%}" alt="">
+                                    <img src="{% static 'accounts/img/landing-love.png'%}" alt="">
                                 </div>
                                 <div class="locate position-absolute bottom-0 start-0 ps-3">
                                     <h5>Vakkaru Resort</h5>
                                     <div class="city d-flex justify-content-center align-item-center">
                                         <div class="loc pe-2">
-                                            <img src="{% static 'home/img/landing-whitw-location.png'%}" alt="">
+                                            <img src="{% static 'accounts/img/landing-whitw-location.png'%}" alt="">
                                         </div>
                                         <div class="addd w-100">
                                             <p>Maldives</p>
@@ -1661,21 +1665,21 @@
                     <h3>Travel Guide</h3>
                     <p class="pe-3">“The world is a book and those who do not travel read only one page.”</p>
                     <div class="socials mt-5 d-flex justify-content-between w-75">
-                        <img src="{% static 'home/img/fbk.png'%}">
-                        <img src="{% static 'home/img/ig.png'%}">
-                        <img src="{% static 'home/img/twi.png'%}">
-                        <img src="{% static 'home/img/li.png'%}">
+                        <img src="{% static 'accounts/img/fbk.png'%}">
+                        <img src="{% static 'accounts/img/ig.png'%}">
+                        <img src="{% static 'accounts/img/twi.png'%}">
+                        <img src="{% static 'accounts/img/li.png'%}">
                     </div>
                 </div>
                 <div class="col-lg-3 ps-5 company">
                     <h4 class="pb-2">Company</h4>
                     <ul class="p-0">
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:landing-page-after-sign-in.html'%}" class="text-decoration-none text-white">Home</a>
+                        <li class="list-unstyled pb-1"><a href="{% url 'accounts:landing-page-after-sign-in'%}" class="text-decoration-none text-white">accounts</a>
                         </li>
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:service.html'%}" class="text-decoration-none text-white">Services</a></li>
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:blog.html'%}" class="text-decoration-none text-white">Blog</a></li>
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:about.html'%}" class="text-decoration-none text-white">About Us</a></li>
-                        <li class="list-unstyled pb-1"><a href="{% url 'home:contact.html'%}" class="text-decoration-none text-white">Contact Us</a>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:service'%}" class="text-decoration-none text-white">Services</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:blog'%}" class="text-decoration-none text-white">Blog</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:about'%}" class="text-decoration-none text-white">About Us</a></li>
+                        <li class="list-unstyled pb-1"><a href="{% url 'home:contact'%}" class="text-decoration-none text-white">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -1702,18 +1706,21 @@
             </div>
             <div class="copyright position-relative w-30 text-center mb-2">
                 <h4>KodedTravels</h4>
-                <img src="{% static 'home/img/landing-copyright.png'%}">
+                <img src="{% static 'accounts/img/landing-copyright.png'%}">
                 <p class="d-inline-block ps-3 m-0">All simple rights reserved 2022</p>
             </div>
         </div>
         <div class="w-30 position-relative bottom-0 mx-auto d-flex justify-content-between text-white faq">
-            <a href="{% url 'home:faq-after.html'%}"><p>FAQs</p></a> 
-            <a href="{% url 'home:terms-and-policies.html'%}"><p class="border-start border-end px-4 terms">Terms & Conditions</p></a> 
-            <a href="{% url 'home:privacy-policy.html'%}"></a> <p>Privacy Policy</p>
+            <a href="{% url 'home:faq-after'%}"><p>FAQs</p></a> 
+            <a href="{% url 'home:terms-and-policies'%}"><p class="border-start border-end px-4 terms">Terms & Conditions</p></a> 
+            <a href="{% url 'home:privacy-policy'%}"></a> <p>Privacy Policy</p>
         </div>
     </footer>
-    <script src="{% static 'home/js/bootstrap.js' %}"></script>
-    <script src="{% static 'home/js/landing-page.js'%}"></script>
+    {%else%}
+    <a href="{% url 'account:signin' %}">Signin</a>
+{% endif %}
+    <script src="{% static 'accounts/js/bootstrap.js' %}"></script>
+    <script src="{% static 'accounts/js/landing-page.js'%}"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
@@ -1743,6 +1750,7 @@
             },
         });
     </script>
+  
 {%endblock content%}
 </body>
 </html>
