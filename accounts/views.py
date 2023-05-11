@@ -1,8 +1,6 @@
-import email
-from urllib.request import Request
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth.models import User # type: ignore
+from django.contrib.auth.models import User          # type: ignore
 from django.contrib.auth import authenticate,login
 # Create your views here.
 
@@ -38,7 +36,7 @@ def signin(request):
         user = authenticate(username=username,password=password)
         if user is not None: 
             login(request,user)
-            username = user.username
+            username = user.username          # type: ignore
             messages.success(request,"You are successfully logged in") #routes to 'home' on successful login  
             return render(request,'accounts/landing-page-after-sign-in.html',{'username': username})
         

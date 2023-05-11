@@ -1,5 +1,3 @@
-import email
-from email import message
 from django.db import models
 
 # Create your models here.
